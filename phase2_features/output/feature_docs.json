@@ -1,0 +1,167 @@
+{
+  "win_pct": {
+    "tier": 1,
+    "era": "all",
+    "desc": "Season-to-date win percentage before this game"
+  },
+  "avg_margin": {
+    "tier": 1,
+    "era": "all",
+    "desc": "Average scoring margin (pts - opp_pts) season-to-date"
+  },
+  "sos": {
+    "tier": 1,
+    "era": "all",
+    "desc": "Strength of schedule: average win_pct of all prior opponents"
+  },
+  "games_played": {
+    "tier": 1,
+    "era": "all",
+    "desc": "Games played season-to-date before this game"
+  },
+  "rest_days": {
+    "tier": 1,
+    "era": "all",
+    "desc": "Days since last game (capped at 30)"
+  },
+  "games_last_7": {
+    "tier": 1,
+    "era": "all",
+    "desc": "Games played in last 7 calendar days"
+  },
+  "win_streak": {
+    "tier": 1,
+    "era": "all",
+    "desc": "Current win streak (negative = losing streak)"
+  },
+  "h2h_win_pct_5": {
+    "tier": 1,
+    "era": "all",
+    "desc": "Head-to-head win % in last 5 meetings (all-time)"
+  },
+  "h2h_win_pct_10": {
+    "tier": 1,
+    "era": "all",
+    "desc": "Head-to-head win % in last 10 meetings (all-time)"
+  },
+  "h2h_games": {
+    "tier": 1,
+    "era": "all",
+    "desc": "Total prior H2H games between these two teams"
+  },
+  "seed": {
+    "tier": 1,
+    "era": "tourney",
+    "desc": "Tournament seed (1-16, NaN for non-tourney games)"
+  },
+  "conf_win_pct": {
+    "tier": 1,
+    "era": "all",
+    "desc": "Conference strength: avg OOC win% of conference members"
+  },
+  "efg_pct": {
+    "tier": 2,
+    "era": "2003+",
+    "desc": "Effective FG% rolling 10 games: (FGM + 0.5*FGM3) / FGA"
+  },
+  "opp_efg_pct": {
+    "tier": 2,
+    "era": "2003+",
+    "desc": "Opponent effective FG% allowed (defensive)"
+  },
+  "to_rate": {
+    "tier": 2,
+    "era": "2003+",
+    "desc": "Turnover rate: TO / estimated possessions"
+  },
+  "opp_to_rate": {
+    "tier": 2,
+    "era": "2003+",
+    "desc": "Opponent turnover rate forced"
+  },
+  "orb_rate": {
+    "tier": 2,
+    "era": "2003+",
+    "desc": "Offensive rebound rate: OR / (OR + opp_DR)"
+  },
+  "drb_rate": {
+    "tier": 2,
+    "era": "2003+",
+    "desc": "Defensive rebound rate: DR / (DR + opp_OR)"
+  },
+  "ft_rate": {
+    "tier": 2,
+    "era": "2003+",
+    "desc": "FT rate: FTA / FGA (how often you get to the line)"
+  },
+  "opp_ft_rate": {
+    "tier": 2,
+    "era": "2003+",
+    "desc": "Opponent FT rate allowed"
+  },
+  "fg3_rate": {
+    "tier": 2,
+    "era": "2003+",
+    "desc": "3-point attempt rate: FGA3 / FGA"
+  },
+  "fg3_pct": {
+    "tier": 2,
+    "era": "2003+",
+    "desc": "3-point field goal percentage"
+  },
+  "ast_to_ratio": {
+    "tier": 2,
+    "era": "2003+",
+    "desc": "Assist-to-turnover ratio"
+  },
+  "blk_rate": {
+    "tier": 2,
+    "era": "2003+",
+    "desc": "Block rate: BLK / opponent FGA2 (2pt attempts)"
+  },
+  "stl_rate": {
+    "tier": 2,
+    "era": "2003+",
+    "desc": "Steal rate: STL / opponent possessions"
+  },
+  "off_eff": {
+    "tier": 2,
+    "era": "2003+",
+    "desc": "Offensive efficiency: points per 100 possessions"
+  },
+  "def_eff": {
+    "tier": 2,
+    "era": "2003+",
+    "desc": "Defensive efficiency: opponent pts per 100 poss"
+  },
+  "net_eff": {
+    "tier": 2,
+    "era": "2003+",
+    "desc": "Net efficiency: off_eff - def_eff"
+  },
+  "pace": {
+    "tier": 2,
+    "era": "2003+",
+    "desc": "Estimated possessions per game"
+  },
+  "massey_avg_rank": {
+    "tier": 3,
+    "era": "2003+",
+    "desc": "Consensus computer ranking (avg across 196 systems). Lower = better."
+  },
+  "massey_best_rank": {
+    "tier": 3,
+    "era": "2003+",
+    "desc": "Best (lowest) rank across all systems"
+  },
+  "massey_n_systems": {
+    "tier": 3,
+    "era": "2003+",
+    "desc": "Number of systems that ranked this team"
+  },
+  "massey_spread": {
+    "tier": 3,
+    "era": "2003+",
+    "desc": "Disagreement between systems (rank std dev)"
+  }
+}

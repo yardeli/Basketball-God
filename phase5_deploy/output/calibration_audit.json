@@ -1,0 +1,79 @@
+{
+  "reliability_diagram": [
+    {
+      "bin_center": 0.05,
+      "mean_predicted": 0.05131704732775688,
+      "mean_actual": 0.022727272727272728,
+      "n": 44,
+      "calibration_error": 0.028589774600484154
+    },
+    {
+      "bin_center": 0.15000000000000002,
+      "mean_predicted": 0.14936919510364532,
+      "mean_actual": 0.0847457627118644,
+      "n": 59,
+      "calibration_error": 0.06462343239178092
+    },
+    {
+      "bin_center": 0.25,
+      "mean_predicted": 0.2476404458284378,
+      "mean_actual": 0.2962962962962963,
+      "n": 81,
+      "calibration_error": 0.048655850467858475
+    },
+    {
+      "bin_center": 0.35000000000000003,
+      "mean_predicted": 0.3534941077232361,
+      "mean_actual": 0.42528735632183906,
+      "n": 87,
+      "calibration_error": 0.07179324859860298
+    },
+    {
+      "bin_center": 0.45,
+      "mean_predicted": 0.4526435136795044,
+      "mean_actual": 0.46774193548387094,
+      "n": 62,
+      "calibration_error": 0.015098421804366546
+    },
+    {
+      "bin_center": 0.55,
+      "mean_predicted": 0.5539005994796753,
+      "mean_actual": 0.5333333333333333,
+      "n": 60,
+      "calibration_error": 0.020567266146341967
+    },
+    {
+      "bin_center": 0.6500000000000001,
+      "mean_predicted": 0.6520156860351562,
+      "mean_actual": 0.6491228070175439,
+      "n": 57,
+      "calibration_error": 0.002892879017612371
+    },
+    {
+      "bin_center": 0.75,
+      "mean_predicted": 0.7472453713417053,
+      "mean_actual": 0.7246376811594203,
+      "n": 69,
+      "calibration_error": 0.022607690182285034
+    },
+    {
+      "bin_center": 0.8500000000000001,
+      "mean_predicted": 0.8403743505477905,
+      "mean_actual": 0.8301886792452831,
+      "n": 53,
+      "calibration_error": 0.01018567130250747
+    },
+    {
+      "bin_center": 0.95,
+      "mean_predicted": 0.960677981376648,
+      "mean_actual": 0.9672131147540983,
+      "n": 61,
+      "calibration_error": 0.006535133377450375
+    }
+  ],
+  "ece": 0.03173983518452063,
+  "mce": 0.07179324859860298,
+  "n_test_games": 633,
+  "brier_score": 0.17388075590133667,
+  "log_loss": 0.5128695036398173
+}

@@ -1,0 +1,42 @@
+{
+  "Round of 64": {
+    "n_games": 1268,
+    "base_acc": 0.7413,
+    "cal_acc": 0.7437,
+    "base_logloss": 0.4713,
+    "cal_logloss": 0.4859,
+    "improvement": 0.0024
+  },
+  "Round of 32": {
+    "n_games": 655,
+    "base_acc": 0.7084,
+    "cal_acc": 0.7176,
+    "base_logloss": 0.5408,
+    "cal_logloss": 0.5634,
+    "improvement": 0.0092
+  },
+  "Sweet 16": {
+    "n_games": 476,
+    "base_acc": 0.666,
+    "cal_acc": 0.6471,
+    "base_logloss": 0.5911,
+    "cal_logloss": 0.6288,
+    "improvement": -0.0189
+  },
+  "Elite Eight": {
+    "n_games": 84,
+    "base_acc": 0.7024,
+    "cal_acc": 0.7143,
+    "base_logloss": 0.5918,
+    "cal_logloss": 0.9674,
+    "improvement": 0.0119
+  },
+  "Championship": {
+    "n_games": 40,
+    "base_acc": 0.8,
+    "cal_acc": 0.825,
+    "base_logloss": 0.5999,
+    "cal_logloss": 1.2197,
+    "improvement": 0.025
+  }
+}

@@ -1,18 +1,3 @@
-# Large data files (regenerate locally)
-*.db
-*.pkl
-*.parquet
-phase1_data/sources/kaggle/MMasseyOrdinals.csv
-
-# Generated outputs
-outputs/*
-data/processed/*
-phase1_data/output/*
-phase2_features/output/*
-phase3_models/output/*
-phase4_tournament/output/*
-phase5_deploy/output/*
-
 # Python cache
 __pycache__/
 *.pyc
@@ -39,4 +24,7 @@ Thumbs.db
 *.tmp
 *.temp
 *.log
-test_*.py
+kill_server.bat
+
+# Environment
+.env (keep .env.example for reference)

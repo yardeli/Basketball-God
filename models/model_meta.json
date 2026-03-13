@@ -1,0 +1,38 @@
+{
+  "feature_names": [
+    "elo_diff",
+    "net_rating_diff",
+    "win_pct_diff",
+    "points_pg_diff",
+    "opp_points_pg_diff",
+    "home_away",
+    "rest_days_diff",
+    "conf_game",
+    "power_conf_diff",
+    "momentum_diff",
+    "injury_impact_diff",
+    "sentiment_diff"
+  ],
+  "feature_importances": {
+    "elo_diff": 0.173211,
+    "net_rating_diff": 0.106217,
+    "win_pct_diff": 0.091204,
+    "points_pg_diff": 0.074869,
+    "opp_points_pg_diff": 0.076334,
+    "home_away": 0.247209,
+    "rest_days_diff": 0.0,
+    "conf_game": 0.153723,
+    "power_conf_diff": 0.0,
+    "momentum_diff": 0.077232,
+    "injury_impact_diff": 0.0,
+    "sentiment_diff": 0.0
+  },
+  "training_metrics": {
+    "train_accuracy": 0.8187959467514405,
+    "train_games": 5033,
+    "val_accuracy": 0.6973788721207307,
+    "val_log_loss": 0.5810859865092957,
+    "val_brier": 0.1987234581073057,
+    "val_games": 1259
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "total_games": 16776,
+  "by_source": {
+    "espn": 16776
+  },
+  "by_decade": {
+    "2020s": 16776
+  },
+  "by_season": {
+    "2024": 5641,
+    "2025": 5678,
+    "2026": 5457
+  },
+  "data_completeness": {
+    "tier_3": 16776
+  },
+  "by_game_type": {
+    "regular": 16776
+  },
+  "by_era": {
+    "modern_3pt": 16776
+  },
+  "total_teams": 362,
+  "total_aliases": 1062,
+  "home_win_by_era": {
+    "modern_3pt": {
+      "rate": 0.6477,
+      "games": 14793
+    }
+  },
+  "covid_2021_games": 0,
+  "data_sources": [
+    {
+      "name": "espn",
+      "games": 16776,
+      "seasons": "2025",
+      "updated": "2026-03-12 09:08:52",
+      "notes": null
+    }
+  ]
+}

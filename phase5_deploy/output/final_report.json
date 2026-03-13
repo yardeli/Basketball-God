@@ -1,0 +1,97 @@
+{
+  "project": "Basketball-God",
+  "description": "NCAA D1 Men's Basketball Tournament Prediction Engine",
+  "build_date": "2026-03-12",
+  "dataset": {
+    "total_games": 202529,
+    "seasons": "1985-2026",
+    "teams": 381,
+    "massey_rankings": "5.8M rows, 196 computer systems",
+    "data_tiers": {
+      "tier1_full_box_score": "2003+ (62.6%)",
+      "tier2_score_only_recent": "1993-2002 (21.4%)",
+      "tier3_score_only_historical": "pre-1993 (16.0%)"
+    }
+  },
+  "model_performance": {
+    "test_window": "2015-2025",
+    "overall_accuracy": 0.7251184834123223,
+    "seed_baseline_accuracy": 0.28751974723538704,
+    "accuracy_lift_95ci": {
+      "mean": 0.43602843601895735,
+      "std": 0.03535239939570756,
+      "ci_lo": 0.36330963665086885,
+      "ci_hi": 0.5023696682464455
+    },
+    "log_loss": 0.5128695036398173,
+    "brier_score": 0.17388075590133667,
+    "avg_espn_bracket_pts": 126.2,
+    "seed_espn_bracket_pts": 51.1
+  },
+  "calibration": {
+    "ece": 0.03173983518452063,
+    "mce": 0.07179324859860298,
+    "status": "well-calibrated"
+  },
+  "top_features": [
+    "diff_conf_win_pct",
+    "diff_sos",
+    "diff_avg_margin",
+    "t1_seed",
+    "diff_massey_avg_rank",
+    "t2_seed",
+    "diff_win_pct",
+    "t2_avg_margin",
+    "t2_win_pct",
+    "t1_avg_margin"
+  ],
+  "feature_importance_method": "xgb_fscore",
+  "tournament_specifics": {
+    "round_calibration": "Isotonic regression per round (R64\u2192Championship)",
+    "seed_matchup_stats": "Historical upset rates by (high_seed, low_seed) bucket",
+    "path_features": [
+      "seeds_beaten",
+      "close_games",
+      "ot_games",
+      "games_played",
+      "days_rest"
+    ],
+    "cinderella_detection": "mid-major + elite defense + strong Massey vs seed",
+    "simulation": "10,000 Monte Carlo bracket simulations"
+  },
+  "approaches_trained": {
+    "A_time_decay": "XGBoost with exponential time-decay sample weights",
+    "B_era_ensemble": "4 era-stratified models + LogReg meta-learner",
+    "C_single_era_features": "XGBoost with era as categorical feature (BEST OVERALL)",
+    "D_transfer_learning": "Pre-train 1985-2012, fine-tune 2013+ (BEST TOURNEY)",
+    "production": "Approach D (transfer), tournament-calibrated via Phase 4"
+  },
+  "worst_case": [
+    {
+      "index": 0,
+      "season": 2018,
+      "acc": 0.6507936507936508,
+      "n": 63
+    },
+    {
+      "index": 1,
+      "season": 2022,
+      "acc": 0.6666666666666666,
+      "n": 63
+    },
+    {
+      "index": 2,
+      "season": 2016,
+      "acc": 0.6825396825396826,
+      "n": 63
+    }
+  ],
+  "deployment_notes": [
+    "Load with BasketballGodPredictor.load() for prediction API",
+    "predict(team_a, team_b, season, round_name) returns prob + confidence",
+    "round_calibrators handle tournament-specific probability shifts",
+    "Model trained through 2025; retrain annually after March Madness",
+    "Features require Massey rankings (available post-Selection Sunday)",
+    "For pre-tournament predictions, use Tier 1 features (seed + margin + rankings)"
+  ]
+}

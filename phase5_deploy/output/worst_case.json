@@ -1,0 +1,98 @@
+{
+  "worst_seasons": [
+    {
+      "index": 0,
+      "season": 2018,
+      "acc": 0.6507936507936508,
+      "n": 63
+    },
+    {
+      "index": 1,
+      "season": 2022,
+      "acc": 0.6666666666666666,
+      "n": 63
+    },
+    {
+      "index": 2,
+      "season": 2016,
+      "acc": 0.6825396825396826,
+      "n": 63
+    },
+    {
+      "index": 3,
+      "season": 2023,
+      "acc": 0.6984126984126984,
+      "n": 63
+    },
+    {
+      "index": 4,
+      "season": 2021,
+      "acc": 0.7121212121212122,
+      "n": 66
+    }
+  ],
+  "by_round": [
+    {
+      "round": "Round of 32",
+      "acc": 0.6978021978021978,
+      "n": 182
+    },
+    {
+      "round": "Round of 64",
+      "acc": 0.7316455696202532,
+      "n": 395
+    },
+    {
+      "round": "Sweet 16",
+      "acc": 0.7391304347826086,
+      "n": 46
+    },
+    {
+      "round": "Elite Eight",
+      "acc": 0.9,
+      "n": 10
+    }
+  ],
+  "by_seed_bucket": [
+    {
+      "seed_bucket": "slight_dog",
+      "acc": 0.6091954022988506,
+      "n": 87
+    },
+    {
+      "seed_bucket": "pick_em_pos",
+      "acc": 0.64,
+      "n": 50
+    },
+    {
+      "seed_bucket": "big_dog",
+      "acc": 0.6551724137931034,
+      "n": 87
+    },
+    {
+      "seed_bucket": "slight_fav",
+      "acc": 0.6578947368421053,
+      "n": 76
+    },
+    {
+      "seed_bucket": "big_fav",
+      "acc": 0.6944444444444444,
+      "n": 108
+    },
+    {
+      "seed_bucket": "pick_em_neg",
+      "acc": 0.7857142857142857,
+      "n": 14
+    },
+    {
+      "seed_bucket": "heavy_fav",
+      "acc": 0.8505747126436781,
+      "n": 87
+    },
+    {
+      "seed_bucket": "heavy_dog",
+      "acc": 0.8629032258064516,
+      "n": 124
+    }
+  ]
+}

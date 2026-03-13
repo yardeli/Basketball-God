@@ -1,0 +1,217 @@
+{
+  "comparison_table": [
+    {
+      "approach": "D_transfer",
+      "avg_accuracy": 0.7133,
+      "avg_tourney_accuracy": 0.7025,
+      "avg_log_loss": 0.5455,
+      "avg_brier": 0.1851,
+      "avg_auc": 0.7934,
+      "avg_seed_baseline": 0.3298,
+      "seasons_tested": 11,
+      "vs_seed_baseline": 0.3835
+    },
+    {
+      "approach": "C",
+      "avg_accuracy": 0.7158,
+      "avg_tourney_accuracy": 0.698,
+      "avg_log_loss": 0.5429,
+      "avg_brier": 0.1842,
+      "avg_auc": 0.7954,
+      "avg_seed_baseline": 0.3298,
+      "seasons_tested": 11,
+      "vs_seed_baseline": 0.386
+    },
+    {
+      "approach": "A_hl15",
+      "avg_accuracy": 0.7161,
+      "avg_tourney_accuracy": 0.6965,
+      "avg_log_loss": 0.5451,
+      "avg_brier": 0.1849,
+      "avg_auc": 0.7939,
+      "avg_seed_baseline": 0.3298,
+      "seasons_tested": 11,
+      "vs_seed_baseline": 0.3863
+    },
+    {
+      "approach": "A_hl5",
+      "avg_accuracy": 0.7162,
+      "avg_tourney_accuracy": 0.6965,
+      "avg_log_loss": 0.544,
+      "avg_brier": 0.1845,
+      "avg_auc": 0.795,
+      "avg_seed_baseline": 0.3298,
+      "seasons_tested": 11,
+      "vs_seed_baseline": 0.3864
+    },
+    {
+      "approach": "A_hl20",
+      "avg_accuracy": 0.7157,
+      "avg_tourney_accuracy": 0.692,
+      "avg_log_loss": 0.5448,
+      "avg_brier": 0.1848,
+      "avg_auc": 0.7941,
+      "avg_seed_baseline": 0.3298,
+      "seasons_tested": 11,
+      "vs_seed_baseline": 0.3859
+    },
+    {
+      "approach": "A_hl10",
+      "avg_accuracy": 0.7149,
+      "avg_tourney_accuracy": 0.692,
+      "avg_log_loss": 0.5444,
+      "avg_brier": 0.1847,
+      "avg_auc": 0.7944,
+      "avg_seed_baseline": 0.3298,
+      "seasons_tested": 11,
+      "vs_seed_baseline": 0.3851
+    },
+    {
+      "approach": "B",
+      "avg_accuracy": 0.6907,
+      "avg_tourney_accuracy": 0.692,
+      "avg_log_loss": 0.584,
+      "avg_brier": 0.1997,
+      "avg_auc": 0.763,
+      "avg_seed_baseline": 0.3298,
+      "seasons_tested": 11,
+      "vs_seed_baseline": 0.3609
+    },
+    {
+      "approach": "D_recent_only",
+      "avg_accuracy": 0.6937,
+      "avg_tourney_accuracy": 0.6711,
+      "avg_log_loss": 1.1392,
+      "avg_brier": 0.2152,
+      "avg_auc": 0.7656,
+      "avg_seed_baseline": 0.3298,
+      "seasons_tested": 11,
+      "vs_seed_baseline": 0.3639
+    }
+  ],
+  "per_season": [
+    {
+      "season": 2015,
+      "A_hl10": 0.7274,
+      "A_hl15": 0.7303,
+      "A_hl20": 0.7259,
+      "A_hl5": 0.727,
+      "B": 0.7083,
+      "C": 0.7286,
+      "D_recent_only": 0.4892,
+      "D_transfer": 0.727
+    },
+    {
+      "season": 2016,
+      "A_hl10": 0.722,
+      "A_hl15": 0.7207,
+      "A_hl20": 0.7237,
+      "A_hl5": 0.7232,
+      "B": 0.7111,
+      "C": 0.7266,
+      "D_recent_only": 0.7164,
+      "D_transfer": 0.7205
+    },
+    {
+      "season": 2017,
+      "A_hl10": 0.7241,
+      "A_hl15": 0.7235,
+      "A_hl20": 0.7237,
+      "A_hl5": 0.7261,
+      "B": 0.6801,
+      "C": 0.7233,
+      "D_recent_only": 0.723,
+      "D_transfer": 0.7194
+    },
+    {
+      "season": 2018,
+      "A_hl10": 0.7192,
+      "A_hl15": 0.7207,
+      "A_hl20": 0.7201,
+      "A_hl5": 0.7201,
+      "B": 0.6989,
+      "C": 0.7162,
+      "D_recent_only": 0.7164,
+      "D_transfer": 0.7156
+    },
+    {
+      "season": 2019,
+      "A_hl10": 0.7196,
+      "A_hl15": 0.7209,
+      "A_hl20": 0.7227,
+      "A_hl5": 0.7218,
+      "B": 0.6906,
+      "C": 0.7198,
+      "D_recent_only": 0.7201,
+      "D_transfer": 0.7188
+    },
+    {
+      "season": 2020,
+      "A_hl10": 0.7011,
+      "A_hl15": 0.704,
+      "A_hl20": 0.7015,
+      "A_hl5": 0.7052,
+      "B": 0.6915,
+      "C": 0.7036,
+      "D_recent_only": 0.7032,
+      "D_transfer": 0.7001
+    },
+    {
+      "season": 2021,
+      "A_hl10": 0.7086,
+      "A_hl15": 0.7105,
+      "A_hl20": 0.7108,
+      "A_hl5": 0.7151,
+      "B": 0.6673,
+      "C": 0.7148,
+      "D_recent_only": 0.7119,
+      "D_transfer": 0.7135
+    },
+    {
+      "season": 2022,
+      "A_hl10": 0.7265,
+      "A_hl15": 0.7249,
+      "A_hl20": 0.7257,
+      "A_hl5": 0.7259,
+      "B": 0.6996,
+      "C": 0.7236,
+      "D_recent_only": 0.7267,
+      "D_transfer": 0.7215
+    },
+    {
+      "season": 2023,
+      "A_hl10": 0.7065,
+      "A_hl15": 0.7063,
+      "A_hl20": 0.7043,
+      "A_hl5": 0.703,
+      "B": 0.6843,
+      "C": 0.703,
+      "D_recent_only": 0.7092,
+      "D_transfer": 0.6999
+    },
+    {
+      "season": 2024,
+      "A_hl10": 0.7012,
+      "A_hl15": 0.7041,
+      "A_hl20": 0.7028,
+      "A_hl5": 0.7027,
+      "B": 0.6724,
+      "C": 0.7016,
+      "D_recent_only": 0.7063,
+      "D_transfer": 0.7019
+    },
+    {
+      "season": 2025,
+      "A_hl10": 0.7081,
+      "A_hl15": 0.7112,
+      "A_hl20": 0.7116,
+      "A_hl5": 0.708,
+      "B": 0.6939,
+      "C": 0.7128,
+      "D_recent_only": 0.7081,
+      "D_transfer": 0.7085
+    }
+  ],
+  "best_overall_accuracy": "D_transfer",
+  "best_tourney_accuracy": "D_transfer"
+}

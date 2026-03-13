@@ -1,0 +1,47 @@
+{
+  "games_by_type": {
+    "regular": 191286,
+    "conf_tourney": 6793,
+    "ncaa_tourney": 2585,
+    "nit": 1284,
+    "cit": 279,
+    "cbi": 263,
+    "other_tourney": 39
+  },
+  "games_by_decade": {
+    "1980s": 19902,
+    "1990s": 42030,
+    "2000s": 48657,
+    "2010s": 54838,
+    "2020s": 37102
+  },
+  "data_tier_counts": {
+    "1": 126761,
+    "2": 43286,
+    "3": 32482
+  },
+  "data_tier_labels": {
+    "1": "Tier 1 \u2014 Full box score (FG/3PT/FT/reb/ast/to/stl/blk)",
+    "2": "Tier 2 \u2014 Score only (2003+ seasons, no box score available)",
+    "3": "Tier 3 \u2014 Score only (pre-2003)"
+  },
+  "games_by_era": {
+    "modern_35sec": 106675,
+    "3pt_early": 28849,
+    "portal_era": 27830,
+    "modern_30sec": 27521,
+    "pre_3pt": 7710,
+    "covid": 3944
+  },
+  "season_range": {
+    "earliest": 1985,
+    "latest": 2026,
+    "total_seasons": 42
+  },
+  "total_teams": 381,
+  "massey_rating_systems": 196,
+  "anomalies": {
+    "low_game_count_seasons": [],
+    "note": "COVID 2021 season expected to be short (~3,000 games vs ~5,500 normal)."
+  }
+}

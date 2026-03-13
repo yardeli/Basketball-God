@@ -1,0 +1,144 @@
+[
+  {
+    "season": 2024,
+    "n_simulations": 10000,
+    "champion_probabilities": [
+      [
+        "Baylor",
+        0.0887
+      ],
+      [
+        "Auburn",
+        0.0853
+      ],
+      [
+        "Mississippi St",
+        0.0811
+      ],
+      [
+        "Purdue",
+        0.0735
+      ],
+      [
+        "Iowa St",
+        0.0726
+      ],
+      [
+        "FL Atlantic",
+        0.0638
+      ],
+      [
+        "Michigan St",
+        0.041
+      ],
+      [
+        "Arizona",
+        0.0348
+      ],
+      [
+        "BYU",
+        0.0347
+      ],
+      [
+        "Tennessee",
+        0.0306
+      ],
+      [
+        "Illinois",
+        0.0305
+      ],
+      [
+        "San Diego St",
+        0.0279
+      ],
+      [
+        "Clemson",
+        0.0265
+      ],
+      [
+        "Nevada",
+        0.0249
+      ],
+      [
+        "Alabama",
+        0.0239
+      ],
+      [
+        "New Mexico",
+        0.0234
+      ]
+    ],
+    "top_cinderellas": []
+  },
+  {
+    "season": 2025,
+    "n_simulations": 10000,
+    "champion_probabilities": [
+      [
+        "Duke",
+        0.3326
+      ],
+      [
+        "Alabama",
+        0.1482
+      ],
+      [
+        "Auburn",
+        0.0664
+      ],
+      [
+        "Purdue",
+        0.0364
+      ],
+      [
+        "Kentucky",
+        0.0356
+      ],
+      [
+        "Tennessee",
+        0.0289
+      ],
+      [
+        "Georgia",
+        0.0289
+      ],
+      [
+        "Maryland",
+        0.0267
+      ],
+      [
+        "Illinois",
+        0.0214
+      ],
+      [
+        "Baylor",
+        0.0181
+      ],
+      [
+        "Oregon",
+        0.0165
+      ],
+      [
+        "Arizona",
+        0.0146
+      ],
+      [
+        "Iowa St",
+        0.0145
+      ],
+      [
+        "UCLA",
+        0.0138
+      ],
+      [
+        "Memphis",
+        0.0136
+      ],
+      [
+        "Florida",
+        0.0128
+      ]
+    ],
+    "top_cinderellas": []
+  }
+]

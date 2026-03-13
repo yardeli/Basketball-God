@@ -1,0 +1,498 @@
+{
+  "per_season": [
+    {
+      "season": 2015,
+      "rounds": {
+        "Round of 64": {
+          "model_correct": 24,
+          "seed_correct": 5,
+          "possible": 32,
+          "pts_each": 1,
+          "model_pts": 24,
+          "seed_pts": 5
+        },
+        "Round of 32": {
+          "model_correct": 10,
+          "seed_correct": 5,
+          "possible": 16,
+          "pts_each": 2,
+          "model_pts": 20,
+          "seed_pts": 10
+        },
+        "Sweet 16": {
+          "model_correct": 10,
+          "seed_correct": 2,
+          "possible": 12,
+          "pts_each": 4,
+          "model_pts": 40,
+          "seed_pts": 8
+        },
+        "Elite Eight": {
+          "model_correct": 2,
+          "seed_correct": 1,
+          "possible": 2,
+          "pts_each": 8,
+          "model_pts": 16,
+          "seed_pts": 8
+        },
+        "Championship": {
+          "model_correct": 1,
+          "seed_correct": 1,
+          "possible": 1,
+          "pts_each": 32,
+          "model_pts": 32,
+          "seed_pts": 32
+        }
+      },
+      "model_total_pts": 132,
+      "seed_total_pts": 63,
+      "model_accuracy": 0.746,
+      "seed_accuracy": 0.2222
+    },
+    {
+      "season": 2016,
+      "rounds": {
+        "Round of 64": {
+          "model_correct": 20,
+          "seed_correct": 13,
+          "possible": 32,
+          "pts_each": 1,
+          "model_pts": 20,
+          "seed_pts": 13
+        },
+        "Round of 32": {
+          "model_correct": 14,
+          "seed_correct": 3,
+          "possible": 16,
+          "pts_each": 2,
+          "model_pts": 28,
+          "seed_pts": 6
+        },
+        "Sweet 16": {
+          "model_correct": 9,
+          "seed_correct": 3,
+          "possible": 12,
+          "pts_each": 4,
+          "model_pts": 36,
+          "seed_pts": 12
+        },
+        "Elite Eight": {
+          "model_correct": 2,
+          "seed_correct": 1,
+          "possible": 2,
+          "pts_each": 8,
+          "model_pts": 16,
+          "seed_pts": 8
+        },
+        "Championship": {
+          "model_correct": 0,
+          "seed_correct": 1,
+          "possible": 1,
+          "pts_each": 32,
+          "model_pts": 0,
+          "seed_pts": 32
+        }
+      },
+      "model_total_pts": 100,
+      "seed_total_pts": 71,
+      "model_accuracy": 0.7143,
+      "seed_accuracy": 0.3333
+    },
+    {
+      "season": 2017,
+      "rounds": {
+        "Round of 64": {
+          "model_correct": 26,
+          "seed_correct": 6,
+          "possible": 32,
+          "pts_each": 1,
+          "model_pts": 26,
+          "seed_pts": 6
+        },
+        "Round of 32": {
+          "model_correct": 11,
+          "seed_correct": 4,
+          "possible": 16,
+          "pts_each": 2,
+          "model_pts": 22,
+          "seed_pts": 8
+        },
+        "Sweet 16": {
+          "model_correct": 8,
+          "seed_correct": 4,
+          "possible": 12,
+          "pts_each": 4,
+          "model_pts": 32,
+          "seed_pts": 16
+        },
+        "Elite Eight": {
+          "model_correct": 2,
+          "seed_correct": 0,
+          "possible": 2,
+          "pts_each": 8,
+          "model_pts": 16,
+          "seed_pts": 0
+        },
+        "Championship": {
+          "model_correct": 1,
+          "seed_correct": 0,
+          "possible": 1,
+          "pts_each": 32,
+          "model_pts": 32,
+          "seed_pts": 0
+        }
+      },
+      "model_total_pts": 128,
+      "seed_total_pts": 30,
+      "model_accuracy": 0.7619,
+      "seed_accuracy": 0.2222
+    },
+    {
+      "season": 2018,
+      "rounds": {
+        "Round of 64": {
+          "model_correct": 23,
+          "seed_correct": 9,
+          "possible": 32,
+          "pts_each": 1,
+          "model_pts": 23,
+          "seed_pts": 9
+        },
+        "Round of 32": {
+          "model_correct": 10,
+          "seed_correct": 6,
+          "possible": 16,
+          "pts_each": 2,
+          "model_pts": 20,
+          "seed_pts": 12
+        },
+        "Sweet 16": {
+          "model_correct": 9,
+          "seed_correct": 5,
+          "possible": 12,
+          "pts_each": 4,
+          "model_pts": 36,
+          "seed_pts": 20
+        },
+        "Elite Eight": {
+          "model_correct": 2,
+          "seed_correct": 1,
+          "possible": 2,
+          "pts_each": 8,
+          "model_pts": 16,
+          "seed_pts": 8
+        },
+        "Championship": {
+          "model_correct": 1,
+          "seed_correct": 0,
+          "possible": 1,
+          "pts_each": 32,
+          "model_pts": 32,
+          "seed_pts": 0
+        }
+      },
+      "model_total_pts": 127,
+      "seed_total_pts": 49,
+      "model_accuracy": 0.7143,
+      "seed_accuracy": 0.3333
+    },
+    {
+      "season": 2019,
+      "rounds": {
+        "Round of 64": {
+          "model_correct": 25,
+          "seed_correct": 12,
+          "possible": 32,
+          "pts_each": 1,
+          "model_pts": 25,
+          "seed_pts": 12
+        },
+        "Round of 32": {
+          "model_correct": 14,
+          "seed_correct": 1,
+          "possible": 16,
+          "pts_each": 2,
+          "model_pts": 28,
+          "seed_pts": 2
+        },
+        "Sweet 16": {
+          "model_correct": 6,
+          "seed_correct": 6,
+          "possible": 12,
+          "pts_each": 4,
+          "model_pts": 24,
+          "seed_pts": 24
+        },
+        "Elite Eight": {
+          "model_correct": 1,
+          "seed_correct": 1,
+          "possible": 2,
+          "pts_each": 8,
+          "model_pts": 8,
+          "seed_pts": 8
+        },
+        "Championship": {
+          "model_correct": 1,
+          "seed_correct": 0,
+          "possible": 1,
+          "pts_each": 32,
+          "model_pts": 32,
+          "seed_pts": 0
+        }
+      },
+      "model_total_pts": 117,
+      "seed_total_pts": 46,
+      "model_accuracy": 0.746,
+      "seed_accuracy": 0.3175
+    },
+    {
+      "season": 2021,
+      "rounds": {
+        "Round of 64": {
+          "model_correct": 16,
+          "seed_correct": 7,
+          "possible": 20,
+          "pts_each": 1,
+          "model_pts": 16,
+          "seed_pts": 7
+        },
+        "Round of 32": {
+          "model_correct": 22,
+          "seed_correct": 10,
+          "possible": 31,
+          "pts_each": 2,
+          "model_pts": 44,
+          "seed_pts": 20
+        },
+        "Sweet 16": {
+          "model_correct": 7,
+          "seed_correct": 2,
+          "possible": 8,
+          "pts_each": 4,
+          "model_pts": 28,
+          "seed_pts": 8
+        },
+        "Elite Eight": {
+          "model_correct": 5,
+          "seed_correct": 1,
+          "possible": 6,
+          "pts_each": 8,
+          "model_pts": 40,
+          "seed_pts": 8
+        },
+        "Championship": {
+          "model_correct": 1,
+          "seed_correct": 1,
+          "possible": 1,
+          "pts_each": 32,
+          "model_pts": 32,
+          "seed_pts": 32
+        }
+      },
+      "model_total_pts": 160,
+      "seed_total_pts": 75,
+      "model_accuracy": 0.7727,
+      "seed_accuracy": 0.3182
+    },
+    {
+      "season": 2022,
+      "rounds": {
+        "Round of 64": {
+          "model_correct": 23,
+          "seed_correct": 10,
+          "possible": 32,
+          "pts_each": 1,
+          "model_pts": 23,
+          "seed_pts": 10
+        },
+        "Round of 32": {
+          "model_correct": 11,
+          "seed_correct": 6,
+          "possible": 16,
+          "pts_each": 2,
+          "model_pts": 22,
+          "seed_pts": 12
+        },
+        "Sweet 16": {
+          "model_correct": 7,
+          "seed_correct": 4,
+          "possible": 12,
+          "pts_each": 4,
+          "model_pts": 28,
+          "seed_pts": 16
+        },
+        "Elite Eight": {
+          "model_correct": 1,
+          "seed_correct": 1,
+          "possible": 2,
+          "pts_each": 8,
+          "model_pts": 8,
+          "seed_pts": 8
+        },
+        "Championship": {
+          "model_correct": 1,
+          "seed_correct": 0,
+          "possible": 1,
+          "pts_each": 32,
+          "model_pts": 32,
+          "seed_pts": 0
+        }
+      },
+      "model_total_pts": 113,
+      "seed_total_pts": 46,
+      "model_accuracy": 0.6825,
+      "seed_accuracy": 0.3333
+    },
+    {
+      "season": 2023,
+      "rounds": {
+        "Round of 64": {
+          "model_correct": 26,
+          "seed_correct": 7,
+          "possible": 32,
+          "pts_each": 1,
+          "model_pts": 26,
+          "seed_pts": 7
+        },
+        "Round of 32": {
+          "model_correct": 11,
+          "seed_correct": 5,
+          "possible": 16,
+          "pts_each": 2,
+          "model_pts": 22,
+          "seed_pts": 10
+        },
+        "Sweet 16": {
+          "model_correct": 5,
+          "seed_correct": 7,
+          "possible": 12,
+          "pts_each": 4,
+          "model_pts": 20,
+          "seed_pts": 28
+        },
+        "Elite Eight": {
+          "model_correct": 2,
+          "seed_correct": 0,
+          "possible": 2,
+          "pts_each": 8,
+          "model_pts": 16,
+          "seed_pts": 0
+        },
+        "Championship": {
+          "model_correct": 1,
+          "seed_correct": 0,
+          "possible": 1,
+          "pts_each": 32,
+          "model_pts": 32,
+          "seed_pts": 0
+        }
+      },
+      "model_total_pts": 116,
+      "seed_total_pts": 45,
+      "model_accuracy": 0.7143,
+      "seed_accuracy": 0.3016
+    },
+    {
+      "season": 2024,
+      "rounds": {
+        "Round of 64": {
+          "model_correct": 23,
+          "seed_correct": 11,
+          "possible": 32,
+          "pts_each": 1,
+          "model_pts": 23,
+          "seed_pts": 11
+        },
+        "Round of 32": {
+          "model_correct": 15,
+          "seed_correct": 2,
+          "possible": 16,
+          "pts_each": 2,
+          "model_pts": 30,
+          "seed_pts": 4
+        },
+        "Sweet 16": {
+          "model_correct": 7,
+          "seed_correct": 6,
+          "possible": 12,
+          "pts_each": 4,
+          "model_pts": 28,
+          "seed_pts": 24
+        },
+        "Elite Eight": {
+          "model_correct": 2,
+          "seed_correct": 0,
+          "possible": 2,
+          "pts_each": 8,
+          "model_pts": 16,
+          "seed_pts": 0
+        },
+        "Championship": {
+          "model_correct": 1,
+          "seed_correct": 1,
+          "possible": 1,
+          "pts_each": 32,
+          "model_pts": 32,
+          "seed_pts": 32
+        }
+      },
+      "model_total_pts": 129,
+      "seed_total_pts": 71,
+      "model_accuracy": 0.7619,
+      "seed_accuracy": 0.3175
+    },
+    {
+      "season": 2025,
+      "rounds": {
+        "Round of 64": {
+          "model_correct": 24,
+          "seed_correct": 7,
+          "possible": 32,
+          "pts_each": 1,
+          "model_pts": 24,
+          "seed_pts": 7
+        },
+        "Round of 32": {
+          "model_correct": 12,
+          "seed_correct": 4,
+          "possible": 16,
+          "pts_each": 2,
+          "model_pts": 24,
+          "seed_pts": 8
+        },
+        "Sweet 16": {
+          "model_correct": 11,
+          "seed_correct": 0,
+          "possible": 12,
+          "pts_each": 4,
+          "model_pts": 44,
+          "seed_pts": 0
+        },
+        "Elite Eight": {
+          "model_correct": 2,
+          "seed_correct": 0,
+          "possible": 2,
+          "pts_each": 8,
+          "model_pts": 16,
+          "seed_pts": 0
+        },
+        "Championship": {
+          "model_correct": 1,
+          "seed_correct": 0,
+          "possible": 1,
+          "pts_each": 32,
+          "model_pts": 32,
+          "seed_pts": 0
+        }
+      },
+      "model_total_pts": 140,
+      "seed_total_pts": 15,
+      "model_accuracy": 0.7937,
+      "seed_accuracy": 0.1746
+    }
+  ],
+  "avg_model_pts": 126.2,
+  "avg_seed_pts": 51.1,
+  "avg_model_acc": 0.7408,
+  "avg_seed_acc": 0.2874
+}

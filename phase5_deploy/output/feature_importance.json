@@ -1,0 +1,193 @@
+{
+  "method": "xgb_fscore",
+  "feature_importance": [
+    {
+      "feature": "diff_conf_win_pct",
+      "importance": 0.0642865342670187
+    },
+    {
+      "feature": "diff_sos",
+      "importance": 0.060268625875330044
+    },
+    {
+      "feature": "diff_avg_margin",
+      "importance": 0.05280679600505109
+    },
+    {
+      "feature": "t1_seed",
+      "importance": 0.05119963264837562
+    },
+    {
+      "feature": "diff_massey_avg_rank",
+      "importance": 0.05051084835265756
+    },
+    {
+      "feature": "t2_seed",
+      "importance": 0.04947767190908047
+    },
+    {
+      "feature": "diff_win_pct",
+      "importance": 0.03799793364711285
+    },
+    {
+      "feature": "t2_avg_margin",
+      "importance": 0.03168407760303065
+    },
+    {
+      "feature": "t2_win_pct",
+      "importance": 0.029617724715876478
+    },
+    {
+      "feature": "t1_avg_margin",
+      "importance": 0.02835495350706004
+    },
+    {
+      "feature": "t1_massey_avg_rank",
+      "importance": 0.02778096659396166
+    },
+    {
+      "feature": "diff_blk_rate",
+      "importance": 0.02341866605441396
+    },
+    {
+      "feature": "diff_stl_rate",
+      "importance": 0.023303868671794282
+    },
+    {
+      "feature": "diff_massey_spread",
+      "importance": 0.02307427390655493
+    },
+    {
+      "feature": "diff_drb_rate",
+      "importance": 0.022385489610836872
+    },
+    {
+      "feature": "diff_win_streak",
+      "importance": 0.021926300080358167
+    },
+    {
+      "feature": "t2_massey_avg_rank",
+      "importance": 0.021696705315118817
+    },
+    {
+      "feature": "diff_pace",
+      "importance": 0.021581907932499138
+    },
+    {
+      "feature": "diff_seed",
+      "importance": 0.021237515784640112
+    },
+    {
+      "feature": "t1_win_pct",
+      "importance": 0.020548731488922053
+    },
+    {
+      "feature": "diff_fg3_rate",
+      "importance": 0.019974744575823673
+    },
+    {
+      "feature": "diff_fg3_pct",
+      "importance": 0.019630352427964643
+    },
+    {
+      "feature": "diff_off_eff",
+      "importance": 0.01940075766272529
+    },
+    {
+      "feature": "diff_ast_to_ratio",
+      "importance": 0.01848237860176788
+    },
+    {
+      "feature": "t2_win_streak",
+      "importance": 0.01825278383652853
+    },
+    {
+      "feature": "diff_to_rate",
+      "importance": 0.017104810010331765
+    },
+    {
+      "feature": "diff_massey_best_rank",
+      "importance": 0.01664562047985306
+    },
+    {
+      "feature": "t2_net_eff",
+      "importance": 0.016416025714613706
+    },
+    {
+      "feature": "diff_orb_rate",
+      "importance": 0.016186430949374355
+    },
+    {
+      "feature": "diff_ft_rate",
+      "importance": 0.016071633566754676
+    },
+    {
+      "feature": "diff_def_eff",
+      "importance": 0.015497646653656296
+    },
+    {
+      "feature": "t1_win_streak",
+      "importance": 0.015497646653656296
+    },
+    {
+      "feature": "diff_h2h_win_pct_10",
+      "importance": 0.0135460911491218
+    },
+    {
+      "feature": "diff_rest_days",
+      "importance": 0.013086901618643095
+    },
+    {
+      "feature": "diff_net_eff",
+      "importance": 0.013086901618643095
+    },
+    {
+      "feature": "t1_net_eff",
+      "importance": 0.013086901618643095
+    },
+    {
+      "feature": "diff_games_played",
+      "importance": 0.012742509470784065
+    },
+    {
+      "feature": "diff_efg_pct",
+      "importance": 0.01228331994030536
+    },
+    {
+      "feature": "diff_h2h_win_pct_5",
+      "importance": 0.008035816783377338
+    },
+    {
+      "feature": "diff_opp_to_rate",
+      "importance": 0.005739869130983814
+    },
+    {
+      "feature": "diff_games_last_7",
+      "importance": 0.004706692687406727
+    },
+    {
+      "feature": "diff_massey_n_systems",
+      "importance": 0.004591895304787051
+    },
+    {
+      "feature": "diff_opp_efg_pct",
+      "importance": 0.003673516243829641
+    },
+    {
+      "feature": "diff_opp_ft_rate",
+      "importance": 0.0030995293307312594
+    }
+  ],
+  "top_features": [
+    "diff_conf_win_pct",
+    "diff_sos",
+    "diff_avg_margin",
+    "t1_seed",
+    "diff_massey_avg_rank",
+    "t2_seed",
+    "diff_win_pct",
+    "t2_avg_margin",
+    "t2_win_pct",
+    "t1_avg_margin"
+  ]
+}

@@ -1,0 +1,402 @@
+{
+  "1v1": {
+    "games": 25,
+    "upsets": 0,
+    "upset_rate": 0.0
+  },
+  "1v2": {
+    "games": 71,
+    "upsets": 30,
+    "upset_rate": 0.4225
+  },
+  "1v3": {
+    "games": 38,
+    "upsets": 14,
+    "upset_rate": 0.3684
+  },
+  "1v4": {
+    "games": 72,
+    "upsets": 20,
+    "upset_rate": 0.2778
+  },
+  "1v5": {
+    "games": 55,
+    "upsets": 11,
+    "upset_rate": 0.2
+  },
+  "1v6": {
+    "games": 12,
+    "upsets": 3,
+    "upset_rate": 0.25
+  },
+  "1v7": {
+    "games": 7,
+    "upsets": 1,
+    "upset_rate": 0.1429
+  },
+  "1v8": {
+    "games": 80,
+    "upsets": 17,
+    "upset_rate": 0.2125
+  },
+  "1v9": {
+    "games": 82,
+    "upsets": 6,
+    "upset_rate": 0.0732
+  },
+  "1v10": {
+    "games": 7,
+    "upsets": 1,
+    "upset_rate": 0.1429
+  },
+  "1v11": {
+    "games": 10,
+    "upsets": 4,
+    "upset_rate": 0.4
+  },
+  "1v12": {
+    "games": 20,
+    "upsets": 0,
+    "upset_rate": 0.0
+  },
+  "1v13": {
+    "games": 4,
+    "upsets": 0,
+    "upset_rate": 0.0
+  },
+  "1v16": {
+    "games": 160,
+    "upsets": 2,
+    "upset_rate": 0.0125
+  },
+  "2v2": {
+    "games": 3,
+    "upsets": 0,
+    "upset_rate": 0.0
+  },
+  "2v3": {
+    "games": 62,
+    "upsets": 24,
+    "upset_rate": 0.3871
+  },
+  "2v4": {
+    "games": 8,
+    "upsets": 4,
+    "upset_rate": 0.5
+  },
+  "2v5": {
+    "games": 7,
+    "upsets": 6,
+    "upset_rate": 0.8571
+  },
+  "2v6": {
+    "games": 34,
+    "upsets": 8,
+    "upset_rate": 0.2353
+  },
+  "2v7": {
+    "games": 92,
+    "upsets": 27,
+    "upset_rate": 0.2935
+  },
+  "2v8": {
+    "games": 8,
+    "upsets": 6,
+    "upset_rate": 0.75
+  },
+  "2v9": {
+    "games": 1,
+    "upsets": 1,
+    "upset_rate": 1.0
+  },
+  "2v10": {
+    "games": 57,
+    "upsets": 20,
+    "upset_rate": 0.3509
+  },
+  "2v11": {
+    "games": 20,
+    "upsets": 4,
+    "upset_rate": 0.2
+  },
+  "2v12": {
+    "games": 2,
+    "upsets": 0,
+    "upset_rate": 0.0
+  },
+  "2v15": {
+    "games": 160,
+    "upsets": 11,
+    "upset_rate": 0.0688
+  },
+  "3v3": {
+    "games": 1,
+    "upsets": 0,
+    "upset_rate": 0.0
+  },
+  "3v4": {
+    "games": 8,
+    "upsets": 4,
+    "upset_rate": 0.5
+  },
+  "3v5": {
+    "games": 3,
+    "upsets": 1,
+    "upset_rate": 0.3333
+  },
+  "3v6": {
+    "games": 82,
+    "upsets": 33,
+    "upset_rate": 0.4024
+  },
+  "3v7": {
+    "games": 16,
+    "upsets": 6,
+    "upset_rate": 0.375
+  },
+  "3v8": {
+    "games": 2,
+    "upsets": 0,
+    "upset_rate": 0.0
+  },
+  "3v9": {
+    "games": 3,
+    "upsets": 1,
+    "upset_rate": 0.3333
+  },
+  "3v10": {
+    "games": 14,
+    "upsets": 4,
+    "upset_rate": 0.2857
+  },
+  "3v11": {
+    "games": 57,
+    "upsets": 20,
+    "upset_rate": 0.3509
+  },
+  "3v14": {
+    "games": 160,
+    "upsets": 23,
+    "upset_rate": 0.1437
+  },
+  "3v15": {
+    "games": 3,
+    "upsets": 1,
+    "upset_rate": 0.3333
+  },
+  "4v4": {
+    "games": 1,
+    "upsets": 0,
+    "upset_rate": 0.0
+  },
+  "4v5": {
+    "games": 85,
+    "upsets": 37,
+    "upset_rate": 0.4353
+  },
+  "4v6": {
+    "games": 5,
+    "upsets": 2,
+    "upset_rate": 0.4
+  },
+  "4v7": {
+    "games": 5,
+    "upsets": 3,
+    "upset_rate": 0.6
+  },
+  "4v8": {
+    "games": 11,
+    "upsets": 6,
+    "upset_rate": 0.5455
+  },
+  "4v9": {
+    "games": 4,
+    "upsets": 2,
+    "upset_rate": 0.5
+  },
+  "4v10": {
+    "games": 2,
+    "upsets": 0,
+    "upset_rate": 0.0
+  },
+  "4v11": {
+    "games": 1,
+    "upsets": 1,
+    "upset_rate": 1.0
+  },
+  "4v12": {
+    "games": 45,
+    "upsets": 13,
+    "upset_rate": 0.2889
+  },
+  "4v13": {
+    "games": 160,
+    "upsets": 33,
+    "upset_rate": 0.2062
+  },
+  "5v5": {
+    "games": 1,
+    "upsets": 0,
+    "upset_rate": 0.0
+  },
+  "5v6": {
+    "games": 2,
+    "upsets": 0,
+    "upset_rate": 0.0
+  },
+  "5v8": {
+    "games": 3,
+    "upsets": 2,
+    "upset_rate": 0.6667
+  },
+  "5v9": {
+    "games": 4,
+    "upsets": 2,
+    "upset_rate": 0.5
+  },
+  "5v10": {
+    "games": 1,
+    "upsets": 0,
+    "upset_rate": 0.0
+  },
+  "5v12": {
+    "games": 160,
+    "upsets": 57,
+    "upset_rate": 0.3563
+  },
+  "5v13": {
+    "games": 21,
+    "upsets": 3,
+    "upset_rate": 0.1429
+  },
+  "6v7": {
+    "games": 8,
+    "upsets": 3,
+    "upset_rate": 0.375
+  },
+  "6v8": {
+    "games": 1,
+    "upsets": 1,
+    "upset_rate": 1.0
+  },
+  "6v10": {
+    "games": 6,
+    "upsets": 2,
+    "upset_rate": 0.3333
+  },
+  "6v11": {
+    "games": 160,
+    "upsets": 62,
+    "upset_rate": 0.3875
+  },
+  "6v14": {
+    "games": 16,
+    "upsets": 2,
+    "upset_rate": 0.125
+  },
+  "6v15": {
+    "games": 1,
+    "upsets": 0,
+    "upset_rate": 0.0
+  },
+  "7v8": {
+    "games": 2,
+    "upsets": 1,
+    "upset_rate": 0.5
+  },
+  "7v10": {
+    "games": 159,
+    "upsets": 62,
+    "upset_rate": 0.3899
+  },
+  "7v11": {
+    "games": 4,
+    "upsets": 4,
+    "upset_rate": 1.0
+  },
+  "7v14": {
+    "games": 1,
+    "upsets": 0,
+    "upset_rate": 0.0
+  },
+  "7v15": {
+    "games": 6,
+    "upsets": 4,
+    "upset_rate": 0.6667
+  },
+  "8v9": {
+    "games": 160,
+    "upsets": 83,
+    "upset_rate": 0.5188
+  },
+  "8v11": {
+    "games": 1,
+    "upsets": 0,
+    "upset_rate": 0.0
+  },
+  "8v12": {
+    "games": 2,
+    "upsets": 2,
+    "upset_rate": 1.0
+  },
+  "8v13": {
+    "games": 1,
+    "upsets": 0,
+    "upset_rate": 0.0
+  },
+  "8v15": {
+    "games": 1,
+    "upsets": 0,
+    "upset_rate": 0.0
+  },
+  "9v11": {
+    "games": 1,
+    "upsets": 1,
+    "upset_rate": 1.0
+  },
+  "9v13": {
+    "games": 1,
+    "upsets": 0,
+    "upset_rate": 0.0
+  },
+  "9v16": {
+    "games": 2,
+    "upsets": 0,
+    "upset_rate": 0.0
+  },
+  "10v11": {
+    "games": 4,
+    "upsets": 2,
+    "upset_rate": 0.5
+  },
+  "10v14": {
+    "games": 1,
+    "upsets": 0,
+    "upset_rate": 0.0
+  },
+  "10v15": {
+    "games": 5,
+    "upsets": 0,
+    "upset_rate": 0.0
+  },
+  "11v11": {
+    "games": 2,
+    "upsets": 0,
+    "upset_rate": 0.0
+  },
+  "11v14": {
+    "games": 7,
+    "upsets": 0,
+    "upset_rate": 0.0
+  },
+  "12v13": {
+    "games": 12,
+    "upsets": 3,
+    "upset_rate": 0.25
+  },
+  "16v16": {
+    "games": 2,
+    "upsets": 0,
+    "upset_rate": 0.0
+  }
+}

@@ -1,0 +1,1268 @@
+{
+  "games": [
+    {
+      "id": "928e4bee3a98148fef88d81b01a27cd5",
+      "home_team": "Tulsa Golden Hurricane",
+      "away_team": "North Texas Mean Green",
+      "commence_time": "2026-03-13T19:35:50Z",
+      "h2h": {
+        "away": {
+          "price": 500,
+          "best_book": "Bovada"
+        },
+        "home": {
+          "price": -109,
+          "best_book": "BetRivers"
+        }
+      },
+      "spread": {},
+      "total": {}
+    },
+    {
+      "id": "16f27efd2cea279524c2aa1581c8e94d",
+      "home_team": "Vanderbilt Commodores",
+      "away_team": "Tennessee Volunteers",
+      "commence_time": "2026-03-13T20:00:37Z",
+      "h2h": {
+        "away": {
+          "price": 3300,
+          "best_book": "BetMGM"
+        },
+        "home": {
+          "price": -750,
+          "best_book": "Bovada"
+        }
+      },
+      "spread": {
+        "away": {
+          "price": -105,
+          "point": 7.5,
+          "best_book": "DraftKings"
+        },
+        "home": {
+          "price": 118,
+          "point": -7.5,
+          "best_book": "BetMGM"
+        }
+      },
+      "total": {
+        "over": {
+          "price": 150,
+          "point": 147.5,
+          "best_book": "DraftKings"
+        },
+        "under": {
+          "price": -195,
+          "point": 147.5,
+          "best_book": "DraftKings"
+        }
+      }
+    },
+    {
+      "id": "7ddda6367079446ebe1e18815fd5cf46",
+      "home_team": "Toledo Rockets",
+      "away_team": "Massachusetts Minutemen",
+      "commence_time": "2026-03-13T21:12:00Z",
+      "h2h": {
+        "away": {
+          "price": 1000,
+          "best_book": "Bovada"
+        },
+        "home": {
+          "price": -450,
+          "best_book": "BetMGM"
+        }
+      },
+      "spread": {
+        "away": {
+          "price": -105,
+          "point": 6.5,
+          "best_book": "BetMGM"
+        },
+        "home": {
+          "price": -118,
+          "point": -6.5,
+          "best_book": "FanDuel"
+        }
+      },
+      "total": {
+        "over": {
+          "price": -104,
+          "point": 162.5,
+          "best_book": "FanDuel"
+        },
+        "under": {
+          "price": -115,
+          "point": 162.5,
+          "best_book": "BetRivers"
+        }
+      }
+    },
+    {
+      "id": "c80f7732065642aa9f8e49e1ab94ba87",
+      "home_team": "VCU Rams",
+      "away_team": "Duquesne Dukes",
+      "commence_time": "2026-03-13T21:20:29Z",
+      "h2h": {
+        "away": {
+          "price": 550,
+          "best_book": "Bovada"
+        },
+        "home": {
+          "price": -550,
+          "best_book": "BetMGM"
+        }
+      },
+      "spread": {
+        "away": {
+          "price": -108,
+          "point": 8.5,
+          "best_book": "BetRivers"
+        },
+        "home": {
+          "price": -110,
+          "point": -8.5,
+          "best_book": "DraftKings"
+        }
+      },
+      "total": {
+        "over": {
+          "price": -115,
+          "point": 149.5,
+          "best_book": "BetRivers"
+        },
+        "under": {
+          "price": -110,
+          "point": 149.5,
+          "best_book": "DraftKings"
+        }
+      }
+    },
+    {
+      "id": "d384cae20553418a82d5761ac27717ca",
+      "home_team": "St. John's Red Storm",
+      "away_team": "Seton Hall Pirates",
+      "commence_time": "2026-03-13T21:30:00Z",
+      "h2h": {
+        "away": {
+          "price": 800,
+          "best_book": "Bovada"
+        },
+        "home": {
+          "price": -1000,
+          "best_book": "FanDuel"
+        }
+      },
+      "spread": {
+        "away": {
+          "price": -129,
+          "point": 10.5,
+          "best_book": "BetRivers"
+        },
+        "home": {
+          "price": 100,
+          "point": -10.5,
+          "best_book": "FanDuel"
+        }
+      },
+      "total": {
+        "over": {
+          "price": -115,
+          "point": 139.5,
+          "best_book": "Bovada"
+        },
+        "under": {
+          "price": -105,
+          "point": 139.5,
+          "best_book": "BetMGM"
+        }
+      }
+    },
+    {
+      "id": "529e0f6467c1484c19f0d913f1d482bf",
+      "home_team": "Howard Bison",
+      "away_team": "South Carolina St Bulldogs",
+      "commence_time": "2026-03-13T22:03:08Z",
+      "h2h": {
+        "home": {
+          "price": -1000,
+          "best_book": "Bovada"
+        },
+        "away": {
+          "price": 1400,
+          "best_book": "FanDuel"
+        }
+      },
+      "spread": {
+        "home": {
+          "price": -106,
+          "point": -16.5,
+          "best_book": "FanDuel"
+        },
+        "away": {
+          "price": -120,
+          "point": 16.5,
+          "best_book": "DraftKings"
+        }
+      },
+      "total": {
+        "over": {
+          "price": -118,
+          "point": 140.5,
+          "best_book": "BetMGM"
+        },
+        "under": {
+          "price": -110,
+          "point": 140.5,
+          "best_book": "BetMGM"
+        }
+      }
+    },
+    {
+      "id": "407e16214de4f4e2604b15a989bd585b",
+      "home_team": "Nebraska Cornhuskers",
+      "away_team": "Purdue Boilermakers",
+      "commence_time": "2026-03-13T22:30:00Z",
+      "h2h": {
+        "home": {
+          "price": 168,
+          "best_book": "FanDuel"
+        },
+        "away": {
+          "price": -187,
+          "best_book": "BetOnline.ag"
+        }
+      },
+      "spread": {
+        "home": {
+          "price": -106,
+          "point": 4.5,
+          "best_book": "FanDuel"
+        },
+        "away": {
+          "price": -104,
+          "point": -4.5,
+          "best_book": "LowVig.ag"
+        }
+      },
+      "total": {
+        "over": {
+          "price": -105,
+          "point": 145.5,
+          "best_book": "DraftKings"
+        },
+        "under": {
+          "price": -105,
+          "point": 145.5,
+          "best_book": "BetMGM"
+        }
+      }
+    },
+    {
+      "id": "21a7dcd1612025c68c433caee2577793",
+      "home_team": "Alabama Crimson Tide",
+      "away_team": "Ole Miss Rebels",
+      "commence_time": "2026-03-13T23:00:00Z",
+      "h2h": {
+        "home": {
+          "price": -715,
+          "best_book": "BetRivers"
+        },
+        "away": {
+          "price": 650,
+          "best_book": "BetMGM"
+        }
+      },
+      "spread": {
+        "home": {
+          "price": -105,
+          "point": -12.5,
+          "best_book": "DraftKings"
+        },
+        "away": {
+          "price": -110,
+          "point": 12.5,
+          "best_book": "BetMGM"
+        }
+      },
+      "total": {
+        "over": {
+          "price": -110,
+          "point": 165.5,
+          "best_book": "BetMGM"
+        },
+        "under": {
+          "price": -104,
+          "point": 165.5,
+          "best_book": "LowVig.ag"
+        }
+      }
+    },
+    {
+      "id": "3992c970e1c95aa827b75794b93d5608",
+      "home_team": "Arizona Wildcats",
+      "away_team": "Iowa State Cyclones",
+      "commence_time": "2026-03-13T23:00:00Z",
+      "h2h": {
+        "home": {
+          "price": -160,
+          "best_book": "BetMGM"
+        },
+        "away": {
+          "price": 145,
+          "best_book": "LowVig.ag"
+        }
+      },
+      "spread": {
+        "home": {
+          "price": 100,
+          "point": -3.5,
+          "best_book": "LowVig.ag"
+        },
+        "away": {
+          "price": -112,
+          "point": 3.5,
+          "best_book": "LowVig.ag"
+        }
+      },
+      "total": {
+        "over": {
+          "price": -108,
+          "point": 144.5,
+          "best_book": "DraftKings"
+        },
+        "under": {
+          "price": -108,
+          "point": 144.5,
+          "best_book": "LowVig.ag"
+        }
+      }
+    },
+    {
+      "id": "1d99d6d17af806bcd8b34aec6e4609c8",
+      "home_team": "Virginia Cavaliers",
+      "away_team": "Miami Hurricanes",
+      "commence_time": "2026-03-13T23:00:00Z",
+      "h2h": {
+        "away": {
+          "price": 150,
+          "best_book": "Bovada"
+        },
+        "home": {
+          "price": -167,
+          "best_book": "BetRivers"
+        }
+      },
+      "spread": {
+        "away": {
+          "price": -101,
+          "point": 3.5,
+          "best_book": "LowVig.ag"
+        },
+        "home": {
+          "price": -110,
+          "point": -3.5,
+          "best_book": "DraftKings"
+        }
+      },
+      "total": {
+        "over": {
+          "price": -108,
+          "point": 145.5,
+          "best_book": "LowVig.ag"
+        },
+        "under": {
+          "price": -108,
+          "point": 145.5,
+          "best_book": "LowVig.ag"
+        }
+      }
+    },
+    {
+      "id": "baa4374670f55f05b211a5adfaddab0c",
+      "home_team": "Akron Zips",
+      "away_team": "Kent State Golden Flashes",
+      "commence_time": "2026-03-13T23:30:00Z",
+      "h2h": {
+        "home": {
+          "price": -285,
+          "best_book": "BetMGM"
+        },
+        "away": {
+          "price": 260,
+          "best_book": "DraftKings"
+        }
+      },
+      "spread": {
+        "home": {
+          "price": -106,
+          "point": -6.5,
+          "best_book": "LowVig.ag"
+        },
+        "away": {
+          "price": -102,
+          "point": 6.5,
+          "best_book": "FanDuel"
+        }
+      },
+      "total": {
+        "over": {
+          "price": -108,
+          "point": 162.5,
+          "best_book": "LowVig.ag"
+        },
+        "under": {
+          "price": -105,
+          "point": 162.5,
+          "best_book": "FanDuel"
+        }
+      }
+    },
+    {
+      "id": "775b314f1a92017f9b5de0c42db5229f",
+      "home_team": "Saint Joseph's Hawks",
+      "away_team": "Davidson Wildcats",
+      "commence_time": "2026-03-13T23:30:00Z",
+      "h2h": {
+        "away": {
+          "price": 120,
+          "best_book": "Bovada"
+        },
+        "home": {
+          "price": -135,
+          "best_book": "DraftKings"
+        }
+      },
+      "spread": {
+        "away": {
+          "price": -115,
+          "point": 2.5,
+          "best_book": "DraftKings"
+        },
+        "home": {
+          "price": -106,
+          "point": -2.0,
+          "best_book": "LowVig.ag"
+        }
+      },
+      "total": {
+        "over": {
+          "price": -107,
+          "point": 132.5,
+          "best_book": "BetRivers"
+        },
+        "under": {
+          "price": -108,
+          "point": 132.5,
+          "best_book": "DraftKings"
+        }
+      }
+    },
+    {
+      "id": "18ebaab5e1add0ce04c597dcb6a3e18e",
+      "home_team": "North Carolina Central Eagles",
+      "away_team": "Delaware St Hornets",
+      "commence_time": "2026-03-14T00:00:00Z",
+      "h2h": {
+        "away": {
+          "price": 157,
+          "best_book": "BetOnline.ag"
+        },
+        "home": {
+          "price": -170,
+          "best_book": "DraftKings"
+        }
+      },
+      "spread": {
+        "away": {
+          "price": 101,
+          "point": 3.5,
+          "best_book": "LowVig.ag"
+        },
+        "home": {
+          "price": -108,
+          "point": -3.5,
+          "best_book": "FanDuel"
+        }
+      },
+      "total": {
+        "over": {
+          "price": -110,
+          "point": 131.5,
+          "best_book": "BetMGM"
+        },
+        "under": {
+          "price": -103,
+          "point": 131.5,
+          "best_book": "LowVig.ag"
+        }
+      }
+    },
+    {
+      "id": "9a8adcbd2e8aa850f07144015ce261ac",
+      "home_team": "UConn Huskies",
+      "away_team": "Georgetown Hoyas",
+      "commence_time": "2026-03-14T00:00:18Z",
+      "h2h": {
+        "away": {
+          "price": 860,
+          "best_book": "FanDuel"
+        },
+        "home": {
+          "price": -1250,
+          "best_book": "BetRivers"
+        }
+      },
+      "spread": {
+        "away": {
+          "price": -106,
+          "point": 14.5,
+          "best_book": "LowVig.ag"
+        },
+        "home": {
+          "price": -106,
+          "point": -14.5,
+          "best_book": "LowVig.ag"
+        }
+      },
+      "total": {
+        "over": {
+          "price": -105,
+          "point": 138.5,
+          "best_book": "Bovada"
+        },
+        "under": {
+          "price": -105,
+          "point": 138.5,
+          "best_book": "BetMGM"
+        }
+      }
+    },
+    {
+      "id": "3ff358f8355c345604c9feb1a13eede4",
+      "home_team": "Florida A&M Rattlers",
+      "away_team": "Southern Jaguars",
+      "commence_time": "2026-03-14T00:30:00Z",
+      "h2h": {
+        "home": {
+          "price": 110,
+          "best_book": "DraftKings"
+        },
+        "away": {
+          "price": -120,
+          "best_book": "LowVig.ag"
+        }
+      },
+      "spread": {
+        "home": {
+          "price": -106,
+          "point": 1.5,
+          "best_book": "FanDuel"
+        },
+        "away": {
+          "price": 100,
+          "point": -1.5,
+          "best_book": "LowVig.ag"
+        }
+      },
+      "total": {
+        "over": {
+          "price": -105,
+          "point": 141.5,
+          "best_book": "BetMGM"
+        },
+        "under": {
+          "price": -105,
+          "point": 141.5,
+          "best_book": "FanDuel"
+        }
+      }
+    },
+    {
+      "id": "fa9593dab05dbc9b57a9702b1d100ee6",
+      "home_team": "UC Irvine Anteaters",
+      "away_team": "CSU Northridge Matadors",
+      "commence_time": "2026-03-14T01:00:00Z",
+      "h2h": {
+        "away": {
+          "price": 157,
+          "best_book": "BetOnline.ag"
+        },
+        "home": {
+          "price": -175,
+          "best_book": "BetMGM"
+        }
+      },
+      "spread": {
+        "away": {
+          "price": -105,
+          "point": 3.5,
+          "best_book": "DraftKings"
+        },
+        "home": {
+          "price": -106,
+          "point": -4.0,
+          "best_book": "LowVig.ag"
+        }
+      },
+      "total": {
+        "over": {
+          "price": -108,
+          "point": 152.5,
+          "best_book": "LowVig.ag"
+        },
+        "under": {
+          "price": -108,
+          "point": 152.5,
+          "best_book": "DraftKings"
+        }
+      }
+    },
+    {
+      "id": "4281039c140bcb13efed3eededacb05b",
+      "home_team": "Michigan St Spartans",
+      "away_team": "UCLA Bruins",
+      "commence_time": "2026-03-14T01:00:00Z",
+      "h2h": {
+        "home": {
+          "price": -225,
+          "best_book": "BetRivers"
+        },
+        "away": {
+          "price": 195,
+          "best_book": "BetMGM"
+        }
+      },
+      "spread": {
+        "home": {
+          "price": -105,
+          "point": -5.5,
+          "best_book": "FanDuel"
+        },
+        "away": {
+          "price": -101,
+          "point": 5.0,
+          "best_book": "LowVig.ag"
+        }
+      },
+      "total": {
+        "over": {
+          "price": -110,
+          "point": 141.5,
+          "best_book": "FanDuel"
+        },
+        "under": {
+          "price": -106,
+          "point": 141.5,
+          "best_book": "LowVig.ag"
+        }
+      }
+    },
+    {
+      "id": "c6c548d3cfb86a2d4d31905dbaed32b7",
+      "home_team": "Utah Valley Wolverines",
+      "away_team": "UT-Arlington Mavericks",
+      "commence_time": "2026-03-14T01:00:00Z",
+      "h2h": {
+        "away": {
+          "price": 334,
+          "best_book": "BetOnline.ag"
+        },
+        "home": {
+          "price": -380,
+          "best_book": "BetUS"
+        }
+      },
+      "spread": {
+        "away": {
+          "price": -110,
+          "point": 8.5,
+          "best_book": "BetUS"
+        },
+        "home": {
+          "price": -105,
+          "point": -8.5,
+          "best_book": "DraftKings"
+        }
+      },
+      "total": {
+        "over": {
+          "price": -110,
+          "point": 136.0,
+          "best_book": "LowVig.ag"
+        },
+        "under": {
+          "price": -106,
+          "point": 136.0,
+          "best_book": "LowVig.ag"
+        }
+      }
+    },
+    {
+      "id": "a830e1cd93ec40bd26216ef178730876",
+      "home_team": "Utah State Aggies",
+      "away_team": "Nevada Wolf Pack",
+      "commence_time": "2026-03-14T01:30:00Z",
+      "h2h": {
+        "away": {
+          "price": 235,
+          "best_book": "BetUS"
+        },
+        "home": {
+          "price": -275,
+          "best_book": "BetMGM"
+        }
+      },
+      "spread": {
+        "away": {
+          "price": -105,
+          "point": 6.5,
+          "best_book": "Bovada"
+        },
+        "home": {
+          "price": -105,
+          "point": -6.5,
+          "best_book": "BetMGM"
+        }
+      },
+      "total": {
+        "over": {
+          "price": -110,
+          "point": 144.5,
+          "best_book": "FanDuel"
+        },
+        "under": {
+          "price": -110,
+          "point": 144.5,
+          "best_book": "FanDuel"
+        }
+      }
+    },
+    {
+      "id": "5c378e4540400301b2408738d1fb3a95",
+      "home_team": "Arkansas Razorbacks",
+      "away_team": "Oklahoma Sooners",
+      "commence_time": "2026-03-14T01:30:18Z",
+      "h2h": {
+        "home": {
+          "price": -260,
+          "best_book": "Bovada"
+        },
+        "away": {
+          "price": 230,
+          "best_book": "DraftKings"
+        }
+      },
+      "spread": {
+        "home": {
+          "price": -105,
+          "point": -6.5,
+          "best_book": "DraftKings"
+        },
+        "away": {
+          "price": -110,
+          "point": 6.5,
+          "best_book": "FanDuel"
+        }
+      },
+      "total": {
+        "over": {
+          "price": -105,
+          "point": 166.5,
+          "best_book": "DraftKings"
+        },
+        "under": {
+          "price": -110,
+          "point": 166.5,
+          "best_book": "FanDuel"
+        }
+      }
+    },
+    {
+      "id": "f5fd956cdeefaa1a87f196aec55d5b32",
+      "home_team": "Houston Cougars",
+      "away_team": "Kansas Jayhawks",
+      "commence_time": "2026-03-14T01:30:31Z",
+      "h2h": {
+        "home": {
+          "price": -205,
+          "best_book": "FanDuel"
+        },
+        "away": {
+          "price": 190,
+          "best_book": "Bovada"
+        }
+      },
+      "spread": {
+        "home": {
+          "price": -115,
+          "point": -4.5,
+          "best_book": "FanDuel"
+        },
+        "away": {
+          "price": -105,
+          "point": 4.5,
+          "best_book": "FanDuel"
+        }
+      },
+      "total": {
+        "over": {
+          "price": -105,
+          "point": 139.5,
+          "best_book": "DraftKings"
+        },
+        "under": {
+          "price": -110,
+          "point": 139.5,
+          "best_book": "BetMGM"
+        }
+      }
+    },
+    {
+      "id": "ffeeea6fb5e99930b63f8e6a35e5f46d",
+      "home_team": "Duke Blue Devils",
+      "away_team": "Clemson Tigers",
+      "commence_time": "2026-03-14T01:30:32Z",
+      "h2h": {
+        "away": {
+          "price": 476,
+          "best_book": "BetOnline.ag"
+        },
+        "home": {
+          "price": -625,
+          "best_book": "DraftKings"
+        }
+      },
+      "spread": {
+        "away": {
+          "price": -108,
+          "point": 10.5,
+          "best_book": "DraftKings"
+        },
+        "home": {
+          "price": -110,
+          "point": -10.5,
+          "best_book": "FanDuel"
+        }
+      },
+      "total": {
+        "over": {
+          "price": -108,
+          "point": 135.5,
+          "best_book": "BetRivers"
+        },
+        "under": {
+          "price": -108,
+          "point": 135.5,
+          "best_book": "DraftKings"
+        }
+      }
+    },
+    {
+      "id": "8251e9d405a7ddb020278dfbfc3dc5fc",
+      "home_team": "Hawai'i Rainbow Warriors",
+      "away_team": "CSU Fullerton Titans",
+      "commence_time": "2026-03-14T03:30:00Z",
+      "h2h": {
+        "away": {
+          "price": 190,
+          "best_book": "DraftKings"
+        },
+        "home": {
+          "price": -210,
+          "best_book": "FanDuel"
+        }
+      },
+      "spread": {
+        "away": {
+          "price": -105,
+          "point": 4.5,
+          "best_book": "BetMGM"
+        },
+        "home": {
+          "price": -110,
+          "point": -5.0,
+          "best_book": "BetUS"
+        }
+      },
+      "total": {
+        "over": {
+          "price": -110,
+          "point": 156.5,
+          "best_book": "FanDuel"
+        },
+        "under": {
+          "price": -108,
+          "point": 156.5,
+          "best_book": "DraftKings"
+        }
+      }
+    },
+    {
+      "id": "e4075cfa03c9492e4840382ae52cd053",
+      "home_team": "Cal Baptist Lancers",
+      "away_team": "Utah Tech Trailblazers",
+      "commence_time": "2026-03-14T03:30:00Z",
+      "h2h": {
+        "home": {
+          "price": -345,
+          "best_book": "FanDuel"
+        },
+        "away": {
+          "price": 330,
+          "best_book": "LowVig.ag"
+        }
+      },
+      "spread": {
+        "home": {
+          "price": -108,
+          "point": -8.5,
+          "best_book": "DraftKings"
+        },
+        "away": {
+          "price": -105,
+          "point": 8.5,
+          "best_book": "BetMGM"
+        }
+      },
+      "total": {
+        "over": {
+          "price": -110,
+          "point": 143.5,
+          "best_book": "FanDuel"
+        },
+        "under": {
+          "price": -103,
+          "point": 143.5,
+          "best_book": "LowVig.ag"
+        }
+      }
+    },
+    {
+      "id": "46e248b8934f1dfd85e7ebf63dbf516f",
+      "home_team": "San Diego St Aztecs",
+      "away_team": "New Mexico Lobos",
+      "commence_time": "2026-03-14T04:00:00Z",
+      "h2h": {
+        "away": {
+          "price": 120,
+          "best_book": "DraftKings"
+        },
+        "home": {
+          "price": -138,
+          "best_book": "LowVig.ag"
+        }
+      },
+      "spread": {
+        "away": {
+          "price": -107,
+          "point": 2.5,
+          "best_book": "BetRivers"
+        },
+        "home": {
+          "price": -105,
+          "point": -2.5,
+          "best_book": "DraftKings"
+        }
+      },
+      "total": {
+        "over": {
+          "price": -105,
+          "point": 150.5,
+          "best_book": "FanDuel"
+        },
+        "under": {
+          "price": -110,
+          "point": 150.5,
+          "best_book": "BetRivers"
+        }
+      }
+    },
+    {
+      "id": "5461763908c1001580539aecc9d19862",
+      "home_team": "Yale Bulldogs",
+      "away_team": "Cornell Big Red",
+      "commence_time": "2026-03-14T15:00:00Z",
+      "h2h": {
+        "away": {
+          "price": 145,
+          "best_book": "BetMGM"
+        },
+        "home": {
+          "price": -166,
+          "best_book": "FanDuel"
+        }
+      },
+      "spread": {
+        "away": {
+          "price": -106,
+          "point": 3.5,
+          "best_book": "LowVig.ag"
+        },
+        "home": {
+          "price": -106,
+          "point": -3.5,
+          "best_book": "LowVig.ag"
+        }
+      },
+      "total": {
+        "over": {
+          "price": -110,
+          "point": 164.5,
+          "best_book": "FanDuel"
+        },
+        "under": {
+          "price": -109,
+          "point": 164.5,
+          "best_book": "BetRivers"
+        }
+      }
+    },
+    {
+      "id": "aea58d8ff584b6e68064aafab185d541",
+      "home_team": "UMBC Retrievers",
+      "away_team": "Vermont Catamounts",
+      "commence_time": "2026-03-14T15:00:00Z",
+      "h2h": {
+        "home": {
+          "price": -132,
+          "best_book": "FanDuel"
+        },
+        "away": {
+          "price": 120,
+          "best_book": "BetRivers"
+        }
+      },
+      "spread": {
+        "home": {
+          "price": -106,
+          "point": -3.0,
+          "best_book": "LowVig.ag"
+        },
+        "away": {
+          "price": -107,
+          "point": 2.5,
+          "best_book": "BetRivers"
+        }
+      },
+      "total": {
+        "over": {
+          "price": -108,
+          "point": 137.0,
+          "best_book": "LowVig.ag"
+        },
+        "under": {
+          "price": -108,
+          "point": 137.0,
+          "best_book": "LowVig.ag"
+        }
+      }
+    },
+    {
+      "id": "85f2f730d0ef7de7169d06cc4bfce1a2",
+      "home_team": "Saint Louis Billikens",
+      "away_team": "Dayton Flyers",
+      "commence_time": "2026-03-14T17:00:00Z",
+      "h2h": {
+        "away": {
+          "price": 200,
+          "best_book": "DraftKings"
+        },
+        "home": {
+          "price": -225,
+          "best_book": "FanDuel"
+        }
+      },
+      "spread": {
+        "away": {
+          "price": -102,
+          "point": 5.5,
+          "best_book": "BetMGM"
+        },
+        "home": {
+          "price": -110,
+          "point": -5.5,
+          "best_book": "DraftKings"
+        }
+      },
+      "total": {
+        "over": {
+          "price": -110,
+          "point": 148.5,
+          "best_book": "DraftKings"
+        },
+        "under": {
+          "price": -103,
+          "point": 148.5,
+          "best_book": "LowVig.ag"
+        }
+      }
+    },
+    {
+      "id": "c6ff17d86d4e0789631a4be4e44ed401",
+      "home_team": "Michigan Wolverines",
+      "away_team": "Wisconsin Badgers",
+      "commence_time": "2026-03-14T17:00:11Z",
+      "h2h": {
+        "home": {
+          "price": -750,
+          "best_book": "FanDuel"
+        },
+        "away": {
+          "price": 575,
+          "best_book": "DraftKings"
+        }
+      },
+      "spread": {
+        "home": {
+          "price": -105,
+          "point": -12.5,
+          "best_book": "DraftKings"
+        },
+        "away": {
+          "price": -110,
+          "point": 12.5,
+          "best_book": "FanDuel"
+        }
+      },
+      "total": {
+        "over": {
+          "price": -108,
+          "point": 160.5,
+          "best_book": "LowVig.ag"
+        },
+        "under": {
+          "price": -108,
+          "point": 160.5,
+          "best_book": "LowVig.ag"
+        }
+      }
+    },
+    {
+      "id": "0c61fb0889da58094e71e31cece4480d",
+      "home_team": "Harvard Crimson",
+      "away_team": "Pennsylvania Quakers",
+      "commence_time": "2026-03-14T18:00:00Z",
+      "h2h": {
+        "home": {
+          "price": -150,
+          "best_book": "BetMGM"
+        },
+        "away": {
+          "price": 130,
+          "best_book": "DraftKings"
+        }
+      },
+      "spread": {
+        "home": {
+          "price": -110,
+          "point": -2.5,
+          "best_book": "DraftKings"
+        },
+        "away": {
+          "price": -102,
+          "point": 2.5,
+          "best_book": "FanDuel"
+        }
+      },
+      "total": {
+        "over": {
+          "price": -105,
+          "point": 136.5,
+          "best_book": "BetMGM"
+        },
+        "under": {
+          "price": -108,
+          "point": 136.5,
+          "best_book": "LowVig.ag"
+        }
+      }
+    },
+    {
+      "id": "a364e4359a4fe030335cf184d6bdc0ce",
+      "home_team": "South Florida Bulls",
+      "away_team": "Charlotte 49ers",
+      "commence_time": "2026-03-14T19:00:20Z",
+      "h2h": {
+        "away": {
+          "price": 750,
+          "best_book": "DraftKings"
+        },
+        "home": {
+          "price": -1050,
+          "best_book": "FanDuel"
+        }
+      },
+      "spread": {
+        "away": {
+          "price": -106,
+          "point": 14.5,
+          "best_book": "LowVig.ag"
+        },
+        "home": {
+          "price": -106,
+          "point": -14.5,
+          "best_book": "LowVig.ag"
+        }
+      },
+      "total": {
+        "over": {
+          "price": -108,
+          "point": 153.5,
+          "best_book": "LowVig.ag"
+        },
+        "under": {
+          "price": -105,
+          "point": 153.5,
+          "best_book": "FanDuel"
+        }
+      }
+    },
+    {
+      "id": "e8778b28236aba0192b11b0e7aa5ba93",
+      "home_team": "Louisiana Tech Bulldogs",
+      "away_team": "Kennesaw St Owls",
+      "commence_time": "2026-03-15T00:30:00Z",
+      "h2h": {
+        "away": {
+          "price": -125,
+          "best_book": "DraftKings"
+        },
+        "home": {
+          "price": 105,
+          "best_book": "DraftKings"
+        }
+      },
+      "spread": {
+        "away": {
+          "price": -106,
+          "point": -1.0,
+          "best_book": "LowVig.ag"
+        },
+        "home": {
+          "price": -106,
+          "point": 1.0,
+          "best_book": "LowVig.ag"
+        }
+      },
+      "total": {
+        "over": {
+          "price": -108,
+          "point": 140.5,
+          "best_book": "LowVig.ag"
+        },
+        "under": {
+          "price": -108,
+          "point": 140.5,
+          "best_book": "LowVig.ag"
+        }
+      }
+    }
+  ],
+  "date": "2026-03-13",
+  "n_games": 32,
+  "requests_remaining": 440,
+  "cached": false,
+  "error": null,
+  "fetched_at": 1773441223.031099
+}
