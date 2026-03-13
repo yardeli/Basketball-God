@@ -294,6 +294,42 @@
     /* ── Hidden utility ── */
     .hidden { display: none !important; }
 
+    /* ── Bet placement modal ── */
+    .bet-row-btn {
+      background: #1e3a5f;
+      color: #38bdf8;
+      border: none;
+      border-radius: 5px;
+      padding: 3px 9px;
+      font-size: 0.7rem;
+      font-weight: 700;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: background .15s;
+    }
+    .bet-row-btn:hover { background: #1d4ed8; color: #fff; }
+    .bm-risk-input {
+      width: 100%;
+      background: #0d1117;
+      border: 1px solid #334155;
+      color: #e2e8f0;
+      border-radius: 6px;
+      padding: 10px 12px;
+      font-size: 1.1rem;
+      font-weight: 700;
+      outline: none;
+    }
+    .bm-risk-input:focus { border-color: #f97316; }
+    .bm-towin-box {
+      background: #0a1f10;
+      border: 1px solid #166534;
+      border-radius: 6px;
+      padding: 10px 12px;
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: #4ade80;
+    }
+
     /* ── Scrollbar ── */
     ::-webkit-scrollbar       { width: 6px; height: 6px; }
     ::-webkit-scrollbar-track { background: #0b0e1c; }
@@ -375,6 +411,7 @@
               <th>Mkt Impl%</th>
               <th>Edge</th>
               <th>Signal</th>
+              <th></th>
             </tr>
           </thead>
           <tbody id="gd-bets-body"></tbody>
@@ -392,7 +429,7 @@
       <h2>&#x1F4CA; Simulated Paper Betting <span class="pt-badge" id="pt-open-count">0 Open</span></h2>
       <div class="pt-input-row">
         <label>Stake $</label>
-        <input type="number" id="pt-stake" value="1000" min="1" onchange="savePtSettings()" />
+        <input type="number" id="pt-stake" value="50" min="1" onchange="savePtSettings()" />
         <label>Thresh</label>
         <input type="number" id="pt-threshold" value="0.65" min="0" max="1" step="0.01" onchange="savePtSettings()" />
         <button class="btn btn-blue btn-sm" onclick="showDaySummary()">Day Summary</button>
@@ -430,6 +467,53 @@
           <thead><tr><th>Date</th><th>Bets</th><th>W</th><th>L</th><th>P&amp;L</th><th>ROI</th></tr></thead>
           <tbody id="pt-history-body"></tbody>
         </table>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════
+       BET PLACEMENT MODAL
+  ═══════════════════════════════════════════ -->
+  <div class="modal-overlay" id="bet-modal" onclick="if(event.target===this)closeBetModal()">
+    <div class="modal-box" style="max-width:380px;">
+      <!-- Header -->
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;">
+        <h2 style="margin:0;font-size:1rem;color:#f1f5f9;">&#x1F3B2; Place Bet</h2>
+        <button class="btn btn-gray btn-sm" onclick="closeBetModal()">&#x2715;</button>
+      </div>
+      <!-- Bet info card -->
+      <div style="background:#0d1117;border:1px solid #1e2a3a;border-radius:8px;padding:14px;margin-bottom:16px;">
+        <div id="bm-matchup" style="color:#64748b;font-size:0.72rem;margin-bottom:4px;"></div>
+        <div id="bm-bet"     style="font-weight:700;font-size:1rem;margin-bottom:10px;color:#f1f5f9;"></div>
+        <div style="display:flex;gap:20px;align-items:center;flex-wrap:wrap;">
+          <div>
+            <div style="color:#64748b;font-size:0.65rem;text-transform:uppercase;letter-spacing:1px;">Market Odds</div>
+            <div id="bm-mkt-odds" style="font-weight:700;font-size:1.2rem;color:#38bdf8;"></div>
+          </div>
+          <div>
+            <div style="color:#64748b;font-size:0.65rem;text-transform:uppercase;letter-spacing:1px;">Edge</div>
+            <div id="bm-edge" style="font-weight:700;font-size:1.2rem;color:#4ade80;"></div>
+          </div>
+          <div style="margin-left:auto;">
+            <span id="bm-signal"></span>
+          </div>
+        </div>
+      </div>
+      <!-- Risk / To Win row -->
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:18px;">
+        <div>
+          <label style="color:#94a3b8;font-size:0.75rem;display:block;margin-bottom:6px;">Risk $</label>
+          <input id="bm-risk" class="bm-risk-input" type="number" min="1" step="1" value="50" oninput="updateBetPayout()" />
+        </div>
+        <div>
+          <label style="color:#94a3b8;font-size:0.75rem;display:block;margin-bottom:6px;">To Win $</label>
+          <div id="bm-towin" class="bm-towin-box">$0.00</div>
+        </div>
+      </div>
+      <!-- Buttons -->
+      <div style="display:flex;gap:10px;">
+        <button class="btn btn-orange" style="flex:1;padding:10px;font-size:0.9rem;" onclick="addBetFromModal()">&#9733; Add to Bet Slip</button>
+        <button class="btn btn-gray"   style="padding:10px 16px;" onclick="closeBetModal()">Cancel</button>
       </div>
     </div>
   </div>
@@ -635,12 +719,14 @@
 // ════════════════════════════════════════════════════════
 //  STATE
 // ════════════════════════════════════════════════════════
-var _allGames  = [];
-var _allData   = {};
-var _chartInst = null;
-var _today     = new Date().toISOString().slice(0, 10);
-var _ptSettings = { stake: 1000, threshold: 0.65 };
-var _ptTab     = 'open';
+var _allGames    = [];
+var _allData     = {};
+var _chartInst   = null;
+var _today       = new Date().toISOString().slice(0, 10);
+var _ptSettings  = { stake: 50, threshold: 0.65 };
+var _ptTab       = 'open';
+var _selectedGame  = null;
+var _betModalBet   = null;
 
 // ════════════════════════════════════════════════════════
 //  INIT
@@ -764,6 +850,7 @@ function selectGame(gameId) {
 }
 
 function renderGameDetail(game) {
+  _selectedGame = game;
   var panel = document.getElementById('game-detail');
   panel.classList.remove('hidden');
 
@@ -794,12 +881,16 @@ function renderGameDetail(game) {
   var bets  = game.bets || [];
   var tbody = document.getElementById('gd-bets-body');
   if (!bets.length) {
-    tbody.innerHTML = '<tr><td colspan="6" style="color:#64748b;">No bets available.</td></tr>';
+    tbody.innerHTML = '<tr><td colspan="7" style="color:#64748b;">No bets available.</td></tr>';
     return;
   }
-  tbody.innerHTML = bets.map(function(b) {
-    var edge = b.edge != null ? (b.edge * 100).toFixed(1) + '%' : '--';
-    var mkt  = b.market_implied != null ? (b.market_implied * 100).toFixed(1) + '%' : '--';
+  tbody.innerHTML = bets.map(function(b, idx) {
+    var edge    = b.edge != null ? (b.edge * 100).toFixed(1) + '%' : '--';
+    var mkt     = b.market_implied != null ? (b.market_implied * 100).toFixed(1) + '%' : '--';
+    var hasMkt  = b.market_odds_raw != null;
+    var btnHtml = hasMkt
+      ? '<button class="bet-row-btn" onclick="openBetModal(' + idx + ')">+ Bet</button>'
+      : '';
     return '<tr>' +
       '<td>' + (b.bet || '--') + '</td>' +
       '<td class="col-model-odds">' + (b.model_odds || '--') + '</td>' +
@@ -807,8 +898,101 @@ function renderGameDetail(game) {
       '<td>' + mkt + '</td>' +
       '<td class="col-edge">' + edge + '</td>' +
       '<td>' + signalBadge(b.signal) + '</td>' +
+      '<td>' + btnHtml + '</td>' +
     '</tr>';
   }).join('');
+}
+
+// ════════════════════════════════════════════════════════
+//  BET PLACEMENT MODAL
+// ════════════════════════════════════════════════════════
+function openBetModal(betIdx) {
+  var game = _selectedGame;
+  if (!game) return;
+  var bet = (game.bets || [])[betIdx];
+  if (!bet) return;
+
+  _betModalBet = bet;
+
+  var awayDisplay = game.away_display || game.away_team || 'Away';
+  var homeDisplay = game.home_display || game.home_team || 'Home';
+
+  document.getElementById('bm-matchup').textContent  = awayDisplay + ' @ ' + homeDisplay;
+  document.getElementById('bm-bet').textContent      = bet.bet || '--';
+  document.getElementById('bm-mkt-odds').textContent = bet.market_odds || '--';
+  document.getElementById('bm-edge').textContent     = bet.edge != null ? (bet.edge * 100).toFixed(1) + '%' : '--';
+  document.getElementById('bm-signal').innerHTML     = signalBadge(bet.signal);
+
+  // Default risk to the stake setting
+  var defaultStake = parseFloat(document.getElementById('pt-stake').value) || 50;
+  document.getElementById('bm-risk').value = defaultStake;
+  updateBetPayout();
+
+  document.getElementById('bet-modal').classList.add('open');
+}
+
+function closeBetModal() {
+  document.getElementById('bet-modal').classList.remove('open');
+  _betModalBet = null;
+}
+
+function updateBetPayout() {
+  var risk  = parseFloat(document.getElementById('bm-risk').value) || 0;
+  var bet   = _betModalBet;
+  var toWin = 0;
+  if (bet && bet.market_odds_raw != null) {
+    var odds = bet.market_odds_raw;
+    toWin = odds > 0 ? risk * (odds / 100) : risk * (100 / Math.abs(odds));
+  }
+  document.getElementById('bm-towin').textContent = '$' + toWin.toFixed(2);
+}
+
+function addBetFromModal() {
+  var game  = _selectedGame;
+  var bet   = _betModalBet;
+  var risk  = parseFloat(document.getElementById('bm-risk').value) || 0;
+  if (!game || !bet || risk <= 0) return;
+
+  var odds  = bet.market_odds_raw;
+  var toWin = odds > 0 ? risk * (odds / 100) : risk * (100 / Math.abs(odds));
+  var gid   = String(game.game_id != null ? game.game_id : (game.id || 0));
+  var key   = gid + '|' + (bet.bet || '');
+
+  var open   = getOpenBets();
+  var closed = getClosedBets();
+  var existing = [].concat(open, closed).map(function(b){ return b.game_id + '|' + b.pick; });
+  if (existing.indexOf(key) >= 0) {
+    alert('This bet is already in your slip.');
+    return;
+  }
+
+  var awayDisplay = game.away_display || game.away_team || 'Away';
+  var homeDisplay = game.home_display || game.home_team || 'Home';
+
+  open.push({
+    game_id:  gid,
+    pick:     bet.bet || 'Bet',
+    bet_type: bet.bet_type || '',
+    matchup:  awayDisplay + ' @ ' + homeDisplay,
+    odds:     bet.market_odds || '--',
+    odds_raw: odds,
+    stake:    risk,
+    toWin:    +toWin.toFixed(2),
+    signal:   bet.signal || '',
+    edge:     bet.edge   || 0,
+    added:    new Date().toISOString(),
+  });
+
+  saveOpenBets(open);
+  renderPaperTrading();
+  closeBetModal();
+
+  // Switch to paper betting tab to show it was added
+  var ptSection = document.querySelector('.pt-tabs');
+  if (ptSection) {
+    var openTab = ptSection.querySelector('.pt-tab');
+    if (openTab) switchPtTab('open', openTab);
+  }
 }
 
 function signalBadge(sig) {
