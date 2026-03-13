@@ -1,0 +1,42 @@
+# Large data files (regenerate locally)
+*.db
+*.pkl
+*.parquet
+phase1_data/sources/kaggle/MMasseyOrdinals.csv
+
+# Generated outputs
+outputs/*
+data/processed/*
+phase1_data/output/*
+phase2_features/output/*
+phase3_models/output/*
+phase4_tournament/output/*
+phase5_deploy/output/*
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+
+# Virtual environments
+venv/
+env/
+ENV/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.temp
+*.log
+test_*.py
