@@ -420,5 +420,5 @@ def api_paperbets():
 
 if __name__ == "__main__":
     print("\n  Basketball-God Web Dashboard")
-    print("  Open: http://localhost:5050\n")
-    app.run(host="0.0.0.0", port=5050, debug=False)
+    print("  Open: http://localhost:5051\n")
+    app.run(host="0.0.0.0", port=5051, debug=False)

@@ -1,0 +1,192 @@
+{
+  "date": "2026-03-14",
+  "test_seasons": [
+    2022,
+    2023,
+    2024,
+    2025
+  ],
+  "methodology": "CPCV walk-forward, 1-season embargo, flat $100 bet simulation",
+  "v1_baseline": {
+    "model": "phase6_regular_season",
+    "avg_accuracy": 0.7018,
+    "avg_brier": 0.1911,
+    "avg_ats_accuracy": 0.5928,
+    "avg_clv_vs_elo": -0.0006,
+    "total_pnl_$100": 5775.73,
+    "n_strong_value_bets": 6326,
+    "strong_bet_false_positive_rate": 0.2299,
+    "avg_hc_accuracy": 0.9133,
+    "per_season": [
+      {
+        "season": 2022,
+        "n_games": 4826,
+        "accuracy": 0.7184,
+        "brier": 0.1862,
+        "log_loss": 0.5491,
+        "auc": 0.791,
+        "hc_acc": 0.9151,
+        "ats_acc": 0.5953,
+        "roi_stats": {
+          "n_bets": 1538,
+          "n_won": 1183,
+          "total_pnl": 1187.89,
+          "roi": 0.0077,
+          "win_rate": 0.7692,
+          "false_positive_rate": 0.2308
+        },
+        "clv": {
+          "avg_clv": -0.0008,
+          "avg_clv_pct": "-0.08%",
+          "pct_positive_clv": 0.4936,
+          "note": "Estimated vs Elo baseline (real CLV tracked going forward via clv_tracker.py)"
+        }
+      },
+      {
+        "season": 2023,
+        "n_games": 5081,
+        "accuracy": 0.6971,
+        "brier": 0.1963,
+        "log_loss": 0.5741,
+        "auc": 0.7667,
+        "hc_acc": 0.8928,
+        "ats_acc": 0.5944,
+        "roi_stats": {
+          "n_bets": 1576,
+          "n_won": 1193,
+          "total_pnl": -1208.78,
+          "roi": -0.0077,
+          "win_rate": 0.757,
+          "false_positive_rate": 0.243
+        },
+        "clv": {
+          "avg_clv": -0.0021,
+          "avg_clv_pct": "-0.21%",
+          "pct_positive_clv": 0.4851,
+          "note": "Estimated vs Elo baseline (real CLV tracked going forward via clv_tracker.py)"
+        }
+      },
+      {
+        "season": 2024,
+        "n_games": 5087,
+        "accuracy": 0.6924,
+        "brier": 0.1929,
+        "log_loss": 0.5651,
+        "auc": 0.7748,
+        "hc_acc": 0.9116,
+        "ats_acc": 0.5777,
+        "roi_stats": {
+          "n_bets": 1642,
+          "n_won": 1269,
+          "total_pnl": 2113.63,
+          "roi": 0.0129,
+          "win_rate": 0.7728,
+          "false_positive_rate": 0.2272
+        },
+        "clv": {
+          "avg_clv": 0.0006,
+          "avg_clv_pct": "+0.06%",
+          "pct_positive_clv": 0.4977,
+          "note": "Estimated vs Elo baseline (real CLV tracked going forward via clv_tracker.py)"
+        }
+      },
+      {
+        "season": 2025,
+        "n_games": 5124,
+        "accuracy": 0.6991,
+        "brier": 0.1891,
+        "log_loss": 0.5514,
+        "auc": 0.7821,
+        "hc_acc": 0.9337,
+        "ats_acc": 0.6036,
+        "roi_stats": {
+          "n_bets": 1570,
+          "n_won": 1227,
+          "total_pnl": 3682.99,
+          "roi": 0.0235,
+          "win_rate": 0.7815,
+          "false_positive_rate": 0.2185
+        },
+        "clv": {
+          "avg_clv": -0.0002,
+          "avg_clv_pct": "-0.02%",
+          "pct_positive_clv": 0.4871,
+          "note": "Estimated vs Elo baseline (real CLV tracked going forward via clv_tracker.py)"
+        }
+      }
+    ]
+  },
+  "v2_enhanced": {
+    "model": "phase7_v2",
+    "new_features": [
+      "diff_elo",
+      "diff_last5_ewm_margin",
+      "diff_coaching_instability",
+      "diff_roster_disruption",
+      "diff_injury_impact"
+    ],
+    "avg_accuracy": 0.7045,
+    "avg_brier": 0.1899,
+    "avg_ats_accuracy": 0.6343,
+    "avg_clv_vs_elo": 0.0015,
+    "total_pnl_$100": 44891.47,
+    "n_strong_value_bets": 3909,
+    "strong_bet_false_positive_rate": 0.16227499999999997,
+    "avg_hc_accuracy": 0.9143,
+    "per_season": [
+      {
+        "season": 2022,
+        "n_games": 4826,
+        "accuracy": 0.7184,
+        "log_loss": 0.5461,
+        "brier": 0.1852,
+        "auc": 0.7932,
+        "hc_acc": 0.9161,
+        "ats_acc": 0.6196
+      },
+      {
+        "season": 2023,
+        "n_games": 5081,
+        "accuracy": 0.6969,
+        "log_loss": 0.5698,
+        "brier": 0.195,
+        "auc": 0.7695,
+        "hc_acc": 0.8968,
+        "ats_acc": 0.6355
+      },
+      {
+        "season": 2024,
+        "n_games": 5087,
+        "accuracy": 0.7006,
+        "log_loss": 0.5639,
+        "brier": 0.1923,
+        "auc": 0.7764,
+        "hc_acc": 0.9077,
+        "ats_acc": 0.621
+      },
+      {
+        "season": 2025,
+        "n_games": 5124,
+        "accuracy": 0.702,
+        "log_loss": 0.5469,
+        "brier": 0.1871,
+        "auc": 0.7869,
+        "hc_acc": 0.9366,
+        "ats_acc": 0.661
+      }
+    ]
+  },
+  "deltas": {
+    "accuracy_delta": 0.0027,
+    "brier_delta": 0.0012,
+    "ats_delta": 0.0415,
+    "pnl_delta_$100": 39115.74,
+    "clv_delta": 0.0021
+  },
+  "notes": {
+    "clv": "CLV estimated retroactively vs Elo baseline (no historical closing lines stored). Forward CLV tracked via clv_tracker.py.",
+    "ats": "ATS accuracy uses diff_massey_spread as market spread proxy.",
+    "injury": "diff_injury_impact = 0 in all historical training games (no injury history). Feature activates in live predictions.",
+    "roi": "ROI simulation uses approximate market odds derived from model probability."
+  }
+}

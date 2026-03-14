@@ -9,7 +9,7 @@ Basketball-God model predictions.
 import os
 import json
 import time
-from datetime import datetime
+from datetime import datetime, timezone, timedelta
 from pathlib import Path
 from typing import Optional
 
@@ -322,7 +322,9 @@ def fetch_todays_games(force_refresh: bool = False) -> dict:
                        "under": {"price": int, "point": float, "best_book": str}},
         }
     """
-    today_str  = datetime.utcnow().strftime("%Y-%m-%d")
+    # Use PST (UTC-8) date so cache resets at midnight local time, not midnight UTC
+    pst_now    = datetime.now(timezone.utc) - timedelta(hours=8)
+    today_str  = pst_now.strftime("%Y-%m-%d")
     cache_path = GAMES_CACHE_DIR / f"games_cache_{today_str}.json"
 
     if not force_refresh and cache_path.exists():
@@ -351,9 +353,9 @@ def fetch_todays_games(force_refresh: bool = False) -> dict:
         resp = requests.get(url, params=params, timeout=15)
 
         if resp.status_code == 401:
-            return _games_error("Invalid API key")
+            return _games_load_cache_or_error(cache_path, "Invalid API key — showing cached games")
         if resp.status_code == 429:
-            return _games_error("API quota exhausted")
+            return _games_load_cache_or_error(cache_path, "API quota exhausted — showing cached games")
         if resp.status_code != 200:
             return _games_error(f"API error {resp.status_code}")
 

@@ -1,0 +1,100 @@
+{
+  "model_version": "v2",
+  "per_season": [
+    {
+      "season": 2022,
+      "n_games": 4826,
+      "accuracy": 0.7184,
+      "log_loss": 0.5461,
+      "brier": 0.1852,
+      "auc": 0.7932,
+      "hc_acc": 0.9161,
+      "ats_acc": 0.6196
+    },
+    {
+      "season": 2023,
+      "n_games": 5081,
+      "accuracy": 0.6969,
+      "log_loss": 0.5698,
+      "brier": 0.195,
+      "auc": 0.7695,
+      "hc_acc": 0.8968,
+      "ats_acc": 0.6355
+    },
+    {
+      "season": 2024,
+      "n_games": 5087,
+      "accuracy": 0.7006,
+      "log_loss": 0.5639,
+      "brier": 0.1923,
+      "auc": 0.7764,
+      "hc_acc": 0.9077,
+      "ats_acc": 0.621
+    },
+    {
+      "season": 2025,
+      "n_games": 5124,
+      "accuracy": 0.702,
+      "log_loss": 0.5469,
+      "brier": 0.1871,
+      "auc": 0.7869,
+      "hc_acc": 0.9366,
+      "ats_acc": 0.661
+    }
+  ],
+  "avg_accuracy": 0.7045,
+  "avg_brier": 0.1899,
+  "avg_hc_accuracy": 0.9143,
+  "avg_ats_accuracy": 0.6343,
+  "test_seasons": [
+    2022,
+    2023,
+    2024,
+    2025
+  ],
+  "n_features": 35,
+  "feature_cols": [
+    "diff_win_pct",
+    "diff_avg_margin",
+    "diff_sos",
+    "diff_rest_days",
+    "diff_games_last_7",
+    "diff_win_streak",
+    "diff_h2h_win_pct_5",
+    "diff_h2h_win_pct_10",
+    "diff_conf_win_pct",
+    "diff_efg_pct",
+    "diff_opp_efg_pct",
+    "diff_to_rate",
+    "diff_opp_to_rate",
+    "diff_orb_rate",
+    "diff_drb_rate",
+    "diff_ft_rate",
+    "diff_opp_ft_rate",
+    "diff_fg3_rate",
+    "diff_fg3_pct",
+    "diff_ast_to_ratio",
+    "diff_blk_rate",
+    "diff_stl_rate",
+    "diff_off_eff",
+    "diff_def_eff",
+    "diff_net_eff",
+    "diff_pace",
+    "diff_massey_avg_rank",
+    "diff_massey_best_rank",
+    "diff_massey_n_systems",
+    "diff_massey_spread",
+    "diff_elo",
+    "diff_last5_ewm_margin",
+    "diff_coaching_instability",
+    "diff_roster_disruption",
+    "diff_injury_impact"
+  ],
+  "new_features": [
+    "diff_elo",
+    "diff_last5_ewm_margin",
+    "diff_coaching_instability",
+    "diff_roster_disruption",
+    "diff_injury_impact"
+  ]
+}

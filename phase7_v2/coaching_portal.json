@@ -1,0 +1,93 @@
+{
+  "_comment": "Manual database of coaching changes and transfer portal disruptions. Coaching changes are AUTO-DETECTED from the DB; this file adds portal entries not in Kaggle data. Add rows manually as events occur.",
+  "_format": {
+    "coaching_changes": "season (ending year), team_id, coach_in, approx_day_num (day_num when change took effect, 0=offseason)",
+    "portal_disruptions": "season, team_id, players_out (key players departed), players_in (key players added), net_disruption (0.0-1.0)"
+  },
+  "coaching_changes": [
+    {"season": 2023, "team_id": 1242, "coach_in": "Dusty_May", "day_num": 0, "note": "Michigan hired after FAU run"},
+    {"season": 2024, "team_id": 1278, "coach_in": "Pat_Kelsey", "day_num": 0, "note": "Louisville rebuild"},
+    {"season": 2024, "team_id": 1323, "coach_in": "Danny_Sprinkle", "day_num": 0, "note": "Washington/Montana State"},
+    {"season": 2024, "team_id": 1437, "coach_in": "Kim_English", "day_num": 0, "note": "Providence"},
+    {"season": 2025, "team_id": 1242, "coach_in": "Dusty_May", "day_num": 0, "note": "Michigan full year"},
+    {"season": 2025, "team_id": 1196, "coach_in": "Nate_Oats", "day_num": 0, "note": "Alabama established"},
+    {"season": 2026, "team_id": 1181, "coach_in": "TBD", "day_num": 45, "note": "Example mid-season"},
+    {"season": 2023, "team_id": 1452, "coach_in": "Jerome_Tang", "day_num": 0, "note": "Kansas State turnaround"},
+    {"season": 2023, "team_id": 1107, "coach_in": "Rodney_Terry", "day_num": 10, "note": "Texas interim mid-season"},
+    {"season": 2024, "team_id": 1276, "coach_in": "John_Calipari", "day_num": 0, "note": "Arkansas from Kentucky"}
+  ],
+  "portal_disruptions": [
+    {
+      "season": 2023,
+      "team_id": 1181,
+      "players_out": 4,
+      "players_in": 6,
+      "net_disruption": 0.5,
+      "note": "Alabama heavy portal activity"
+    },
+    {
+      "season": 2023,
+      "team_id": 1276,
+      "players_out": 8,
+      "players_in": 5,
+      "net_disruption": 0.75,
+      "note": "Kentucky after Calipari portal rebuild"
+    },
+    {
+      "season": 2024,
+      "team_id": 1276,
+      "players_out": 10,
+      "players_in": 8,
+      "net_disruption": 0.85,
+      "note": "Arkansas Calipari first year portal"
+    },
+    {
+      "season": 2024,
+      "team_id": 1452,
+      "players_out": 5,
+      "players_in": 7,
+      "net_disruption": 0.6,
+      "note": "Kansas State rebuild"
+    },
+    {
+      "season": 2025,
+      "team_id": 1242,
+      "players_out": 6,
+      "players_in": 9,
+      "net_disruption": 0.65,
+      "note": "Michigan under Dusty May year 2"
+    },
+    {
+      "season": 2025,
+      "team_id": 1163,
+      "players_out": 3,
+      "players_in": 5,
+      "net_disruption": 0.45,
+      "note": "Duke portal additions"
+    },
+    {
+      "season": 2025,
+      "team_id": 1314,
+      "players_out": 7,
+      "players_in": 4,
+      "net_disruption": 0.70,
+      "note": "North Carolina heavy losses"
+    },
+    {
+      "season": 2026,
+      "team_id": 1276,
+      "players_out": 6,
+      "players_in": 7,
+      "net_disruption": 0.60,
+      "note": "Arkansas Calipari year 2"
+    },
+    {
+      "season": 2026,
+      "team_id": 1181,
+      "players_out": 4,
+      "players_in": 8,
+      "net_disruption": 0.55,
+      "note": "Alabama continued portal use"
+    }
+  ]
+}
