@@ -204,6 +204,170 @@ def api_daily():
         })
 
 
+@app.route("/api/live")
+def api_live():
+    """
+    Live game updates: current scores, clock, in-game win probabilities,
+    and fresh market odds for all in-progress NCAAB games.
+    Poll every 60 seconds during games.
+    """
+    try:
+        from live_game_model import fetch_live_scores, live_win_prob
+        from odds_fetcher import fetch_todays_games
+        from daily_predictor import american_to_implied
+
+        live_games = fetch_live_scores()
+        if not live_games:
+            return jsonify({"games": [], "any_live": False})
+
+        odds_data = fetch_todays_games(force_refresh=True)
+        predictor = get_daily_predictor()
+
+        enriched = []
+        for lg in live_games:
+            home_name = lg["home_name"]
+            away_name = lg["away_name"]
+
+            # Match to odds entry by team name
+            odds_entry = None
+            for og in odds_data.get("games", []):
+                hn = og.get("home_team", "").lower()
+                an = og.get("away_team", "").lower()
+                if (home_name.lower() in hn or hn in home_name.lower()) and \
+                   (away_name.lower() in an or an in away_name.lower()):
+                    odds_entry = og
+                    break
+
+            # Pre-game model probability
+            if predictor and predictor.ready:
+                pred = predictor._predict_regular_season(home_name, away_name)
+            else:
+                pred = {"prob_home_wins": 0.5, "model_spread": 0.0}
+
+            pregame_home_prob = pred.get("prob_home_wins", 0.5)
+
+            # In-game win probability
+            live_prob = live_win_prob(
+                pregame_home_prob = pregame_home_prob,
+                home_score        = lg["home_score"],
+                away_score        = lg["away_score"],
+                minutes_remaining = lg["minutes_remaining"],
+            )
+
+            # Live market odds
+            live_home_ml = live_away_ml = None
+            live_home_implied = live_away_implied = None
+            best_book = None
+            if odds_entry:
+                h2h = odds_entry.get("h2h", {})
+                if h2h.get("home"):
+                    live_home_ml      = h2h["home"]["price"]
+                    live_home_implied = round(american_to_implied(live_home_ml), 4)
+                    best_book         = h2h["home"].get("best_book", "")
+                if h2h.get("away"):
+                    live_away_ml      = h2h["away"]["price"]
+                    live_away_implied = round(american_to_implied(live_away_ml), 4)
+
+            enriched.append({
+                "game_id":           lg["game_id"],
+                "home_name":         home_name,
+                "away_name":         away_name,
+                "home_score":        lg["home_score"],
+                "away_score":        lg["away_score"],
+                "period":            lg["period"],
+                "clock":             lg["clock"],
+                "halftime":          lg["halftime"],
+                "minutes_remaining": lg["minutes_remaining"],
+                "pregame_home_prob": round(pregame_home_prob, 3),
+                "pregame_spread":    live_prob.get("pregame_spread"),
+                "live": {
+                    "home_prob":       live_prob["live_home_prob"],
+                    "away_prob":       live_prob["live_away_prob"],
+                    "expected_margin": live_prob["expected_final_margin"],
+                    "remaining_sigma": live_prob["remaining_uncertainty"],
+                },
+                "market": {
+                    "home_ml":      live_home_ml,
+                    "away_ml":      live_away_ml,
+                    "home_implied": live_home_implied,
+                    "away_implied": live_away_implied,
+                    "best_book":    best_book,
+                },
+                "edge": {
+                    "home": round(live_prob["live_home_prob"] - live_home_implied, 4) if live_home_implied else None,
+                    "away": round(live_prob["live_away_prob"] - live_away_implied, 4) if live_away_implied else None,
+                },
+            })
+
+        return jsonify({"games": enriched, "any_live": True})
+
+    except Exception as e:
+        import traceback; traceback.print_exc()
+        return jsonify({"games": [], "any_live": False, "error": str(e)})
+
+
+@app.route("/api/hedge", methods=["POST"])
+def api_hedge():
+    """Compute hedge recommendation for an existing bet given current live state."""
+    try:
+        from live_game_model import compute_hedge, fetch_live_scores, live_win_prob
+        from odds_fetcher import fetch_todays_games
+        from daily_predictor import american_to_implied
+
+        body          = flask_request.get_json()
+        game_id       = str(body.get("game_id", ""))
+        original_side = body.get("original_side", "home")
+        original_stake= float(body.get("original_stake", 0))
+        original_odds = int(body.get("original_odds", 0))
+
+        live_games = fetch_live_scores()
+        lg = next((g for g in live_games if str(g["game_id"]) == game_id), None)
+        if not lg:
+            return jsonify({"error": "Game not found or not in progress"})
+
+        predictor = get_daily_predictor()
+        pred = predictor._predict_regular_season(lg["home_name"], lg["away_name"]) \
+               if (predictor and predictor.ready) else {"prob_home_wins": 0.5}
+
+        live_prob_data = live_win_prob(
+            pregame_home_prob = pred.get("prob_home_wins", 0.5),
+            home_score        = lg["home_score"],
+            away_score        = lg["away_score"],
+            minutes_remaining = lg["minutes_remaining"],
+        )
+
+        odds_data = fetch_todays_games(force_refresh=False)
+        live_home_ml = live_away_ml = None
+        for g in odds_data.get("games", []):
+            hn = g.get("home_team", "").lower()
+            if lg["home_name"].lower() in hn or hn in lg["home_name"].lower():
+                h2h = g.get("h2h", {})
+                live_home_ml = h2h.get("home", {}).get("price")
+                live_away_ml = h2h.get("away", {}).get("price")
+                break
+
+        result = compute_hedge(
+            original_stake         = original_stake,
+            original_american_odds = original_odds,
+            original_side          = original_side,
+            live_home_american     = live_home_ml,
+            live_away_american     = live_away_ml,
+            live_home_prob         = live_prob_data["live_home_prob"],
+            live_away_prob         = live_prob_data["live_away_prob"],
+        )
+        result.update({
+            "live_score":     f"{lg['away_score']} – {lg['home_score']}",
+            "clock":          lg["clock"],
+            "period":         lg["period"],
+            "live_home_prob": live_prob_data["live_home_prob"],
+            "live_away_prob": live_prob_data["live_away_prob"],
+        })
+        return jsonify(result)
+
+    except Exception as e:
+        return jsonify({"error": str(e)})
+
+
 @app.route("/api/refresh", methods=["POST"])
 def api_refresh():
     """Force-refresh the season stats store (fetch latest game results from ESPN)."""

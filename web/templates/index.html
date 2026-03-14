@@ -148,11 +148,50 @@
     .game-card .gc-pick  { color: #4ade80; font-size: 0.72rem; margin-top: 4px; font-weight: 600; }
     .game-card .gc-edge  { color: #f97316; font-size: 0.7rem; }
     .game-card .gc-round { color: #64748b; font-size: 0.68rem; margin-top: 4px; }
-    .game-card.game-card-live { opacity: 0.6; border-color: #475569; }
-    .game-card.game-card-live:hover { border-color: #f97316; opacity: 0.8; }
-    .game-card.game-card-live.active { border-color: #f97316; opacity: 1; }
+    .game-card.game-card-live { opacity: 1; border-color: #f97316; background: #1a120a; }
+    .game-card.game-card-live:hover { border-color: #fb923c; }
+    .game-card.game-card-live.active { border-color: #fb923c; background: #231508; }
     .game-card .gc-live-badge { color: #f97316; font-size: 0.7rem; margin-top: 4px; font-weight: 600; animation: livePulse 1.5s ease-in-out infinite; }
+    .game-card .gc-score { color: #f1f5f9; font-size: 1rem; font-weight: 700; margin-top: 3px; letter-spacing: 1px; }
+    .game-card .gc-clock { color: #94a3b8; font-size: 0.68rem; margin-top: 1px; }
+    .game-card .gc-live-edge { font-size: 0.7rem; margin-top: 3px; }
     @keyframes livePulse { 0%,100% { opacity:1; } 50% { opacity:0.4; } }
+
+    /* ── Live betting panel ── */
+    #live-panel { background: #0f172a; border: 1px solid #f97316; border-radius: 8px; padding: 16px; margin-bottom: 16px; }
+    #live-panel h3 { color: #f97316; font-size: 0.9rem; margin-bottom: 12px; }
+    .live-game-row { display: flex; gap: 12px; flex-wrap: wrap; align-items: center;
+                     background: #1a1f2e; border-radius: 6px; padding: 10px 14px; margin-bottom: 8px; }
+    .live-score-big { font-size: 1.4rem; font-weight: 700; color: #f1f5f9; min-width: 90px; text-align: center; }
+    .live-prob-col { display: flex; flex-direction: column; gap: 4px; min-width: 140px; }
+    .live-prob-bar-wrap { height: 8px; background: #1e2a3a; border-radius: 4px; overflow: hidden; }
+    .live-prob-bar { height: 100%; background: linear-gradient(90deg, #f97316, #fbbf24); border-radius: 4px; transition: width 0.6s ease; }
+    .live-prob-label { font-size: 0.7rem; color: #94a3b8; }
+    .live-odds-col { font-size: 0.78rem; color: #94a3b8; min-width: 120px; }
+    .live-edge-col { font-size: 0.8rem; font-weight: 600; }
+    .live-edge-pos { color: #4ade80; }
+    .live-edge-neg { color: #f87171; }
+    .live-hedge-btn { background: #1e3a5f; color: #60a5fa; border: 1px solid #3b82f6; border-radius: 4px;
+                      padding: 4px 10px; font-size: 0.75rem; cursor: pointer; white-space: nowrap; }
+    .live-hedge-btn:hover { background: #2563eb; color: #fff; }
+
+    /* ── Hedge modal ── */
+    #hedge-modal { display:none; position:fixed; inset:0; background:rgba(0,0,0,0.75); z-index:1100; align-items:center; justify-content:center; }
+    #hedge-modal.open { display:flex; }
+    .hedge-box { background:#111827; border:1px solid #3b82f6; border-radius:10px; padding:24px; width:420px; max-width:95vw; }
+    .hedge-box h3 { color:#60a5fa; margin-bottom:14px; }
+    .hedge-row { display:flex; justify-content:space-between; align-items:center; padding:6px 0; border-bottom:1px solid #1e2a3a; font-size:0.82rem; }
+    .hedge-row:last-child { border-bottom: none; }
+    .hedge-label { color:#94a3b8; }
+    .hedge-val { color:#f1f5f9; font-weight:600; }
+    .hedge-rec { font-size:0.9rem; font-weight:700; padding:10px; border-radius:6px; margin:12px 0; text-align:center; }
+    .hedge-rec.hold    { background:#14532d; color:#4ade80; }
+    .hedge-rec.partial { background:#422006; color:#fdba74; }
+    .hedge-rec.full    { background:#1d4ed8; color:#bfdbfe; }
+    .hedge-rec.cut     { background:#7f1d1d; color:#fca5a5; }
+    .hedge-input-row { display:flex; gap:8px; margin-top:10px; }
+    .hedge-input-row input { flex:1; background:#1e2a3a; border:1px solid #334155; color:#f1f5f9; border-radius:4px; padding:6px 10px; font-size:0.85rem; }
+    .hedge-input-row select { background:#1e2a3a; border:1px solid #334155; color:#f1f5f9; border-radius:4px; padding:6px; font-size:0.85rem; }
 
     /* ── Game detail panel ── */
     .game-detail-panel {
@@ -406,6 +445,13 @@
     <div class="games-scroll" id="games-scroll">
       <div style="color:#64748b;padding:20px;">Loading&hellip;</div>
     </div>
+
+    <!-- Live betting panel — shown only when games are in progress -->
+    <div id="live-panel" class="hidden">
+      <h3>&#9679; LIVE GAMES <span style="font-size:0.72rem;font-weight:400;color:#94a3b8;">— updates every 60s</span></h3>
+      <div id="live-games-list"></div>
+    </div>
+
     <div class="game-detail-panel hidden" id="game-detail">
       <h3 id="gd-title">Select a game</h3>
       <div class="prob-row" id="gd-probs"></div>
@@ -522,6 +568,39 @@
       <div style="display:flex;gap:10px;">
         <button class="btn btn-orange" style="flex:1;padding:10px;font-size:0.9rem;" onclick="addBetFromModal()">&#9733; Add to Bet Slip</button>
         <button class="btn btn-gray"   style="padding:10px 16px;" onclick="closeBetModal()">Cancel</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════
+       HEDGE MODAL
+  ═══════════════════════════════════════════ -->
+  <div id="hedge-modal" onclick="if(event.target===this)closeHedgeModal()">
+    <div class="hedge-box">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;">
+        <h3 style="margin:0;">&#x1F4B0; Hedge Calculator</h3>
+        <button class="btn btn-gray btn-sm" onclick="closeHedgeModal()">&#x2715;</button>
+      </div>
+      <div id="hm-game-info" style="color:#94a3b8;font-size:0.8rem;margin-bottom:8px;"></div>
+      <div id="hm-score"     style="font-size:1.2rem;font-weight:700;color:#f97316;margin-bottom:12px;text-align:center;"></div>
+      <!-- Input row -->
+      <div style="margin-bottom:12px;">
+        <div style="color:#94a3b8;font-size:0.72rem;text-transform:uppercase;letter-spacing:1px;margin-bottom:6px;">Your Original Bet</div>
+        <div class="hedge-input-row">
+          <select id="hm-side" style="min-width:80px;">
+            <option value="home">Home</option>
+            <option value="away">Away</option>
+          </select>
+          <input id="hm-odds"  type="number" placeholder="Odds (e.g. -110)" style="width:130px;" />
+          <input id="hm-stake" type="number" placeholder="Stake $" value="50" style="width:90px;" />
+          <button class="btn btn-blue btn-sm" onclick="computeHedge()">Calculate</button>
+        </div>
+      </div>
+      <div id="hm-error"   style="color:#f87171;font-size:0.8rem;display:none;margin-bottom:8px;"></div>
+      <div id="hm-results" style="display:none;">
+        <div id="hm-rec"   class="hedge-rec hold">--</div>
+        <div id="hm-rows"></div>
+        <div id="hm-explain" style="color:#64748b;font-size:0.72rem;margin-top:8px;"></div>
       </div>
     </div>
   </div>
@@ -772,6 +851,9 @@ async function init() {
   autoAddStrongBets();
   renderPaperTrading();
   loadModelStatus();
+
+  // Start live polling — auto-shows panel when games are in progress
+  startLivePolling();
 }
 
 // ════════════════════════════════════════════════════════
@@ -873,13 +955,6 @@ function renderGameDetail(game) {
   var awayDisplay = game.away_display || game.away_team || 'Away';
   var homeDisplay = game.home_display || game.home_team || 'Home';
 
-  document.getElementById('gd-title').innerHTML =
-    awayDisplay + '&nbsp;&nbsp;@&nbsp;&nbsp;' + homeDisplay + modelBadge;
-
-  var homeProb = pred.prob_home_wins != null ? pred.prob_home_wins : (game.home_win_prob || 0.5);
-  var awayProb = pred.prob_away_wins != null ? pred.prob_away_wins : (1 - homeProb);
-  var confBadge = pred.confidence === 'high' ? ' &nbsp;<span style="color:#22c55e;font-size:0.75rem;">&#9679; HIGH CONF</span>' :
-                  pred.confidence === 'medium' ? ' &nbsp;<span style="color:#f97316;font-size:0.75rem;">&#9679; MED CONF</span>' : '';
   var nHome = pred.home_n_games != null ? pred.home_n_games : '?';
   var nAway = pred.away_n_games != null ? pred.away_n_games : '?';
   var dataNote = pred.model_type === 'regular_season'
@@ -889,6 +964,14 @@ function renderGameDetail(game) {
     : pred.model_type === 'tournament'
     ? '<span style="background:#1a3320;color:#4ade80;font-size:0.68rem;padding:2px 6px;border-radius:4px;margin-left:6px;">TOURNAMENT MODEL</span>'
     : '';
+
+  document.getElementById('gd-title').innerHTML =
+    awayDisplay + '&nbsp;&nbsp;@&nbsp;&nbsp;' + homeDisplay + modelBadge;
+
+  var homeProb = pred.prob_home_wins != null ? pred.prob_home_wins : (game.home_win_prob || 0.5);
+  var awayProb = pred.prob_away_wins != null ? pred.prob_away_wins : (1 - homeProb);
+  var confBadge = pred.confidence === 'high' ? ' &nbsp;<span style="color:#22c55e;font-size:0.75rem;">&#9679; HIGH CONF</span>' :
+                  pred.confidence === 'medium' ? ' &nbsp;<span style="color:#f97316;font-size:0.75rem;">&#9679; MED CONF</span>' : '';
   var probsEl  = document.getElementById('gd-probs');
   probsEl.innerHTML =
     '<div class="prob-box">' +
@@ -1614,6 +1697,178 @@ function fmtPct(v) {
 
 function escStr(s) {
   return (s || '').replace(/\\/g, '\\\\').replace(/'/g, "\\'");
+}
+
+// ════════════════════════════════════════════════════════
+//  LIVE BETTING PANEL
+// ════════════════════════════════════════════════════════
+var _liveInterval = null;
+var _hedgeGameId  = null;
+
+function startLivePolling() {
+  fetchLive();
+  if (!_liveInterval) _liveInterval = setInterval(fetchLive, 60000);
+}
+
+function stopLivePolling() {
+  if (_liveInterval) { clearInterval(_liveInterval); _liveInterval = null; }
+}
+
+async function fetchLive() {
+  try {
+    var d = await fetch('/api/live').then(function(r){ return r.json(); });
+    var panel = document.getElementById('live-panel');
+    if (d.any_live && d.games && d.games.length) {
+      renderLivePanel(d.games);
+      panel.classList.remove('hidden');
+    } else {
+      panel.classList.add('hidden');
+    }
+    (d.games || []).forEach(function(lg) { updateLiveCard(lg); });
+  } catch(e) {}
+}
+
+function renderLivePanel(games) {
+  var listEl = document.getElementById('live-games-list');
+  listEl.innerHTML = games.map(function(g) {
+    var homeProb = g.live ? g.live.home_prob : 0.5;
+    var awayProb = g.live ? g.live.away_prob : 0.5;
+    var homeEdge = g.edge && g.edge.home != null ? g.edge.home : null;
+    var awayEdge = g.edge && g.edge.away != null ? g.edge.away : null;
+    var mktHome  = g.market && g.market.home_ml != null ? g.market.home_ml : null;
+    var mktAway  = g.market && g.market.away_ml != null ? g.market.away_ml : null;
+    var clockStr = g.halftime ? 'HALF' : ('P' + g.period + ' ' + g.clock);
+
+    var mktHtml = mktHome != null
+      ? '<div>' + g.home_name + ': <b>' + (mktHome > 0 ? '+' : '') + mktHome + '</b></div>' +
+        '<div>' + g.away_name + ': <b>' + (mktAway > 0 ? '+' : '') + mktAway + '</b></div>'
+      : '<div style="color:#64748b;">No live odds</div>';
+
+    var edgeHtml = '';
+    if (homeEdge != null) edgeHtml += '<div class="' + (homeEdge >= 0 ? 'live-edge-pos' : 'live-edge-neg') + '">' +
+      g.home_name + ' ' + (homeEdge >= 0 ? '+' : '') + (homeEdge * 100).toFixed(1) + '% edge</div>';
+    if (awayEdge != null) edgeHtml += '<div class="' + (awayEdge >= 0 ? 'live-edge-pos' : 'live-edge-neg') + '">' +
+      g.away_name + ' ' + (awayEdge >= 0 ? '+' : '') + (awayEdge * 100).toFixed(1) + '% edge</div>';
+    if (!edgeHtml) edgeHtml = '<div style="color:#64748b;">No edge data</div>';
+
+    var hn = (g.home_name || '').replace(/'/g, "\\'");
+    var an = (g.away_name || '').replace(/'/g, "\\'");
+
+    return '<div class="live-game-row">' +
+      '<div style="min-width:200px;">' +
+        '<div style="font-weight:700;font-size:0.88rem;">' + g.away_name + ' ' + g.away_score + ' &ndash; ' + g.home_score + ' ' + g.home_name + '</div>' +
+        '<div style="color:#f97316;font-size:0.72rem;font-weight:600;margin-top:2px;">' + clockStr + '</div>' +
+      '</div>' +
+      '<div class="live-prob-col">' +
+        '<div class="live-prob-label">' + g.home_name + ' win prob</div>' +
+        '<div class="live-prob-bar-wrap"><div class="live-prob-bar" style="width:' + (homeProb * 100).toFixed(0) + '%;"></div></div>' +
+        '<div class="live-prob-label" style="font-weight:600;color:#f1f5f9;">' +
+          (homeProb * 100).toFixed(1) + '% / ' + (awayProb * 100).toFixed(1) + '%' +
+        '</div>' +
+      '</div>' +
+      '<div class="live-odds-col">' + mktHtml + '</div>' +
+      '<div class="live-edge-col">' + edgeHtml + '</div>' +
+      '<button class="live-hedge-btn" onclick="openHedgeModal(\'' + g.game_id + '\',\'' + hn + '\',\'' + an + '\')">&#x1F4B0; Hedge</button>' +
+    '</div>';
+  }).join('');
+}
+
+function updateLiveCard(lg) {
+  var card = document.getElementById('gc-' + lg.game_id);
+  if (!card) return;
+  card.classList.add('game-card-live');
+  var scoreEl = card.querySelector('.gc-score');
+  var clockEl = card.querySelector('.gc-clock');
+  var scoreStr = lg.away_score + '\u2013' + lg.home_score;
+  var clockStr = lg.halftime ? 'HALF' : ('P' + lg.period + ' ' + lg.clock);
+  if (scoreEl) { scoreEl.textContent = scoreStr; }
+  else { var s = document.createElement('div'); s.className = 'gc-score'; s.textContent = scoreStr; card.appendChild(s); }
+  if (clockEl) { clockEl.textContent = clockStr; }
+  else { var c = document.createElement('div'); c.className = 'gc-clock'; c.textContent = clockStr; card.appendChild(c); }
+  var homeEdge = lg.edge && lg.edge.home != null ? lg.edge.home : null;
+  if (homeEdge != null) {
+    var edgeEl  = card.querySelector('.gc-live-edge');
+    var edgeStr = (homeEdge >= 0 ? '+' : '') + (homeEdge * 100).toFixed(1) + '%';
+    var edgeCls = 'gc-live-edge ' + (homeEdge >= 0 ? 'c-green' : 'c-red');
+    if (edgeEl) { edgeEl.textContent = edgeStr; edgeEl.className = edgeCls; }
+    else { var e = document.createElement('div'); e.className = edgeCls; e.textContent = edgeStr; card.appendChild(e); }
+  }
+}
+
+// ════════════════════════════════════════════════════════
+//  HEDGE MODAL
+// ════════════════════════════════════════════════════════
+function openHedgeModal(gameId, homeName, awayName) {
+  _hedgeGameId = gameId;
+  document.getElementById('hm-game-info').textContent = awayName + ' @ ' + homeName;
+  document.getElementById('hm-score').textContent   = '';
+  document.getElementById('hm-results').style.display = 'none';
+  document.getElementById('hm-error').style.display   = 'none';
+  document.getElementById('hm-error').textContent     = '';
+  document.getElementById('hedge-modal').classList.add('open');
+}
+
+function closeHedgeModal() {
+  document.getElementById('hedge-modal').classList.remove('open');
+  _hedgeGameId = null;
+}
+
+async function computeHedge() {
+  if (!_hedgeGameId) return;
+  var side  = document.getElementById('hm-side').value;
+  var odds  = parseInt(document.getElementById('hm-odds').value)   || 0;
+  var stake = parseFloat(document.getElementById('hm-stake').value) || 0;
+  var errEl = document.getElementById('hm-error');
+  if (!odds || !stake) {
+    errEl.textContent = 'Enter your original odds and stake amount.';
+    errEl.style.display = '';
+    return;
+  }
+  errEl.style.display = 'none';
+  try {
+    var d = await fetch('/api/hedge', {
+      method:  'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body:    JSON.stringify({ game_id: _hedgeGameId, original_side: side, original_stake: stake, original_odds: odds }),
+    }).then(function(r){ return r.json(); });
+
+    if (d.error) {
+      errEl.textContent = d.error;
+      errEl.style.display = '';
+      return;
+    }
+
+    var scoreInfo = [d.live_score, d.clock ? d.clock : null, d.period ? 'P' + d.period : null]
+      .filter(Boolean).join(' · ');
+    document.getElementById('hm-score').textContent = scoreInfo;
+
+    var rec    = d.recommendation || 'HOLD';
+    var recEl  = document.getElementById('hm-rec');
+    var recCls = rec === 'HOLD' ? 'hold' : rec === 'PARTIAL HEDGE' ? 'partial' : rec === 'FULL HEDGE' ? 'full' : 'cut';
+    recEl.className   = 'hedge-rec ' + recCls;
+    recEl.textContent = rec;
+
+    var rows = [
+      { label: 'Original Stake',       val: '$' + (d.original_stake || 0).toFixed(2) },
+      { label: 'Original Potential Win',val: '$' + ((d.original_profit || 0)).toFixed(2) },
+      { label: 'Live Home Win Prob',    val: d.live_home_prob != null ? (d.live_home_prob * 100).toFixed(1) + '%' : '--' },
+      { label: 'Live Away Win Prob',    val: d.live_away_prob != null ? (d.live_away_prob * 100).toFixed(1) + '%' : '--' },
+    ];
+    if (d.live_edge != null) rows.push({ label: 'Live Edge on Your Bet', val: (d.live_edge >= 0 ? '+' : '') + (d.live_edge * 100).toFixed(1) + '%' });
+    if (d.full_hedge_stake   != null) rows.push({ label: 'Full Hedge Stake',    val: '$' + d.full_hedge_stake.toFixed(2) });
+    if (d.full_hedge_profit  != null) rows.push({ label: 'Guaranteed Profit',   val: '$' + d.full_hedge_profit.toFixed(2) });
+    if (d.partial_hedge_stake != null) rows.push({ label: 'Partial Hedge Stake', val: '$' + d.partial_hedge_stake.toFixed(2) });
+
+    document.getElementById('hm-rows').innerHTML = rows.map(function(r) {
+      return '<div class="hedge-row"><span class="hedge-label">' + r.label + '</span><span class="hedge-val">' + r.val + '</span></div>';
+    }).join('');
+
+    document.getElementById('hm-explain').textContent = d.explanation || '';
+    document.getElementById('hm-results').style.display = '';
+  } catch(e) {
+    errEl.textContent = 'Server error: ' + e.message;
+    errEl.style.display = '';
+  }
 }
 
 // ════════════════════════════════════════════════════════
