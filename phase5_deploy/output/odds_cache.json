@@ -1,36 +1,42 @@
 {
   "teams": [
     {
-      "name": "Howard Bison",
-      "best_odds": -2000,
-      "best_odds_fmt": "-2000",
-      "best_book": "Bovada",
-      "implied_prob": 0.9524,
+      "name": "Duke Blue Devils",
+      "best_odds": -10000,
+      "best_odds_fmt": "-10000",
+      "best_book": "BetMGM",
+      "implied_prob": 0.9901,
       "all_prices": [
-        -4800,
-        -7000,
-        -10000,
-        -2000
+        -50000,
+        -10000
       ],
-      "fair_prob": 0.03
+      "fair_prob": 0.0427
     },
     {
-      "name": "UConn Huskies",
-      "best_odds": -1250,
-      "best_odds_fmt": "-1250",
-      "best_book": "BetRivers",
-      "implied_prob": 0.9259,
+      "name": "Houston Cougars",
+      "best_odds": -3300,
+      "best_odds_fmt": "-3300",
+      "best_book": "Bovada",
+      "implied_prob": 0.9706,
       "all_prices": [
-        -1600,
-        -1350,
-        -1350,
-        -1350,
-        -1400,
-        -1250,
-        -1300,
-        -1350
+        -50000,
+        -10000,
+        -3300
       ],
-      "fair_prob": 0.0292
+      "fair_prob": 0.0419
+    },
+    {
+      "name": "Utah State Aggies",
+      "best_odds": -3300,
+      "best_odds_fmt": "-3300",
+      "best_book": "Bovada",
+      "implied_prob": 0.9706,
+      "all_prices": [
+        -100000,
+        -10000,
+        -3300
+      ],
+      "fair_prob": 0.0419
     },
     {
       "name": "South Florida Bulls",
@@ -44,207 +50,117 @@
         -1200,
         -1115
       ],
-      "fair_prob": 0.0288
-    },
-    {
-      "name": "St. John's Red Storm",
-      "best_odds": -1000,
-      "best_odds_fmt": "-1000",
-      "best_book": "FanDuel",
-      "implied_prob": 0.9091,
-      "all_prices": [
-        -1000,
-        -1667,
-        -1100,
-        -1000
-      ],
-      "fair_prob": 0.0286
+      "fair_prob": 0.0394
     },
     {
       "name": "Michigan Wolverines",
-      "best_odds": -750,
-      "best_odds_fmt": "-750",
-      "best_book": "FanDuel",
-      "implied_prob": 0.8824,
+      "best_odds": -770,
+      "best_odds_fmt": "-770",
+      "best_book": "BetRivers",
+      "implied_prob": 0.8851,
       "all_prices": [
-        -750,
-        -850,
-        -900
+        -780,
+        -900,
+        -900,
+        -770
       ],
-      "fair_prob": 0.0278
+      "fair_prob": 0.0382
     },
     {
-      "name": "Alabama Crimson Tide",
+      "name": "UCLA Bruins",
       "best_odds": -715,
       "best_odds_fmt": "-715",
       "best_book": "BetRivers",
       "implied_prob": 0.8773,
       "all_prices": [
-        -900,
-        -900,
-        -1000,
+        -2200,
+        -2500,
         -715,
-        -900,
-        -900,
-        -900,
-        -900
+        -1800
       ],
-      "fair_prob": 0.0276
-    },
-    {
-      "name": "Duke Blue Devils",
-      "best_odds": -625,
-      "best_odds_fmt": "-625",
-      "best_book": "DraftKings",
-      "implied_prob": 0.8621,
-      "all_prices": [
-        -650,
-        -625,
-        -650,
-        -650,
-        -650,
-        -670,
-        -650,
-        -650
-      ],
-      "fair_prob": 0.0272
-    },
-    {
-      "name": "Toledo Rockets",
-      "best_odds": -600,
-      "best_odds_fmt": "-600",
-      "best_book": "Bovada",
-      "implied_prob": 0.8571,
-      "all_prices": [
-        -1600,
-        -1600,
-        -900,
-        -600,
-        -3335
-      ],
-      "fair_prob": 0.027
+      "fair_prob": 0.0378
     },
     {
       "name": "Utah Valley Wolverines",
-      "best_odds": -380,
-      "best_odds_fmt": "-380",
-      "best_book": "BetUS",
-      "implied_prob": 0.7917,
+      "best_odds": -470,
+      "best_odds_fmt": "-470",
+      "best_book": "Bovada",
+      "implied_prob": 0.8246,
       "all_prices": [
-        -410,
-        -425,
-        -425,
-        -400,
-        -400,
-        -430,
-        -380
+        -520,
+        -470,
+        -660
       ],
-      "fair_prob": 0.0249
+      "fair_prob": 0.0356
     },
     {
       "name": "Cal Baptist Lancers",
-      "best_odds": -345,
-      "best_odds_fmt": "-345",
-      "best_book": "FanDuel",
-      "implied_prob": 0.7753,
+      "best_odds": -350,
+      "best_odds_fmt": "-350",
+      "best_book": "BetMGM",
+      "implied_prob": 0.7778,
       "all_prices": [
         -375,
-        -345,
-        -420,
-        -420,
-        -400,
         -360,
-        -380,
-        -350
+        -360,
+        -360,
+        -350,
+        -375,
+        -350,
+        -380
       ],
-      "fair_prob": 0.0244
+      "fair_prob": 0.0335
     },
     {
-      "name": "VCU Rams",
-      "best_odds": -335,
-      "best_odds_fmt": "-335",
-      "best_book": "BetRivers",
-      "implied_prob": 0.7701,
+      "name": "Florida Gators",
+      "best_odds": -350,
+      "best_odds_fmt": "-350",
+      "best_book": "BetMGM",
+      "implied_prob": 0.7778,
       "all_prices": [
-        -360,
-        -480,
-        -500,
-        -335,
-        -425
+        -395,
+        -350,
+        -385
       ],
-      "fair_prob": 0.0243
+      "fair_prob": 0.0335
     },
     {
       "name": "Akron Zips",
-      "best_odds": -285,
-      "best_odds_fmt": "-285",
-      "best_book": "BetMGM",
-      "implied_prob": 0.7403,
+      "best_odds": -295,
+      "best_odds_fmt": "-295",
+      "best_book": "FanDuel",
+      "implied_prob": 0.7468,
       "all_prices": [
-        -290,
-        -290,
-        -315,
-        -325,
-        -285,
-        -315,
-        -300,
-        -290
+        -310,
+        -295
       ],
-      "fair_prob": 0.0233
+      "fair_prob": 0.0322
     },
     {
-      "name": "Utah State Aggies",
-      "best_odds": -275,
-      "best_odds_fmt": "-275",
-      "best_book": "BetMGM",
-      "implied_prob": 0.7333,
+      "name": "VCU Rams",
+      "best_odds": -250,
+      "best_odds_fmt": "-250",
+      "best_book": "FanDuel",
+      "implied_prob": 0.7143,
       "all_prices": [
-        -280,
-        -280,
-        -285,
-        -285,
-        -275,
-        -278,
-        -280,
-        -280
+        -250,
+        -250
       ],
-      "fair_prob": 0.0231
+      "fair_prob": 0.0308
     },
     {
-      "name": "Arkansas Razorbacks",
-      "best_odds": -260,
-      "best_odds_fmt": "-260",
-      "best_book": "Bovada",
-      "implied_prob": 0.7222,
+      "name": "North Carolina Central Eagles",
+      "best_odds": -240,
+      "best_odds_fmt": "-240",
+      "best_book": "FanDuel",
+      "implied_prob": 0.7059,
       "all_prices": [
-        -275,
-        -285,
-        -275,
-        -275,
-        -275,
-        -286,
-        -260,
-        -275
+        -20000,
+        -1115,
+        -335,
+        -240
       ],
-      "fair_prob": 0.0228
-    },
-    {
-      "name": "Michigan St Spartans",
-      "best_odds": -225,
-      "best_odds_fmt": "-225",
-      "best_book": "BetRivers",
-      "implied_prob": 0.6923,
-      "all_prices": [
-        -230,
-        -230,
-        -225,
-        -225,
-        -225,
-        -235,
-        -230,
-        -225
-      ],
-      "fair_prob": 0.0218
+      "fair_prob": 0.0304
     },
     {
       "name": "Saint Louis Billikens",
@@ -258,114 +174,36 @@
         -250,
         -250
       ],
-      "fair_prob": 0.0218
+      "fair_prob": 0.0299
     },
     {
       "name": "Hawai'i Rainbow Warriors",
-      "best_odds": -210,
-      "best_odds_fmt": "-210",
-      "best_book": "FanDuel",
-      "implied_prob": 0.6774,
+      "best_odds": -220,
+      "best_odds_fmt": "-220",
+      "best_book": "LowVig.ag",
+      "implied_prob": 0.6875,
       "all_prices": [
         -230,
-        -210,
-        -225,
-        -225,
-        -220,
-        -215,
-        -210,
-        -225
-      ],
-      "fair_prob": 0.0213
-    },
-    {
-      "name": "Houston Cougars",
-      "best_odds": -205,
-      "best_odds_fmt": "-205",
-      "best_book": "FanDuel",
-      "implied_prob": 0.6721,
-      "all_prices": [
-        -205,
-        -225,
-        -215,
-        -215,
+        -250,
         -220,
         -220,
-        -230,
-        -215
+        -220,
+        -220,
+        -240,
+        -240
       ],
-      "fair_prob": 0.0212
+      "fair_prob": 0.0296
     },
     {
-      "name": "Purdue Boilermakers",
-      "best_odds": -175,
-      "best_odds_fmt": "-175",
-      "best_book": "Bovada",
-      "implied_prob": 0.6364,
-      "all_prices": [
-        -187,
-        -187,
-        -225,
-        -298,
-        -195,
-        -235,
-        -265,
-        -175
-      ],
-      "fair_prob": 0.0201
-    },
-    {
-      "name": "UC Irvine Anteaters",
-      "best_odds": -175,
-      "best_odds_fmt": "-175",
-      "best_book": "BetMGM",
-      "implied_prob": 0.6364,
-      "all_prices": [
-        -185,
-        -175,
-        -180,
-        -180,
-        -186,
-        -192,
-        -180,
-        -180
-      ],
-      "fair_prob": 0.0201
-    },
-    {
-      "name": "North Carolina Central Eagles",
+      "name": "Southern Jaguars",
       "best_odds": -170,
       "best_odds_fmt": "-170",
       "best_book": "DraftKings",
       "implied_prob": 0.6296,
       "all_prices": [
-        -170,
-        -180,
-        -180,
-        -175,
-        -175,
-        -175,
-        -178
-      ],
-      "fair_prob": 0.0198
-    },
-    {
-      "name": "Virginia Cavaliers",
-      "best_odds": -167,
-      "best_odds_fmt": "-167",
-      "best_book": "BetRivers",
-      "implied_prob": 0.6255,
-      "all_prices": [
-        -168,
-        -168,
-        -175,
-        -170,
-        -175,
-        -167,
-        -175,
         -170
       ],
-      "fair_prob": 0.0197
+      "fair_prob": 0.0272
     },
     {
       "name": "Yale Bulldogs",
@@ -375,108 +213,81 @@
       "implied_prob": 0.6241,
       "all_prices": [
         -166,
-        -167,
+        -180,
         -175
       ],
-      "fair_prob": 0.0197
+      "fair_prob": 0.0269
     },
     {
-      "name": "Arizona Wildcats",
-      "best_odds": -164,
-      "best_odds_fmt": "-164",
+      "name": "Arkansas Razorbacks",
+      "best_odds": -156,
+      "best_odds_fmt": "-156",
       "best_book": "FanDuel",
-      "implied_prob": 0.6212,
+      "implied_prob": 0.6094,
       "all_prices": [
+        -156,
         -166,
-        -165,
-        -165,
-        -164,
-        -170,
-        -175,
-        -165,
-        -170
+        -190,
+        -175
       ],
-      "fair_prob": 0.0196
+      "fair_prob": 0.0263
     },
     {
       "name": "Harvard Crimson",
-      "best_odds": -150,
-      "best_odds_fmt": "-150",
-      "best_book": "BetMGM",
-      "implied_prob": 0.6,
+      "best_odds": -152,
+      "best_odds_fmt": "-152",
+      "best_book": "FanDuel",
+      "implied_prob": 0.6032,
       "all_prices": [
         -152,
         -157,
         -155,
-        -150
+        -155
       ],
-      "fair_prob": 0.0189
+      "fair_prob": 0.026
     },
     {
-      "name": "Saint Joseph's Hawks",
-      "best_odds": -135,
-      "best_odds_fmt": "-135",
-      "best_book": "DraftKings",
-      "implied_prob": 0.5745,
+      "name": "UConn Huskies",
+      "best_odds": -140,
+      "best_odds_fmt": "-140",
+      "best_book": "FanDuel",
+      "implied_prob": 0.5833,
       "all_prices": [
-        -135,
-        -137,
-        -137,
-        -137,
-        -140,
-        -143,
-        -140,
-        -135
+        -160,
+        -140
       ],
-      "fair_prob": 0.0181
-    },
-    {
-      "name": "San Diego St Aztecs",
-      "best_odds": -135,
-      "best_odds_fmt": "-135",
-      "best_book": "Bovada",
-      "implied_prob": 0.5745,
-      "all_prices": [
-        -142,
-        -138,
-        -138,
-        -138,
-        -145,
-        -148,
-        -140,
-        -135
-      ],
-      "fair_prob": 0.0181
+      "fair_prob": 0.0252
     },
     {
       "name": "UMBC Retrievers",
-      "best_odds": -132,
-      "best_odds_fmt": "-132",
+      "best_odds": -137,
+      "best_odds_fmt": "-137",
       "best_book": "FanDuel",
-      "implied_prob": 0.569,
+      "implied_prob": 0.5781,
       "all_prices": [
         -150,
-        -132,
+        -137,
         -142
       ],
-      "fair_prob": 0.0179
+      "fair_prob": 0.0249
     },
     {
-      "name": "Southern Jaguars",
-      "best_odds": -127,
-      "best_odds_fmt": "-127",
-      "best_book": "LowVig.ag",
-      "implied_prob": 0.5595,
+      "name": "San Diego St Aztecs",
+      "best_odds": -130,
+      "best_odds_fmt": "-130",
+      "best_book": "Bovada",
+      "implied_prob": 0.5652,
       "all_prices": [
-        -130,
-        -130,
-        -129,
-        -127,
-        -127,
-        -130,
+        -142,
+        -137,
+        -137,
+        -138,
+        -145,
+        -150,
+        -135,
         -130
       ],
-      "fair_prob": 0.0176
+      "fair_prob": 0.0244
     },
     {
       "name": "Kennesaw St Owls",
@@ -486,69 +297,53 @@
       "implied_prob": 0.5556,
       "all_prices": [
         -125,
-        -125
+        -125,
+        -134,
+        -127
       ],
-      "fair_prob": 0.0175
+      "fair_prob": 0.024
     },
     {
-      "name": "Louisiana Tech Bulldogs",
+      "name": "Tulsa Golden Hurricane",
+      "best_odds": -110,
+      "best_odds_fmt": "-110",
+      "best_book": "BetMGM",
+      "implied_prob": 0.5238,
+      "all_prices": [
+        -125,
+        -110,
+        -115,
+        -118
+      ],
+      "fair_prob": 0.0226
+    },
+    {
+      "name": "Wichita St Shockers",
       "best_odds": 105,
       "best_odds_fmt": "+105",
       "best_book": "DraftKings",
       "implied_prob": 0.4878,
       "all_prices": [
         105,
-        105
+        -110,
+        -104,
+        -106
       ],
-      "fair_prob": 0.0154
+      "fair_prob": 0.021
     },
     {
-      "name": "Florida A&M Rattlers",
-      "best_odds": 110,
-      "best_odds_fmt": "+110",
-      "best_book": "DraftKings",
-      "implied_prob": 0.4762,
+      "name": "Louisiana Tech Bulldogs",
+      "best_odds": 112,
+      "best_odds_fmt": "+112",
+      "best_book": "FanDuel",
+      "implied_prob": 0.4717,
       "all_prices": [
-        110,
-        108,
-        104,
-        107,
-        107,
         105,
-        110
-      ],
-      "fair_prob": 0.015
-    },
-    {
-      "name": "Vanderbilt Commodores",
-      "best_odds": 120,
-      "best_odds_fmt": "+120",
-      "best_book": "Bovada",
-      "implied_prob": 0.4545,
-      "all_prices": [
-        -50000,
-        -10000,
-        120
-      ],
-      "fair_prob": 0.0143
-    },
-    {
-      "name": "Davidson Wildcats",
-      "best_odds": 120,
-      "best_odds_fmt": "+120",
-      "best_book": "Bovada",
-      "implied_prob": 0.4545,
-      "all_prices": [
-        114,
-        114,
-        117,
-        117,
-        115,
+        105,
         112,
-        120,
-        115
+        104
       ],
-      "fair_prob": 0.0143
+      "fair_prob": 0.0203
     },
     {
       "name": "New Mexico Lobos",
@@ -558,15 +353,15 @@
       "implied_prob": 0.4545,
       "all_prices": [
         120,
-        118,
-        118,
+        117,
+        117,
         115,
-        118,
-        118,
         120,
-        115
+        120,
+        115,
+        110
       ],
-      "fair_prob": 0.0143
+      "fair_prob": 0.0196
     },
     {
       "name": "Vermont Catamounts",
@@ -576,10 +371,10 @@
       "implied_prob": 0.4545,
       "all_prices": [
         120,
-        110,
+        114,
         120
       ],
-      "fair_prob": 0.0143
+      "fair_prob": 0.0196
     },
     {
       "name": "Pennsylvania Quakers",
@@ -593,7 +388,44 @@
         130,
         125
       ],
-      "fair_prob": 0.0137
+      "fair_prob": 0.0188
+    },
+    {
+      "name": "St. John's Red Storm",
+      "best_odds": 135,
+      "best_odds_fmt": "+135",
+      "best_book": "BetMGM",
+      "implied_prob": 0.4255,
+      "all_prices": [
+        135,
+        116
+      ],
+      "fair_prob": 0.0184
+    },
+    {
+      "name": "Prairie View Panthers",
+      "best_odds": 142,
+      "best_odds_fmt": "+142",
+      "best_book": "DraftKings",
+      "implied_prob": 0.4132,
+      "all_prices": [
+        142
+      ],
+      "fair_prob": 0.0178
+    },
+    {
+      "name": "Oklahoma Sooners",
+      "best_odds": 145,
+      "best_odds_fmt": "+145",
+      "best_book": "BetMGM",
+      "implied_prob": 0.4082,
+      "all_prices": [
+        122,
+        130,
+        145,
+        125
+      ],
+      "fair_prob": 0.0176
     },
     {
       "name": "Cornell Big Red",
@@ -603,150 +435,10 @@
       "implied_prob": 0.4082,
       "all_prices": [
         136,
-        135,
+        143,
         145
       ],
-      "fair_prob": 0.0129
-    },
-    {
-      "name": "Iowa State Cyclones",
-      "best_odds": 146,
-      "best_odds_fmt": "+146",
-      "best_book": "BetUS",
-      "implied_prob": 0.4065,
-      "all_prices": [
-        140,
-        145,
-        145,
-        136,
-        140,
-        132,
-        140,
-        146
-      ],
-      "fair_prob": 0.0128
-    },
-    {
-      "name": "Tulsa Golden Hurricane",
-      "best_odds": 150,
-      "best_odds_fmt": "+150",
-      "best_book": "Bovada",
-      "implied_prob": 0.4,
-      "all_prices": [
-        -340,
-        -315,
-        -500,
-        -435,
-        150
-      ],
-      "fair_prob": 0.0126
-    },
-    {
-      "name": "Miami Hurricanes",
-      "best_odds": 150,
-      "best_odds_fmt": "+150",
-      "best_book": "Bovada",
-      "implied_prob": 0.4,
-      "all_prices": [
-        148,
-        148,
-        145,
-        140,
-        145,
-        135,
-        150,
-        146
-      ],
-      "fair_prob": 0.0126
-    },
-    {
-      "name": "Delaware St Hornets",
-      "best_odds": 157,
-      "best_odds_fmt": "+157",
-      "best_book": "BetOnline.ag",
-      "implied_prob": 0.3891,
-      "all_prices": [
-        142,
-        157,
-        157,
-        145,
-        133,
-        150,
-        144
-      ],
-      "fair_prob": 0.0123
-    },
-    {
-      "name": "CSU Northridge Matadors",
-      "best_odds": 157,
-      "best_odds_fmt": "+157",
-      "best_book": "BetOnline.ag",
-      "implied_prob": 0.3891,
-      "all_prices": [
-        154,
-        145,
-        157,
-        157,
-        145,
-        154,
-        155,
-        155
-      ],
-      "fair_prob": 0.0123
-    },
-    {
-      "name": "Kansas Jayhawks",
-      "best_odds": 190,
-      "best_odds_fmt": "+190",
-      "best_book": "Bovada",
-      "implied_prob": 0.3448,
-      "all_prices": [
-        168,
-        185,
-        183,
-        183,
-        180,
-        170,
-        190,
-        183
-      ],
-      "fair_prob": 0.0109
-    },
-    {
-      "name": "CSU Fullerton Titans",
-      "best_odds": 190,
-      "best_odds_fmt": "+190",
-      "best_book": "DraftKings",
-      "implied_prob": 0.3448,
-      "all_prices": [
-        190,
-        172,
-        189,
-        189,
-        180,
-        163,
-        180,
-        185
-      ],
-      "fair_prob": 0.0109
-    },
-    {
-      "name": "UCLA Bruins",
-      "best_odds": 195,
-      "best_odds_fmt": "+195",
-      "best_book": "BetMGM",
-      "implied_prob": 0.339,
-      "all_prices": [
-        188,
-        190,
-        175,
-        189,
-        189,
-        195,
-        190,
-        190
-      ],
-      "fair_prob": 0.0107
+      "fair_prob": 0.0176
     },
     {
       "name": "Dayton Flyers",
@@ -760,207 +452,107 @@
         200,
         190
       ],
-      "fair_prob": 0.0105
+      "fair_prob": 0.0144
     },
     {
-      "name": "Nebraska Cornhuskers",
-      "best_odds": 220,
-      "best_odds_fmt": "+220",
-      "best_book": "DraftKings",
-      "implied_prob": 0.3125,
+      "name": "Saint Joseph's Hawks",
+      "best_odds": 202,
+      "best_odds_fmt": "+202",
+      "best_book": "FanDuel",
+      "implied_prob": 0.3311,
       "all_prices": [
-        163,
-        163,
-        172,
-        220,
-        167,
-        180,
-        175,
-        150
+        202,
+        200
       ],
-      "fair_prob": 0.0098
+      "fair_prob": 0.0143
     },
     {
-      "name": "Oklahoma Sooners",
-      "best_odds": 230,
-      "best_odds_fmt": "+230",
-      "best_book": "DraftKings",
-      "implied_prob": 0.303,
-      "all_prices": [
-        220,
-        230,
-        226,
-        226,
-        220,
-        215,
-        215,
-        230
-      ],
-      "fair_prob": 0.0095
-    },
-    {
-      "name": "Nevada Wolf Pack",
-      "best_odds": 235,
-      "best_odds_fmt": "+235",
+      "name": "CSU Fullerton Titans",
+      "best_odds": 203,
+      "best_odds_fmt": "+203",
       "best_book": "BetUS",
-      "implied_prob": 0.2985,
+      "implied_prob": 0.33,
       "all_prices": [
-        230,
-        230,
-        230,
-        230,
-        220,
-        215,
-        230,
+        190,
+        202,
+        186,
+        186,
+        180,
+        170,
+        203,
+        200
+      ],
+      "fair_prob": 0.0142
+    },
+    {
+      "name": "Toledo Rockets",
+      "best_odds": 250,
+      "best_odds_fmt": "+250",
+      "best_book": "DraftKings",
+      "implied_prob": 0.2857,
+      "all_prices": [
+        250,
         235
       ],
-      "fair_prob": 0.0094
-    },
-    {
-      "name": "Kent State Golden Flashes",
-      "best_odds": 260,
-      "best_odds_fmt": "+260",
-      "best_book": "DraftKings",
-      "implied_prob": 0.2778,
-      "all_prices": [
-        237,
-        237,
-        250,
-        260,
-        230,
-        220,
-        250,
-        240
-      ],
-      "fair_prob": 0.0088
-    },
-    {
-      "name": "UT-Arlington Mavericks",
-      "best_odds": 334,
-      "best_odds_fmt": "+334",
-      "best_book": "BetOnline.ag",
-      "implied_prob": 0.2304,
-      "all_prices": [
-        320,
-        334,
-        334,
-        310,
-        300,
-        320,
-        305
-      ],
-      "fair_prob": 0.0073
+      "fair_prob": 0.0123
     },
     {
       "name": "Utah Tech Trailblazers",
-      "best_odds": 330,
-      "best_odds_fmt": "+330",
-      "best_book": "LowVig.ag",
-      "implied_prob": 0.2326,
+      "best_odds": 295,
+      "best_odds_fmt": "+295",
+      "best_book": "DraftKings",
+      "implied_prob": 0.2532,
       "all_prices": [
         295,
+        280,
+        289,
+        289,
+        280,
         270,
-        330,
-        330,
+        280,
+        290
+      ],
+      "fair_prob": 0.0109
+    },
+    {
+      "name": "Vanderbilt Commodores",
+      "best_odds": 310,
+      "best_odds_fmt": "+310",
+      "best_book": "DraftKings",
+      "implied_prob": 0.2439,
+      "all_prices": [
         310,
-        265,
-        305,
+        280,
         275
       ],
-      "fair_prob": 0.0073
+      "fair_prob": 0.0105
     },
     {
-      "name": "North Texas Mean Green",
-      "best_odds": 340,
-      "best_odds_fmt": "+340",
-      "best_book": "BetMGM",
-      "implied_prob": 0.2273,
+      "name": "UT-Arlington Mavericks",
+      "best_odds": 410,
+      "best_odds_fmt": "+410",
+      "best_book": "FanDuel",
+      "implied_prob": 0.1961,
       "all_prices": [
-        250,
-        230,
-        340,
-        280,
-        -200
+        350,
+        345,
+        410
       ],
-      "fair_prob": 0.0072
-    },
-    {
-      "name": "Duquesne Dukes",
-      "best_odds": 340,
-      "best_odds_fmt": "+340",
-      "best_book": "BetMGM",
-      "implied_prob": 0.2273,
-      "all_prices": [
-        260,
-        330,
-        340,
-        230,
-        285
-      ],
-      "fair_prob": 0.0072
-    },
-    {
-      "name": "Clemson Tigers",
-      "best_odds": 476,
-      "best_odds_fmt": "+476",
-      "best_book": "BetOnline.ag",
-      "implied_prob": 0.1736,
-      "all_prices": [
-        460,
-        455,
-        476,
-        476,
-        475,
-        420,
-        450,
-        475
-      ],
-      "fair_prob": 0.0055
+      "fair_prob": 0.0085
     },
     {
       "name": "Wisconsin Badgers",
-      "best_odds": 575,
-      "best_odds_fmt": "+575",
+      "best_odds": 600,
+      "best_odds_fmt": "+600",
       "best_book": "DraftKings",
-      "implied_prob": 0.1481,
+      "implied_prob": 0.1429,
       "all_prices": [
-        520,
-        575,
-        575
-      ],
-      "fair_prob": 0.0047
-    },
-    {
-      "name": "Seton Hall Pirates",
-      "best_odds": 650,
-      "best_odds_fmt": "+650",
-      "best_book": "BetRivers",
-      "implied_prob": 0.1333,
-      "all_prices": [
-        560,
-        650,
+        530,
         600,
-        550
-      ],
-      "fair_prob": 0.0042
-    },
-    {
-      "name": "Ole Miss Rebels",
-      "best_odds": 650,
-      "best_odds_fmt": "+650",
-      "best_book": "BetMGM",
-      "implied_prob": 0.1333,
-      "all_prices": [
-        590,
         600,
-        650,
-        460,
-        613,
-        613,
-        575,
-        600
+        450
       ],
-      "fair_prob": 0.0042
+      "fair_prob": 0.0062
     },
     {
       "name": "Charlotte 49ers",
@@ -974,73 +566,79 @@
         750,
         600
       ],
-      "fair_prob": 0.0037
+      "fair_prob": 0.0051
     },
     {
-      "name": "Massachusetts Minutemen",
-      "best_odds": 850,
-      "best_odds_fmt": "+850",
-      "best_book": "BetRivers",
-      "implied_prob": 0.1053,
-      "all_prices": [
-        800,
-        750,
-        525,
-        375,
-        850
-      ],
-      "fair_prob": 0.0033
-    },
-    {
-      "name": "Georgetown Hoyas",
-      "best_odds": 860,
-      "best_odds_fmt": "+860",
-      "best_book": "FanDuel",
-      "implied_prob": 0.1042,
-      "all_prices": [
-        860,
-        800,
-        817,
-        817,
-        800,
-        700,
-        725,
-        830
-      ],
-      "fair_prob": 0.0033
-    },
-    {
-      "name": "South Carolina St Bulldogs",
-      "best_odds": 1600,
-      "best_odds_fmt": "+1600",
+      "name": "Michigan St Spartans",
+      "best_odds": 1100,
+      "best_odds_fmt": "+1100",
       "best_book": "DraftKings",
-      "implied_prob": 0.0588,
+      "implied_prob": 0.0833,
       "all_prices": [
-        1600,
-        1500,
-        1600,
-        900
+        870,
+        1100,
+        400,
+        800
       ],
-      "fair_prob": 0.0019
+      "fair_prob": 0.0036
     },
     {
-      "name": "Tennessee Volunteers",
+      "name": "Kansas Jayhawks",
+      "best_odds": 3000,
+      "best_odds_fmt": "+3000",
+      "best_book": "FanDuel",
+      "implied_prob": 0.0323,
+      "all_prices": [
+        3000,
+        3000,
+        1200
+      ],
+      "fair_prob": 0.0014
+    },
+    {
+      "name": "Delaware St Hornets",
+      "best_odds": 3000,
+      "best_odds_fmt": "+3000",
+      "best_book": "DraftKings",
+      "implied_prob": 0.0323,
+      "all_prices": [
+        3000,
+        510,
+        240,
+        178
+      ],
+      "fair_prob": 0.0014
+    },
+    {
+      "name": "Clemson Tigers",
       "best_odds": 3300,
       "best_odds_fmt": "+3300",
       "best_book": "BetMGM",
       "implied_prob": 0.0294,
       "all_prices": [
         3000,
-        3300,
-        -155
+        3300
       ],
-      "fair_prob": 0.0009
+      "fair_prob": 0.0013
+    },
+    {
+      "name": "Nevada Wolf Pack",
+      "best_odds": 8000,
+      "best_odds_fmt": "+8000",
+      "best_book": "FanDuel",
+      "implied_prob": 0.0123,
+      "all_prices": [
+        8000,
+        3300,
+        1200
+      ],
+      "fair_prob": 0.0005
     }
   ],
-  "requests_remaining": 439,
-  "requests_used": 61,
-  "n_events": 33,
+  "requests_remaining": 407,
+  "requests_used": 93,
+  "n_events": 24,
   "error": null,
-  "fetched_at": 1773441615.3415027,
+  "fetched_at": 1773458155.341545,
   "cached": false
 }

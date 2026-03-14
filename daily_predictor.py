@@ -60,28 +60,61 @@ def total_over_prob(model_total: float, market_line: float, sigma: float = 15.0)
 
 
 def _signal(edge: float) -> str:
-    if edge >= 0.15:
-        return "STRONG BET"
-    if edge >= 0.02:
+    if edge >= 0.08:
+        return "STRONG VALUE"
+    if edge >= 0.04:
         return "MODEL HIGHER"
-    if edge <= -0.02:
+    if edge >= -0.04:
+        return "AGREE"
+    if edge >= -0.08:
         return "MARKET HIGHER"
-    return "AGREE"
+    return "FADE"
 
 
 # ── DailyPredictor ────────────────────────────────────────────────────────────
 
+def _is_tournament_game(game_date=None) -> bool:
+    """
+    Detect whether a game date falls inside March Madness window.
+    Tournament runs roughly March 15 – April 8 each year.
+    """
+    from datetime import date as _date
+    d = game_date or _date.today()
+    if isinstance(d, str):
+        d = _date.fromisoformat(d[:10])
+    return (d.month == 3 and d.day >= 15) or (d.month == 4 and d.day <= 8)
+
+
 class DailyPredictor:
-    """Wraps the trained NCAAModel for real-time game win-probability predictions."""
+    """
+    Basketball-God 2.0 — unified predictor with routing:
+      - Tournament games  → NCAAModel (tournament-trained, 72% accuracy)
+      - Regular season    → RegularSeasonModel (trained on 2010-2025 regular season)
+
+    Zero-fill is eliminated: SeasonStatsStore provides real rolling features
+    for every active D1 team. League-average defaults replace 0 for sparse teams.
+    """
 
     def __init__(self):
+        # Tournament model (legacy, unchanged)
         self.model = None
         self.elo   = None
-        self.ready = False
-        self._team_index: dict[str, int] = {}   # normalized name → team_id
+        self._team_index: dict[str, int] = {}
         self._id_to_name: dict[int, str] = {}
 
+        # Regular season model (2.0)
+        self.rs_model  = None
+        self.rs_store  = None
+
+        self.ready = False
+
     def load(self) -> "DailyPredictor":
+        self._load_tournament_model()
+        self._load_regular_season_model()
+        self.ready = True
+        return self
+
+    def _load_tournament_model(self):
         try:
             from model_training import NCAAModel
             from elo import EloSystem, build_elo_ratings
@@ -95,7 +128,6 @@ class DailyPredictor:
             if all_games_path.exists():
                 games = pd.read_csv(all_games_path)
                 self.elo, _ = build_elo_ratings(games)
-                # Build team-name lookup from games data
                 for col_id, col_name in [("home_id", "home_team"), ("away_id", "away_team")]:
                     if col_id in games.columns and col_name in games.columns:
                         pairs = games[[col_id, col_name]].drop_duplicates()
@@ -107,12 +139,19 @@ class DailyPredictor:
             else:
                 from elo import EloSystem
                 self.elo = EloSystem()
-
-            self.ready = True
         except Exception as e:
-            print(f"[DailyPredictor] load failed: {e}", file=sys.stderr)
-            self.ready = False
-        return self
+            print(f"[DailyPredictor] tournament model load failed: {e}", file=sys.stderr)
+
+    def _load_regular_season_model(self):
+        try:
+            from regular_season_model import RegularSeasonModel
+            from season_stats_store import SeasonStatsStore
+
+            self.rs_model = RegularSeasonModel().load()
+            self.rs_store = SeasonStatsStore()
+            self.rs_store.refresh()
+        except Exception as e:
+            print(f"[DailyPredictor] regular season model load failed: {e}", file=sys.stderr)
 
     def _find_team_id(self, name: str) -> Optional[int]:
         key = name.lower().strip()
@@ -124,26 +163,50 @@ class DailyPredictor:
                 return tid
         return None
 
-    def predict_game(self, home: str, away: str) -> dict:
+    def predict_game(self, home: str, away: str, game_date=None) -> dict:
+        """
+        Route to the right model based on game date:
+          - March 15 – April 8  → tournament model (NCAAModel)
+          - All other dates      → regular season model (RegularSeasonModel)
+        """
         base = {
             "home_team": home, "away_team": away,
             "home_display": home, "away_display": away,
-            "home_id": None,  "away_id": None,
+            "home_id": None, "away_id": None,
             "prob_home_wins": 0.50, "prob_away_wins": 0.50,
-            "model_spread": 0.0,   "predicted_total": 145.0,
-            "confidence": "low",   "model_data_available": False,
+            "model_spread": 0.0, "predicted_total": 145.0,
+            "confidence": "low", "model_data_available": False,
+            "model_type": "unknown",
         }
         if not self.ready:
             return base
 
+        if _is_tournament_game(game_date):
+            return self._predict_tournament(home, away)
+        else:
+            return self._predict_regular_season(home, away, game_date)
+
+    def _predict_tournament(self, home: str, away: str) -> dict:
+        """Use the legacy NCAAModel for tournament games."""
+        base = {
+            "home_team": home, "away_team": away,
+            "home_display": home, "away_display": away,
+            "home_id": None, "away_id": None,
+            "prob_home_wins": 0.50, "prob_away_wins": 0.50,
+            "model_spread": 0.0, "predicted_total": 145.0,
+            "confidence": "low", "model_data_available": False,
+            "model_type": "tournament",
+        }
+        if not self.model:
+            return base
         try:
             import pandas as pd
             from config import MATCHUP_FEATURES
 
             home_id = self._find_team_id(home)
             away_id = self._find_team_id(away)
-            home_elo = self.elo.get_rating(home_id) if home_id else 1500.0
-            away_elo = self.elo.get_rating(away_id) if away_id else 1500.0
+            home_elo = self.elo.get_rating(home_id) if home_id and self.elo else 1500.0
+            away_elo = self.elo.get_rating(away_id) if away_id and self.elo else 1500.0
 
             feature_row = {f: 0 for f in MATCHUP_FEATURES}
             feature_row["elo_diff"]  = home_elo - away_elo
@@ -169,9 +232,37 @@ class DailyPredictor:
                 "predicted_total": 145.0,
                 "confidence": conf,
                 "model_data_available": True,
+                "model_type": "tournament",
             }
         except Exception as e:
-            print(f"[DailyPredictor] predict_game error ({home} vs {away}): {e}",
+            print(f"[DailyPredictor] tournament predict error ({home} vs {away}): {e}",
+                  file=sys.stderr)
+            return base
+
+    def _predict_regular_season(self, home: str, away: str, game_date=None) -> dict:
+        """Use RegularSeasonModel with real rolling features from SeasonStatsStore."""
+        base = {
+            "home_team": home, "away_team": away,
+            "home_display": home, "away_display": away,
+            "home_id": None, "away_id": None,
+            "prob_home_wins": 0.50, "prob_away_wins": 0.50,
+            "model_spread": 0.0, "predicted_total": 145.0,
+            "confidence": "low", "model_data_available": False,
+            "model_type": "regular_season",
+        }
+        if not self.rs_model or not self.rs_model.ready:
+            return base
+        try:
+            from datetime import date as _date
+            d = game_date or _date.today()
+            if isinstance(d, str):
+                d = _date.fromisoformat(d[:10])
+
+            features = self.rs_store.get_matchup_features(home, away, d) if self.rs_store else {}
+            result = self.rs_model.predict(features, home, away)
+            return result
+        except Exception as e:
+            print(f"[DailyPredictor] regular season predict error ({home} vs {away}): {e}",
                   file=sys.stderr)
             return base
 

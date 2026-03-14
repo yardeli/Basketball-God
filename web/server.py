@@ -5,6 +5,7 @@ Then open: http://localhost:5050
 """
 import json
 import sys
+from datetime import datetime, timezone
 from pathlib import Path
 
 from flask import Flask, jsonify, send_file, request as flask_request
@@ -106,11 +107,38 @@ def api_daily():
             })
 
         predictor = get_daily_predictor()
+        now_utc   = datetime.now(timezone.utc)
 
         enriched_games = []
         for game in odds_data.get("games", []):
             home = game["home_team"]
             away = game["away_team"]
+
+            # Determine if game has already started
+            in_progress = False
+            try:
+                ct = datetime.fromisoformat(game["commence_time"].replace("Z", "+00:00"))
+                in_progress = ct <= now_utc
+            except Exception:
+                pass
+
+            if in_progress:
+                # Show the game but strip edges — live odds are meaningless to a pre-game model
+                enriched_games.append({
+                    "id":            game["id"],
+                    "home_team":     home,
+                    "away_team":     away,
+                    "home_display":  home,
+                    "away_display":  away,
+                    "commence_time": game["commence_time"],
+                    "in_progress":   True,
+                    "prediction":    {"prob_home_wins": 0.5, "prob_away_wins": 0.5,
+                                      "confidence": "low", "model_data_available": False},
+                    "bets":          [],
+                    "best_edge":     0,
+                    "n_value_bets":  0,
+                })
+                continue
 
             if predictor and predictor.ready:
                 prediction = predictor.predict_game(home, away)
@@ -133,6 +161,7 @@ def api_daily():
                 "home_display":  prediction["home_display"],
                 "away_display":  prediction["away_display"],
                 "commence_time": game["commence_time"],
+                "in_progress":   False,
                 "prediction": {
                     "prob_home_wins":  prediction["prob_home_wins"],
                     "prob_away_wins":  prediction["prob_away_wins"],
@@ -140,13 +169,20 @@ def api_daily():
                     "predicted_total": prediction["predicted_total"],
                     "confidence":      prediction["confidence"],
                     "data_available":  prediction["model_data_available"],
+                    "model_type":      prediction.get("model_type", "unknown"),
+                    "home_n_games":    prediction.get("home_n_games"),
+                    "away_n_games":    prediction.get("away_n_games"),
                 },
                 "bets":         bets,
                 "best_edge":    bets[0]["edge"] if bets else 0,
                 "n_value_bets": sum(1 for b in bets if b["edge"] >= 0.04),
             })
 
-        enriched_games.sort(key=lambda g: (-g["n_value_bets"], -g["best_edge"]))
+        # Upcoming games first (sorted by value), then in-progress at the end
+        upcoming   = [g for g in enriched_games if not g["in_progress"]]
+        live_games = [g for g in enriched_games if g["in_progress"]]
+        upcoming.sort(key=lambda g: (-g["n_value_bets"], -g["best_edge"]))
+        enriched_games = upcoming + live_games
 
         return jsonify({
             "games":              enriched_games,
@@ -166,6 +202,38 @@ def api_daily():
             "n_games": 0, "cached": False,
             "requests_remaining": -1, "model_ready": False,
         })
+
+
+@app.route("/api/refresh", methods=["POST"])
+def api_refresh():
+    """Force-refresh the season stats store (fetch latest game results from ESPN)."""
+    global _daily_predictor
+    try:
+        predictor = get_daily_predictor()
+        if predictor and predictor.rs_store:
+            predictor.rs_store.refresh(force=True)
+            return jsonify({
+                "ok": True,
+                "games": len(predictor.rs_store.games),
+                "teams_ranked": len(predictor.rs_store.elo_ranks),
+            })
+        return jsonify({"ok": False, "error": "Regular season model not loaded"})
+    except Exception as e:
+        return jsonify({"ok": False, "error": str(e)})
+
+
+@app.route("/api/model_status")
+def api_model_status():
+    """Return status of both models."""
+    predictor = get_daily_predictor()
+    return jsonify({
+        "tournament_model": bool(predictor and predictor.model),
+        "regular_season_model": bool(predictor and predictor.rs_model and predictor.rs_model.ready),
+        "season_games_loaded": len(predictor.rs_store.games) if (predictor and predictor.rs_store) else 0,
+        "teams_ranked": len(predictor.rs_store.elo_ranks) if (predictor and predictor.rs_store) else 0,
+        "summaries_cached": sum(1 for g in predictor.rs_store.games if g.get("has_summary"))
+                            if (predictor and predictor.rs_store) else 0,
+    })
 
 
 @app.route("/api/paperbets")

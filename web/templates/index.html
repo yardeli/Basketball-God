@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Basketball-God — NCAA Prediction Dashboard</title>
+  <title>Rusi's Crystal Ball — NCAA Prediction Dashboard</title>
   <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -148,6 +148,11 @@
     .game-card .gc-pick  { color: #4ade80; font-size: 0.72rem; margin-top: 4px; font-weight: 600; }
     .game-card .gc-edge  { color: #f97316; font-size: 0.7rem; }
     .game-card .gc-round { color: #64748b; font-size: 0.68rem; margin-top: 4px; }
+    .game-card.game-card-live { opacity: 0.6; border-color: #475569; }
+    .game-card.game-card-live:hover { border-color: #f97316; opacity: 0.8; }
+    .game-card.game-card-live.active { border-color: #f97316; opacity: 1; }
+    .game-card .gc-live-badge { color: #f97316; font-size: 0.7rem; margin-top: 4px; font-weight: 600; animation: livePulse 1.5s ease-in-out infinite; }
+    @keyframes livePulse { 0%,100% { opacity:1; } 50% { opacity:0.4; } }
 
     /* ── Game detail panel ── */
     .game-detail-panel {
@@ -200,10 +205,11 @@
       font-weight: 700;
       letter-spacing: 0.5px;
     }
-    .sig-strong { background: #166534; color: #4ade80; }
+    .sig-strong { background: #14532d; color: #4ade80; font-weight: 700; }
     .sig-higher { background: #1d4ed8; color: #bfdbfe; }
-    .sig-market { background: #7f1d1d; color: #fca5a5; }
     .sig-agree  { background: #1e2a3a; color: #94a3b8; }
+    .sig-market { background: #422006; color: #fdba74; }
+    .sig-fade   { background: #7f1d1d; color: #fca5a5; font-weight: 700; }
 
     /* ── Paper trading ── */
     .pt-header {
@@ -343,7 +349,7 @@
 ═══════════════════════════════════════════ -->
 <header class="site-header">
   <div>
-    <h1>&#x1F3C0; Basketball-God</h1>
+    <h1>&#x1F52E; Rusi's Crystal Ball</h1>
     <p>NCAA Tournament Intelligence Engine &mdash; 202,529 Games (1985&ndash;2026)</p>
   </div>
   <div class="header-badges">
@@ -393,7 +399,9 @@
     </div>
     <div class="meta-bar">
       <span class="meta-info" id="games-meta">Loading games&hellip;</span>
+      <span class="meta-info" id="model-status" style="margin-left:8px;font-size:0.7rem;color:#64748b;"></span>
       <button class="btn btn-orange" onclick="refreshGames()">&#x27F3; Refresh Lines</button>
+      <button class="btn" style="background:#1e3a5f;color:#60a5fa;margin-left:4px;" onclick="refreshSeasonStats()" title="Fetch latest game results from ESPN">&#x21BB; Update Stats</button>
     </div>
     <div class="games-scroll" id="games-scroll">
       <div style="color:#64748b;padding:20px;">Loading&hellip;</div>
@@ -763,6 +771,7 @@ async function init() {
 
   autoAddStrongBets();
   renderPaperTrading();
+  loadModelStatus();
 }
 
 // ════════════════════════════════════════════════════════
@@ -823,9 +832,16 @@ function renderGames(games, meta) {
 }
 
 function buildGameCard(g) {
-  var hasPick = (g.bets || []).some(function(b){ return b.signal === 'STRONG BET' || b.signal === 'MODEL HIGHER'; });
+  var gid = g.game_id != null ? g.game_id : (g.id || 0);
+  if (g.in_progress) {
+    return '<div class="game-card game-card-live" id="gc-' + gid + '" onclick="selectGame(\'' + gid + '\')">' +
+             '<div class="gc-teams">' + (g.away_display || g.away_team || 'Away') + ' @ ' + (g.home_display || g.home_team || 'Home') + '</div>' +
+             '<div class="gc-live-badge">&#9679; LIVE</div>' +
+           '</div>';
+  }
+  var hasPick = (g.bets || []).some(function(b){ return b.signal === 'STRONG VALUE' || b.signal === 'MODEL HIGHER'; });
   var pickCls = hasPick ? ' has-pick' : '';
-  var pick    = (g.bets || []).find(function(b){ return b.signal === 'STRONG BET'; });
+  var pick    = (g.bets || []).find(function(b){ return b.signal === 'STRONG VALUE'; });
   var pickHtml = '';
   if (pick) {
     var edgeStr = pick.edge != null ? (pick.edge * 100).toFixed(1) + '%' : '';
@@ -834,7 +850,6 @@ function buildGameCard(g) {
     pickHtml = '<div class="gc-pick">&#9733; ' + (pick.bet || '') + '</div>' +
                '<div class="gc-edge">Edge: ' + edgeStr + mktPart + '</div>';
   }
-  var gid = g.game_id != null ? g.game_id : (g.id || 0);
   return '<div class="game-card' + pickCls + '" id="gc-' + gid + '" onclick="selectGame(\'' + gid + '\')">' +
            '<div class="gc-teams">' + (g.away_display || g.away_team || 'Away') + ' @ ' + (g.home_display || g.home_team || 'Home') + '</div>' +
            pickHtml +
@@ -858,13 +873,22 @@ function renderGameDetail(game) {
   var awayDisplay = game.away_display || game.away_team || 'Away';
   var homeDisplay = game.home_display || game.home_team || 'Home';
 
-  document.getElementById('gd-title').textContent =
-    awayDisplay + '  @  ' + homeDisplay;
+  document.getElementById('gd-title').innerHTML =
+    awayDisplay + '&nbsp;&nbsp;@&nbsp;&nbsp;' + homeDisplay + modelBadge;
 
   var homeProb = pred.prob_home_wins != null ? pred.prob_home_wins : (game.home_win_prob || 0.5);
   var awayProb = pred.prob_away_wins != null ? pred.prob_away_wins : (1 - homeProb);
   var confBadge = pred.confidence === 'high' ? ' &nbsp;<span style="color:#22c55e;font-size:0.75rem;">&#9679; HIGH CONF</span>' :
                   pred.confidence === 'medium' ? ' &nbsp;<span style="color:#f97316;font-size:0.75rem;">&#9679; MED CONF</span>' : '';
+  var nHome = pred.home_n_games != null ? pred.home_n_games : '?';
+  var nAway = pred.away_n_games != null ? pred.away_n_games : '?';
+  var dataNote = pred.model_type === 'regular_season'
+    ? ' <span style="color:#64748b;font-size:0.65rem;">(' + nAway + 'g / ' + nHome + 'g)</span>' : '';
+  var modelBadge = pred.model_type === 'regular_season'
+    ? '<span style="background:#1e3a5f;color:#60a5fa;font-size:0.68rem;padding:2px 6px;border-radius:4px;margin-left:6px;">REG SEASON MODEL</span>' + dataNote
+    : pred.model_type === 'tournament'
+    ? '<span style="background:#1a3320;color:#4ade80;font-size:0.68rem;padding:2px 6px;border-radius:4px;margin-left:6px;">TOURNAMENT MODEL</span>'
+    : '';
   var probsEl  = document.getElementById('gd-probs');
   probsEl.innerHTML =
     '<div class="prob-box">' +
@@ -880,6 +904,10 @@ function renderGameDetail(game) {
 
   var bets  = game.bets || [];
   var tbody = document.getElementById('gd-bets-body');
+  if (game.in_progress) {
+    tbody.innerHTML = '<tr><td colspan="7" style="color:#f97316;text-align:center;padding:1rem;">&#9679; Game in progress &mdash; pre-game analysis only. Live odds are not used by the model.</td></tr>';
+    return;
+  }
   if (!bets.length) {
     tbody.innerHTML = '<tr><td colspan="7" style="color:#64748b;">No bets available.</td></tr>';
     return;
@@ -997,7 +1025,7 @@ function addBetFromModal() {
 
 function signalBadge(sig) {
   if (!sig) return '<span class="signal sig-agree">--</span>';
-  var map = { 'STRONG BET': 'sig-strong', 'MODEL HIGHER': 'sig-higher', 'MARKET HIGHER': 'sig-market', 'AGREE': 'sig-agree' };
+  var map = { 'STRONG VALUE': 'sig-strong', 'MODEL HIGHER': 'sig-higher', 'AGREE': 'sig-agree', 'MARKET HIGHER': 'sig-market', 'FADE': 'sig-fade' };
   var cls = map[sig] || 'sig-agree';
   return '<span class="signal ' + cls + '">' + sig + '</span>';
 }
@@ -1013,6 +1041,41 @@ async function refreshGames() {
   } catch(e) {
     document.getElementById('games-meta').textContent = 'Refresh failed.';
   }
+}
+
+async function refreshSeasonStats() {
+  var btn = event.target;
+  var orig = btn.textContent;
+  btn.textContent = 'Updating\u2026';
+  btn.disabled = true;
+  try {
+    var d = await fetch('/api/refresh', {method: 'POST'}).then(function(r){ return r.json(); });
+    if (d.ok) {
+      document.getElementById('model-status').textContent =
+        d.games + ' games | ' + d.teams_ranked + ' teams ranked';
+      // Refresh game predictions with new stats
+      await refreshGames();
+    } else {
+      alert('Stats update failed: ' + (d.error || 'unknown error'));
+    }
+  } catch(e) {
+    alert('Stats update failed: ' + e);
+  } finally {
+    btn.textContent = orig;
+    btn.disabled = false;
+  }
+}
+
+async function loadModelStatus() {
+  try {
+    var d = await fetch('/api/model_status').then(function(r){ return r.json(); });
+    var parts = [];
+    if (d.regular_season_model) parts.push('RS model \u2713');
+    if (d.tournament_model)     parts.push('Tournament model \u2713');
+    if (d.season_games_loaded)  parts.push(d.season_games_loaded + ' games');
+    if (d.summaries_cached)     parts.push(d.summaries_cached + ' box scores');
+    document.getElementById('model-status').textContent = parts.join(' \u00b7 ');
+  } catch(e) {}
 }
 
 // ════════════════════════════════════════════════════════
@@ -1348,7 +1411,7 @@ function autoAddStrongBets() {
 
   _allGames.forEach(function(g) {
     (g.bets || []).forEach(function(b) {
-      if (b.signal !== 'STRONG BET' && b.signal !== 'MODEL HIGHER') return;
+      if (b.signal !== 'STRONG VALUE' && b.signal !== 'MODEL HIGHER') return;
       var prob = Math.max(g.home_win_prob || 0, g.away_win_prob || 0);
       if (prob < _ptSettings.threshold) return;
       var gid = g.game_id != null ? g.game_id : (g.id || 0);

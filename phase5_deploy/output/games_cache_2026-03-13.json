@@ -7,56 +7,16 @@
       "commence_time": "2026-03-13T19:35:50Z",
       "h2h": {
         "away": {
-          "price": 500,
-          "best_book": "Bovada"
-        },
-        "home": {
-          "price": -109,
-          "best_book": "BetRivers"
-        }
-      },
-      "spread": {},
-      "total": {}
-    },
-    {
-      "id": "16f27efd2cea279524c2aa1581c8e94d",
-      "home_team": "Vanderbilt Commodores",
-      "away_team": "Tennessee Volunteers",
-      "commence_time": "2026-03-13T20:00:37Z",
-      "h2h": {
-        "away": {
           "price": 3300,
           "best_book": "BetMGM"
         },
         "home": {
-          "price": -750,
+          "price": -1800,
           "best_book": "Bovada"
         }
       },
-      "spread": {
-        "away": {
-          "price": -105,
-          "point": 7.5,
-          "best_book": "DraftKings"
-        },
-        "home": {
-          "price": 118,
-          "point": -7.5,
-          "best_book": "BetMGM"
-        }
-      },
-      "total": {
-        "over": {
-          "price": 150,
-          "point": 147.5,
-          "best_book": "DraftKings"
-        },
-        "under": {
-          "price": -195,
-          "point": 147.5,
-          "best_book": "DraftKings"
-        }
-      }
+      "spread": {},
+      "total": {}
     },
     {
       "id": "7ddda6367079446ebe1e18815fd5cf46",
@@ -65,36 +25,36 @@
       "commence_time": "2026-03-13T21:12:00Z",
       "h2h": {
         "away": {
-          "price": 1000,
-          "best_book": "Bovada"
+          "price": 3000,
+          "best_book": "FanDuel"
         },
         "home": {
-          "price": -450,
-          "best_book": "BetMGM"
+          "price": -3300,
+          "best_book": "Bovada"
         }
       },
       "spread": {
         "away": {
-          "price": -105,
-          "point": 6.5,
-          "best_book": "BetMGM"
+          "price": -110,
+          "point": 8.5,
+          "best_book": "Bovada"
         },
         "home": {
-          "price": -118,
-          "point": -6.5,
-          "best_book": "FanDuel"
+          "price": -105,
+          "point": -8.5,
+          "best_book": "DraftKings"
         }
       },
       "total": {
         "over": {
-          "price": -104,
-          "point": 162.5,
-          "best_book": "FanDuel"
+          "price": 100,
+          "point": 151.5,
+          "best_book": "DraftKings"
         },
         "under": {
-          "price": -115,
-          "point": 162.5,
-          "best_book": "BetRivers"
+          "price": 100,
+          "point": 151.5,
+          "best_book": "FanDuel"
         }
       }
     },
@@ -105,36 +65,36 @@
       "commence_time": "2026-03-13T21:20:29Z",
       "h2h": {
         "away": {
-          "price": 550,
-          "best_book": "Bovada"
+          "price": 800,
+          "best_book": "DraftKings"
         },
         "home": {
-          "price": -550,
-          "best_book": "BetMGM"
+          "price": -700,
+          "best_book": "Bovada"
         }
       },
       "spread": {
         "away": {
-          "price": -108,
+          "price": -113,
           "point": 8.5,
           "best_book": "BetRivers"
         },
         "home": {
-          "price": -110,
+          "price": -104,
           "point": -8.5,
-          "best_book": "DraftKings"
+          "best_book": "FanDuel"
         }
       },
       "total": {
         "over": {
-          "price": -115,
-          "point": 149.5,
-          "best_book": "BetRivers"
+          "price": -105,
+          "point": 129.5,
+          "best_book": "BetMGM"
         },
         "under": {
-          "price": -110,
-          "point": 149.5,
-          "best_book": "DraftKings"
+          "price": -109,
+          "point": 129.5,
+          "best_book": "BetRivers"
         }
       }
     },
@@ -145,36 +105,36 @@
       "commence_time": "2026-03-13T21:30:00Z",
       "h2h": {
         "away": {
-          "price": 800,
-          "best_book": "Bovada"
+          "price": 3500,
+          "best_book": "FanDuel"
         },
         "home": {
-          "price": -1000,
-          "best_book": "FanDuel"
+          "price": -10000,
+          "best_book": "BetMGM"
         }
       },
       "spread": {
         "away": {
-          "price": -129,
-          "point": 10.5,
-          "best_book": "BetRivers"
+          "price": -118,
+          "point": 17.5,
+          "best_book": "FanDuel"
         },
         "home": {
-          "price": 100,
-          "point": -10.5,
+          "price": -112,
+          "point": -17.5,
           "best_book": "FanDuel"
         }
       },
       "total": {
         "over": {
-          "price": -115,
-          "point": 139.5,
-          "best_book": "Bovada"
+          "price": -121,
+          "point": 132.5,
+          "best_book": "BetRivers"
         },
         "under": {
-          "price": -105,
-          "point": 139.5,
-          "best_book": "BetMGM"
+          "price": -106,
+          "point": 132.5,
+          "best_book": "FanDuel"
         }
       }
     },
@@ -185,34 +145,34 @@
       "commence_time": "2026-03-13T22:03:08Z",
       "h2h": {
         "home": {
-          "price": -1000,
+          "price": -5000,
           "best_book": "Bovada"
         },
         "away": {
-          "price": 1400,
-          "best_book": "FanDuel"
+          "price": 3300,
+          "best_book": "BetMGM"
         }
       },
       "spread": {
         "home": {
-          "price": -106,
-          "point": -16.5,
-          "best_book": "FanDuel"
+          "price": -110,
+          "point": -20.5,
+          "best_book": "BetMGM"
         },
         "away": {
-          "price": -120,
-          "point": 16.5,
-          "best_book": "DraftKings"
+          "price": -118,
+          "point": 20.5,
+          "best_book": "BetMGM"
         }
       },
       "total": {
         "over": {
-          "price": -118,
+          "price": -115,
           "point": 140.5,
           "best_book": "BetMGM"
         },
         "under": {
-          "price": -110,
+          "price": -115,
           "point": 140.5,
           "best_book": "BetMGM"
         }
@@ -222,38 +182,38 @@
       "id": "407e16214de4f4e2604b15a989bd585b",
       "home_team": "Nebraska Cornhuskers",
       "away_team": "Purdue Boilermakers",
-      "commence_time": "2026-03-13T22:30:00Z",
+      "commence_time": "2026-03-13T22:30:13Z",
       "h2h": {
         "home": {
-          "price": 168,
-          "best_book": "FanDuel"
+          "price": 240,
+          "best_book": "Bovada"
         },
         "away": {
-          "price": -187,
-          "best_book": "BetOnline.ag"
+          "price": -200,
+          "best_book": "BetRivers"
         }
       },
       "spread": {
         "home": {
-          "price": -106,
-          "point": 4.5,
-          "best_book": "FanDuel"
+          "price": -120,
+          "point": 5.5,
+          "best_book": "DraftKings"
         },
         "away": {
-          "price": -104,
-          "point": -4.5,
-          "best_book": "LowVig.ag"
+          "price": -106,
+          "point": -5.5,
+          "best_book": "FanDuel"
         }
       },
       "total": {
         "over": {
-          "price": -105,
-          "point": 145.5,
+          "price": -110,
+          "point": 152.5,
           "best_book": "DraftKings"
         },
         "under": {
-          "price": -105,
-          "point": 145.5,
+          "price": -115,
+          "point": 152.5,
           "best_book": "BetMGM"
         }
       }
@@ -275,14 +235,14 @@
       },
       "spread": {
         "home": {
-          "price": -105,
+          "price": -106,
           "point": -12.5,
-          "best_book": "DraftKings"
+          "best_book": "LowVig.ag"
         },
         "away": {
-          "price": -110,
+          "price": 100,
           "point": 12.5,
-          "best_book": "BetMGM"
+          "best_book": "Bovada"
         }
       },
       "total": {
@@ -299,46 +259,6 @@
       }
     },
     {
-      "id": "3992c970e1c95aa827b75794b93d5608",
-      "home_team": "Arizona Wildcats",
-      "away_team": "Iowa State Cyclones",
-      "commence_time": "2026-03-13T23:00:00Z",
-      "h2h": {
-        "home": {
-          "price": -160,
-          "best_book": "BetMGM"
-        },
-        "away": {
-          "price": 145,
-          "best_book": "LowVig.ag"
-        }
-      },
-      "spread": {
-        "home": {
-          "price": 100,
-          "point": -3.5,
-          "best_book": "LowVig.ag"
-        },
-        "away": {
-          "price": -112,
-          "point": 3.5,
-          "best_book": "LowVig.ag"
-        }
-      },
-      "total": {
-        "over": {
-          "price": -108,
-          "point": 144.5,
-          "best_book": "DraftKings"
-        },
-        "under": {
-          "price": -108,
-          "point": 144.5,
-          "best_book": "LowVig.ag"
-        }
-      }
-    },
-    {
       "id": "1d99d6d17af806bcd8b34aec6e4609c8",
       "home_team": "Virginia Cavaliers",
       "away_team": "Miami Hurricanes",
@@ -349,20 +269,20 @@
           "best_book": "Bovada"
         },
         "home": {
-          "price": -167,
-          "best_book": "BetRivers"
+          "price": -165,
+          "best_book": "BetOnline.ag"
         }
       },
       "spread": {
         "away": {
-          "price": -101,
+          "price": -103,
           "point": 3.5,
           "best_book": "LowVig.ag"
         },
         "home": {
-          "price": -110,
+          "price": -109,
           "point": -3.5,
-          "best_book": "DraftKings"
+          "best_book": "LowVig.ag"
         }
       },
       "total": {
@@ -374,6 +294,46 @@
         "under": {
           "price": -108,
           "point": 145.5,
+          "best_book": "LowVig.ag"
+        }
+      }
+    },
+    {
+      "id": "3992c970e1c95aa827b75794b93d5608",
+      "home_team": "Arizona Wildcats",
+      "away_team": "Iowa State Cyclones",
+      "commence_time": "2026-03-13T23:10:00Z",
+      "h2h": {
+        "home": {
+          "price": -160,
+          "best_book": "FanDuel"
+        },
+        "away": {
+          "price": 150,
+          "best_book": "Bovada"
+        }
+      },
+      "spread": {
+        "home": {
+          "price": -101,
+          "point": -3.5,
+          "best_book": "LowVig.ag"
+        },
+        "away": {
+          "price": -110,
+          "point": 3.5,
+          "best_book": "Bovada"
+        }
+      },
+      "total": {
+        "over": {
+          "price": -108,
+          "point": 144.5,
+          "best_book": "DraftKings"
+        },
+        "under": {
+          "price": -108,
+          "point": 144.5,
           "best_book": "LowVig.ag"
         }
       }
@@ -389,8 +349,8 @@
           "best_book": "BetMGM"
         },
         "away": {
-          "price": 260,
-          "best_book": "DraftKings"
+          "price": 265,
+          "best_book": "Bovada"
         }
       },
       "spread": {
@@ -426,11 +386,11 @@
       "h2h": {
         "away": {
           "price": 120,
-          "best_book": "Bovada"
+          "best_book": "DraftKings"
         },
         "home": {
-          "price": -135,
-          "best_book": "DraftKings"
+          "price": -137,
+          "best_book": "FanDuel"
         }
       },
       "spread": {
@@ -440,7 +400,7 @@
           "best_book": "DraftKings"
         },
         "home": {
-          "price": -106,
+          "price": -111,
           "point": -2.0,
           "best_book": "LowVig.ag"
         }
@@ -475,7 +435,7 @@
       },
       "spread": {
         "away": {
-          "price": 101,
+          "price": -103,
           "point": 3.5,
           "best_book": "LowVig.ag"
         },
@@ -527,14 +487,14 @@
       },
       "total": {
         "over": {
-          "price": -105,
+          "price": -103,
           "point": 138.5,
-          "best_book": "Bovada"
+          "best_book": "LowVig.ag"
         },
         "under": {
-          "price": -105,
+          "price": -110,
           "point": 138.5,
-          "best_book": "BetMGM"
+          "best_book": "FanDuel"
         }
       }
     },
@@ -549,7 +509,7 @@
           "best_book": "DraftKings"
         },
         "away": {
-          "price": -120,
+          "price": -127,
           "best_book": "LowVig.ag"
         }
       },
@@ -561,7 +521,7 @@
         },
         "away": {
           "price": 100,
-          "point": -1.5,
+          "point": -2.0,
           "best_book": "LowVig.ag"
         }
       },
@@ -626,7 +586,7 @@
       "h2h": {
         "home": {
           "price": -225,
-          "best_book": "BetRivers"
+          "best_book": "LowVig.ag"
         },
         "away": {
           "price": 195,
@@ -665,8 +625,8 @@
       "commence_time": "2026-03-14T01:00:00Z",
       "h2h": {
         "away": {
-          "price": 334,
-          "best_book": "BetOnline.ag"
+          "price": 320,
+          "best_book": "DraftKings"
         },
         "home": {
           "price": -380,
@@ -675,9 +635,9 @@
       },
       "spread": {
         "away": {
-          "price": -110,
+          "price": -106,
           "point": 8.5,
-          "best_book": "BetUS"
+          "best_book": "LowVig.ag"
         },
         "home": {
           "price": -105,
@@ -795,9 +755,9 @@
       },
       "spread": {
         "home": {
-          "price": -115,
-          "point": -4.5,
-          "best_book": "FanDuel"
+          "price": -101,
+          "point": -5.0,
+          "best_book": "LowVig.ag"
         },
         "away": {
           "price": -105,
@@ -847,7 +807,7 @@
       },
       "total": {
         "over": {
-          "price": -108,
+          "price": -109,
           "point": 135.5,
           "best_book": "BetRivers"
         },
@@ -915,9 +875,9 @@
       },
       "spread": {
         "home": {
-          "price": -108,
+          "price": -105,
           "point": -8.5,
-          "best_book": "DraftKings"
+          "best_book": "BetRivers"
         },
         "away": {
           "price": -105,
@@ -949,15 +909,15 @@
           "best_book": "DraftKings"
         },
         "home": {
-          "price": -138,
-          "best_book": "LowVig.ag"
+          "price": -135,
+          "best_book": "Bovada"
         }
       },
       "spread": {
         "away": {
-          "price": -107,
+          "price": -110,
           "point": 2.5,
-          "best_book": "BetRivers"
+          "best_book": "FanDuel"
         },
         "home": {
           "price": -105,
@@ -972,7 +932,7 @@
           "best_book": "FanDuel"
         },
         "under": {
-          "price": -110,
+          "price": -109,
           "point": 150.5,
           "best_book": "BetRivers"
         }
@@ -1087,13 +1047,53 @@
       },
       "total": {
         "over": {
-          "price": -110,
+          "price": -108,
           "point": 148.5,
-          "best_book": "DraftKings"
+          "best_book": "BetRivers"
         },
         "under": {
           "price": -103,
           "point": 148.5,
+          "best_book": "LowVig.ag"
+        }
+      }
+    },
+    {
+      "id": "5d7798af55cf3098712e708c6c49c605",
+      "home_team": "Florida Gators",
+      "away_team": "Vanderbilt Commodores",
+      "commence_time": "2026-03-14T17:00:00Z",
+      "h2h": {
+        "home": {
+          "price": -410,
+          "best_book": "DraftKings"
+        },
+        "away": {
+          "price": 320,
+          "best_book": "DraftKings"
+        }
+      },
+      "spread": {
+        "home": {
+          "price": -106,
+          "point": -6.5,
+          "best_book": "LowVig.ag"
+        },
+        "away": {
+          "price": -106,
+          "point": 6.5,
+          "best_book": "LowVig.ag"
+        }
+      },
+      "total": {
+        "over": {
+          "price": -108,
+          "point": 160.5,
+          "best_book": "LowVig.ag"
+        },
+        "under": {
+          "price": -108,
+          "point": 160.5,
           "best_book": "LowVig.ag"
         }
       }
@@ -1109,8 +1109,8 @@
           "best_book": "FanDuel"
         },
         "away": {
-          "price": 575,
-          "best_book": "DraftKings"
+          "price": 600,
+          "best_book": "BetMGM"
         }
       },
       "spread": {
@@ -1120,20 +1120,20 @@
           "best_book": "DraftKings"
         },
         "away": {
-          "price": -110,
+          "price": -106,
           "point": 12.5,
-          "best_book": "FanDuel"
+          "best_book": "LowVig.ag"
         }
       },
       "total": {
         "over": {
           "price": -108,
-          "point": 160.5,
+          "point": 160.0,
           "best_book": "LowVig.ag"
         },
         "under": {
           "price": -108,
-          "point": 160.5,
+          "point": 160.0,
           "best_book": "LowVig.ag"
         }
       }
@@ -1229,8 +1229,8 @@
           "best_book": "DraftKings"
         },
         "home": {
-          "price": 105,
-          "best_book": "DraftKings"
+          "price": 112,
+          "best_book": "FanDuel"
         }
       },
       "spread": {
@@ -1261,8 +1261,8 @@
   ],
   "date": "2026-03-13",
   "n_games": 32,
-  "requests_remaining": 440,
+  "requests_remaining": 436,
   "cached": false,
   "error": null,
-  "fetched_at": 1773441223.031099
+  "fetched_at": 1773442624.2992802
 }

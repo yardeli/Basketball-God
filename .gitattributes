@@ -3,7 +3,6 @@
 *.pkl filter=lfs diff=lfs merge=lfs -text
 *.parquet filter=lfs diff=lfs merge=lfs -text
 *.csv filter=lfs diff=lfs merge=lfs -text
-
 # Specific large files
 phase1_data/output/basketball_god.db filter=lfs diff=lfs merge=lfs -text
 phase1_data/sources/kaggle/MMasseyOrdinals.csv filter=lfs diff=lfs merge=lfs -text

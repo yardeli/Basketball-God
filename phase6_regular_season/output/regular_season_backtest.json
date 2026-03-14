@@ -1,0 +1,76 @@
+{
+  "per_season": [
+    {
+      "season": 2022,
+      "n_games": 4826,
+      "accuracy": 0.7184,
+      "log_loss": 0.5491,
+      "brier": 0.1862,
+      "auc": 0.791
+    },
+    {
+      "season": 2023,
+      "n_games": 5081,
+      "accuracy": 0.6971,
+      "log_loss": 0.5741,
+      "brier": 0.1963,
+      "auc": 0.7667
+    },
+    {
+      "season": 2024,
+      "n_games": 5087,
+      "accuracy": 0.6924,
+      "log_loss": 0.5651,
+      "brier": 0.1929,
+      "auc": 0.7748
+    },
+    {
+      "season": 2025,
+      "n_games": 5124,
+      "accuracy": 0.6991,
+      "log_loss": 0.5514,
+      "brier": 0.1891,
+      "auc": 0.7821
+    }
+  ],
+  "avg_accuracy": 0.7018,
+  "test_seasons": [
+    2022,
+    2023,
+    2024,
+    2025
+  ],
+  "n_features": 30,
+  "feature_cols": [
+    "diff_win_pct",
+    "diff_avg_margin",
+    "diff_sos",
+    "diff_rest_days",
+    "diff_games_last_7",
+    "diff_win_streak",
+    "diff_h2h_win_pct_5",
+    "diff_h2h_win_pct_10",
+    "diff_conf_win_pct",
+    "diff_efg_pct",
+    "diff_opp_efg_pct",
+    "diff_to_rate",
+    "diff_opp_to_rate",
+    "diff_orb_rate",
+    "diff_drb_rate",
+    "diff_ft_rate",
+    "diff_opp_ft_rate",
+    "diff_fg3_rate",
+    "diff_fg3_pct",
+    "diff_ast_to_ratio",
+    "diff_blk_rate",
+    "diff_stl_rate",
+    "diff_off_eff",
+    "diff_def_eff",
+    "diff_net_eff",
+    "diff_pace",
+    "diff_massey_avg_rank",
+    "diff_massey_best_rank",
+    "diff_massey_n_systems",
+    "diff_massey_spread"
+  ]
+}
